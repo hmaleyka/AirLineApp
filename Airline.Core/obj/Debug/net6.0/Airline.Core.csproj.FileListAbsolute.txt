@@ -1,0 +1,14 @@
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\bin\Debug\net6.0\Airline.Core.deps.json
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\bin\Debug\net6.0\Airline.Core.dll
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\bin\Debug\net6.0\Airline.Core.pdb
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\obj\Debug\net6.0\Airline.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\obj\Debug\net6.0\Airline.Core.AssemblyInfoInputs.cache
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\obj\Debug\net6.0\Airline.Core.AssemblyInfo.cs
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\obj\Debug\net6.0\Airline.Core.csproj.CoreCompileInputs.cache
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\obj\Debug\net6.0\Airline.Core.dll
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\obj\Debug\net6.0\refint\Airline.Core.dll
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\obj\Debug\net6.0\Airline.Core.pdb
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\obj\Debug\net6.0\ref\Airline.Core.dll
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\bin\Debug\net6.0\Airline.Core.runtimeconfig.json
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\obj\Debug\net6.0\Airline.Core.csproj.AssemblyReference.cache
+C:\Users\owner\source\repos\AirlineApp\Airline.Core\obj\Debug\net6.0\Airline.Core.genruntimeconfig.cache
