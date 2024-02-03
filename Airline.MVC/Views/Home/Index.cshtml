@@ -651,114 +651,46 @@
             <div class="col-xl-12">
                 <div class="package-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="package-item">
-                                <div class="package-thumb">
-                                    <img src="~/assets/images/package/package-9.png" alt="package">
-                                    <div class="package-prize">
-                                        <span>$115.00</span>
+                        @foreach (var item in Model.packages)
+                        {
+                            <div class="swiper-slide">
+                                <div class="package-item">
+                                    <div class="package-thumb">
+                                        <img src="~/Upload/Package/@item.ImgUrl" alt="package">
+                                        <div class="package-prize">
+                                            <span>@item.Price</span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="package-content">
-                                    <div class="package-content-header">
-                                        <h3 class="title">
-                                            <a href="package-details.html">Island of the Goods</a>
-                                        </h3>
-                                    </div>
-                                    <div class="package-content-body">
-                                        <ul class="package-list">
-                                            <li>Date : Thursday, Nov 4, 2021</li>
-                                            <li>Person : 2 Adults</li>
-                                        </ul>
-                                        <div class="package-content-footer">
-                                            <div class="package-btn">
-                                                <a href="service-details.html" class="custom-btn">
-                                                    <i class="icon-btn-icon-v2 mr-2"></i> Book Now
-                                                </a>
-                                            </div>
-                                            <div class="package-video">
-                                                <a data-rel="lightcase:myCollection"
-                                                   href="https://www.youtube.com/embed/Hw4ctvV25H0">
-                                                    <img src="~/assets/images/icon/icon-17.png" alt="icon">
-                                                </a>
+                                    <div class="package-content">
+                                        <div class="package-content-header">
+                                            <h3 class="title">
+                                                <a href="package-details.html">@item.Title</a>
+                                            </h3>
+                                        </div>
+                                        <div class="package-content-body">
+                                            <ul class="package-list">
+                                                <li>Date : @item.date</li>
+                                                <li>Person : @item.Person</li>
+                                            </ul>
+                                            <div class="package-content-footer">
+                                                <div class="package-btn">
+                                                    <a href="service-details.html" class="custom-btn">
+                                                        <i class="icon-btn-icon-v2 mr-2"></i> Book Now
+                                                    </a>
+                                                </div>
+                                                <div class="package-video">
+                                                    <a data-rel="lightcase:myCollection"
+                                                       href="https://www.youtube.com/embed/Hw4ctvV25H0">
+                                                        <img src="~/Manage/Upload/@item.ImgUrl" alt="icon">
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="package-item">
-                                <div class="package-thumb">
-                                    <img src="~/assets/images/package/package-10.png" alt="package">
-                                    <div class="package-prize">
-                                        <span>$110.00</span>
-                                    </div>
-                                </div>
-                                <div class="package-content">
-                                    <div class="package-content-header">
-                                        <h3 class="title">
-                                            <a href="package-details.html">City of the Goods</a>
-                                        </h3>
-                                    </div>
-                                    <div class="package-content-body">
-                                        <ul class="package-list">
-                                            <li>Date : Friday, Dec 7, 2021</li>
-                                            <li>Person : 3 Adults</li>
-                                        </ul>
-                                        <div class="package-content-footer">
-                                            <div class="package-btn">
-                                                <a href="service-details.html" class="custom-btn">
-                                                    <i class="icon-btn-icon-v2 mr-2"></i> Book Now
-                                                </a>
-                                            </div>
-                                            <div class="package-video">
-                                                <a data-rel="lightcase:myCollection"
-                                                   href="https://www.youtube.com/embed/Hw4ctvV25H0">
-                                                    <img src="~/assets/images/icon/icon-17.png" alt="icon">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="package-item">
-                                <div class="package-thumb">
-                                    <img src="~/assets/images/package/package-11.png" alt="package">
-                                    <div class="package-prize">
-                                        <span>$120.00</span>
-                                    </div>
-                                </div>
-                                <div class="package-content">
-                                    <div class="package-content-header">
-                                        <h3 class="title">
-                                            <a href="package-details.html">Desert of the Goods</a>
-                                        </h3>
-                                    </div>
-                                    <div class="package-content-body">
-                                        <ul class="package-list">
-                                            <li>Date : Sunday, Sep 3, 2021</li>
-                                            <li>Person : 4 Adults</li>
-                                        </ul>
-                                        <div class="package-content-footer">
-                                            <div class="package-btn">
-                                                <a href="service-details.html" class="custom-btn">
-                                                    <i class="icon-btn-icon-v2 mr-2"></i> Book Now
-                                                </a>
-                                            </div>
-                                            <div class="package-video">
-                                                <a data-rel="lightcase:myCollection"
-                                                   href="https://www.youtube.com/embed/Hw4ctvV25H0">
-                                                    <img src="~/assets/images/icon/icon-17.png" alt="icon">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        }
+                       
                     </div>
                     <div class="slider-prev">
                         <i class="fas fa-chevron-left"></i>

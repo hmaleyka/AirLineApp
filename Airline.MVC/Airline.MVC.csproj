@@ -18,4 +18,10 @@
     <ProjectReference Include="..\Airline.Business\Airline.Business.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Upload\Deal\" />
+    <Folder Include="wwwroot\Upload\Team\" />
+    <Folder Include="wwwroot\Upload\Package\" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,83 @@
+﻿@using Airline.Core.Entities;
+@model List<Deal>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                        <h6 class="text-white text-capitalize ps-3">Package table</h6>
+                    </div>
+                    <a class="btn btn-primary" asp-controller="Deal" asp-action="Create" style="margin-top:20px">Create</a>
+                </div>
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-secondary opacity-7">Title</th>
+                                    <th class="text-secondary opacity-7">Description</th>
+                                    <th class="text-secondary opacity-7">Price</th>
+                                    <th class="text-secondary opacity-7">Feature</th>
+                                    <th class="text-secondary opacity-7">Passenger</th>
+                                    <th class="text-secondary opacity-7">Distance</th>
+                                    <th class="text-secondary opacity-7">Speed</th>
+                                    <th class="text-secondary opacity-7">Range</th>
+                                    <th class="text-secondary opacity-7">MainPhoto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">@item.Title</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Description</p>
+                                        </td>
+
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Price</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Feature</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Passenger</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Distance</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Speed</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Range</p>
+                                        </td>
+                                        <td>
+                                            <div style="width:100px">
+                                                <img width="100%" src="~/Upload/Deal/@item.MainPhoto">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" asp-controller="Deal" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                                            <a class="btn btn-danger " asp-controller="Deal" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+﻿@using Airline.Business.ViewModel.DealVM;
+@model DealUpdateVM
+
+<div class="container">
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Title" class="form-label">Title</label>
+                <input asp-for="Title" class="form-control">
+                <span asp-validation-for="Title" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Description" class="form-label">Description</label>
+                <input asp-for="Description" class="form-control">
+                <span asp-validation-for="Description" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Price" class="form-label">Price</label>
+                <input asp-for="Price" class="form-control">
+                <span asp-validation-for="Price" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Feature" class="form-label">Feature</label>
+                <input asp-for="Feature" class="form-control">
+                <span asp-validation-for="Feature" style="color: red"></span>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="mb-3 col-md-6" style="margin-left:15px">
+                <label asp-for="Distance" class="form-label">Distance</label>
+                <textarea class="form-control" asp-for="Distance" rows="4"></textarea>
+                <span asp-validation-for="Distance" style="color: red"></span>
+            </div>
+            <div class="mb-3 col-md-6" style="margin-left:15px">
+                <label asp-for="Speed" class="form-label">Speed</label>
+                <textarea class="form-control" asp-for="Speed" rows="4"></textarea>
+                <span asp-validation-for="Speed" style="color: red"></span>
+            </div>
+            <div class="row">
+                <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                    <div style="width:100px; height:10opx">
+                        <img Width="100%" src="~/Upload/Deal/@Model.alldealphotos?.FirstOrDefault().ImgUrl" />
+                    </div>
+                    <label asp-for="MainPhoto" class="form-label">MainPhoto</label>
+                    <input asp-for="MainPhoto" class="form-control">
+                    <span asp-validation-for="MainPhoto" style="color: red"></span>
+                </div>
+                <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                    <div style="width:100px; height:10opx">
+                        <img Width="100%" src="~/Upload/Deal/@Model.alldealphotos?.FirstOrDefault().ImgUrl" />
+                    </div>
+                    <label asp-for="dealphotos" class="form-label">hoverPhoto</label>
+                    <input asp-for="dealphotos" class="form-control">
+                    <span asp-validation-for="dealphotos" style="color: red"></span>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+
+</div>

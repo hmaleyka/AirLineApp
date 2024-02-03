@@ -15,7 +15,12 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IBenefitRepository, BenefitRepository>();
 builder.Services.AddScoped<IBenefitService, BenefitService>();
-//builder.Services.AddScoped<IPackageService, PackageService>();
+builder.Services.AddScoped<IPackageService, PackageService>();
+builder.Services.AddScoped<IPackageRepository, PackageRepository>();
+builder.Services.AddScoped<IDealRepository, DealRepository>();
+builder.Services.AddScoped<IDealService, DealService>();
+builder.Services.AddScoped<ITeamRepository, TeamRepository>();
+builder.Services.AddScoped<ITeamService, TeamService>();
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 {

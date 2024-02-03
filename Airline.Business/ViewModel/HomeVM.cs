@@ -10,6 +10,6 @@ namespace Airline.Business.ViewModel
     public class HomeVM
     {
         public List<Benefit> benefits {  get; set; }
-
+        public List<Package> packages { get; set; }
     }
 }

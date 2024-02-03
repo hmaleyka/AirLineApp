@@ -78,6 +78,10 @@ namespace Airline.DAL.Repositories.Implementations
         {
             await _dbcontext.SaveChangesAsync();
         }
-
+        public IQueryable<TEntity> GetQuery(Expression<Func<TEntity, bool>> expression)
+        {
+            return _dbcontext.Set<TEntity>().Where(expression);
+        }
+   
     }
 }

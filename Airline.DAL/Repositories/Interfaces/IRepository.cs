@@ -22,5 +22,7 @@ namespace Airline.DAL.Repositories.Interfaces
 
         void Delete(TEntity entity);
         Task SaveChangesAsync();
+        public IQueryable<TEntity> GetQuery(Expression<Func<TEntity, bool>> expression);
+   
     }
 }

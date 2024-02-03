@@ -1,0 +1,53 @@
+﻿@using Airline.Business.ViewModel.PackageVM;
+@model PackageCreateVM
+
+<div class=" container">
+
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Title">Title</label>
+            <input class="form-control" asp-for="Title">
+            <span asp-validation-for="Title" style=" color: red"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description"> Description</label>
+            <input class="form-control" asp-for="Description">
+            <span asp-validation-for="Description" style=" color: red"></span>
+        </div>
+        <div class="row">
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Image" class="form-label">Image</label>
+                <input asp-for="Image" class="form-control">
+                <span asp-validation-for="Image" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Perk" class="form-label">Perk</label>
+                <input asp-for="Perk" class="form-control">
+                <span asp-validation-for="Perk" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Feature" class="form-label">Feature</label>
+                <input asp-for="Feature" class="form-control">
+                <span asp-validation-for="Feature" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Duration" class="form-label">Duration</label>
+                <input asp-for="Duration" class="form-control">
+                <span asp-validation-for="Duration" style="color: red"></span>
+            </div> 
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="date" class="form-label">date</label>
+                <input asp-for="date" class="form-control" >
+                <span asp-validation-for="date" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Person" class="form-label">Person</label>
+                <input asp-for="Person" class="form-control">
+                <span asp-validation-for="Person" style="color: red"></span>
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -21,6 +21,7 @@ namespace Airline.MVC.Controllers
             HomeVM home = new HomeVM()
             {
                 benefits = _context.benefits.ToList(),
+                packages= _context.packages.ToList(),
             };
             return View(home);
         }

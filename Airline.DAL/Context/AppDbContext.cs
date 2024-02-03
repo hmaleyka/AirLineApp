@@ -19,5 +19,6 @@ namespace Airline.DAL.Context
         public DbSet<Package> packages { get; set; }
         public DbSet<Benefit> benefits { get; set; }
         public DbSet<DealPhoto> dealPhotos { get; set; }
+        public DbSet<Team> teams { get; set; }
     }
 }
