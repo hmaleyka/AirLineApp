@@ -43,18 +43,14 @@ namespace Airline.MVC.Areas.Manage.Controllers
                 Range = deals.Range,
                 Speed = deals.Speed,
                 Passenger = deals.Passenger,
+                Price = deals.Price,
                 MainphotoUrl=deals.MainPhoto,
-            };
-            foreach (var item in dealvm.alldealphotos)
-            {
-                ProductImagesVm productImages = new ProductImagesVm()
+                alldealphotos = deals.dealphotos.Select(item => new ProductImagesVm
                 {
                     ImgUrl = item.ImgUrl,
                     Id = item.Id,
-                };
-
-                dealvm.alldealphotos?.Add(productImages);
-            }
+                }).ToList(),
+            };
 
             return View(dealvm);
         }

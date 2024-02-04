@@ -36,6 +36,7 @@ namespace Airline.Business.Services.Implementations
                 Description = dealvm.Description,
                 Feature = dealvm.Feature,
                 Distance = dealvm.Distance,
+                Price = dealvm.Price,
                 Range = dealvm.Range,
                 Speed = dealvm.Speed,
                 Passenger = dealvm.Passenger,
@@ -114,6 +115,10 @@ namespace Airline.Business.Services.Implementations
             existdeal.Range = dealvm.Range;
             existdeal.Speed = dealvm.Speed;
             existdeal.Passenger = dealvm.Passenger;
+            existdeal.Price = dealvm.Price;
+           // existdeal.MainPhoto = dealvm.MainphotoUrl;
+            
+            
             if (dealvm.MainPhoto != null)
             {
 
@@ -125,15 +130,38 @@ namespace Airline.Business.Services.Implementations
                 {
                     throw new Exception("Image size should not be large than 2mb");
                 }
-                var oldphoto = existdeal.dealphotos.FirstOrDefault();
-                existdeal.dealphotos.Remove(oldphoto);
-                DealPhoto photo = new DealPhoto()
-                {
-                    DealId = existdeal.Id,
-                    ImgUrl = dealvm.MainPhoto.Upload(_env.WebRootPath, @"\Upload\Deal\"),
-                };
-                existdeal.dealphotos?.Add(photo);
+                //var oldphoto = existdeal.dealphotos.FirstOrDefault();
+                //existdeal.MainPhoto.Remove(oldphoto);
+                existdeal.MainPhoto = dealvm.MainPhoto.Upload(_env.WebRootPath, @"\Upload\Deal\");
+                
             }
+
+            if (dealvm.ImageIds == null)
+            {
+                existdeal.dealphotos.RemoveAll(d=>d.IsDeleted=false);
+            }
+            else
+            {
+                var removeListImage = existdeal.dealphotos?.Where(p => !dealvm.ImageIds.Contains(p.Id)).ToList();
+                if (removeListImage != null)
+                {
+                    foreach (var image in removeListImage)
+                    {
+                        existdeal.dealphotos.Remove(image);
+                        FileManager.DeleteFile(image.ImgUrl, _env.WebRootPath, @"\Upload\Product\");
+                    }
+
+                }
+                else
+                {
+                    existdeal.dealphotos.RemoveAll(p =>p.IsDeleted=false);
+                }
+
+            }
+
+
+
+
             if (dealvm.dealphotos != null)
             {
                 foreach (var photo in dealvm.dealphotos)

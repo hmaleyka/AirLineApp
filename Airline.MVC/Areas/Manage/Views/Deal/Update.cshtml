@@ -25,6 +25,16 @@
                 <input asp-for="Feature" class="form-control">
                 <span asp-validation-for="Feature" style="color: red"></span>
             </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Passenger" class="form-label">Passenger</label>
+                <input asp-for="Passenger" class="form-control">
+                <span asp-validation-for="Passenger" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Range" class="form-label">Range</label>
+                <input asp-for="Range" class="form-control">
+                <span asp-validation-for="Range" style="color: red"></span>
+            </div>
         </div>
         <div class="row align-items-center">
             <div class="mb-3 col-md-6" style="margin-left:15px">
@@ -40,17 +50,27 @@
             <div class="row">
                 <div class="mb-3" col-md-3 style="margin-right: 30px;">
                     <div style="width:100px; height:10opx">
-                        <img Width="100%" src="~/Upload/Deal/@Model.alldealphotos?.FirstOrDefault().ImgUrl" />
+                        <img Width="100%" src="~/Upload/Deal/@Model.MainphotoUrl" />
                     </div>
                     <label asp-for="MainPhoto" class="form-label">MainPhoto</label>
                     <input asp-for="MainPhoto" class="form-control">
                     <span asp-validation-for="MainPhoto" style="color: red"></span>
                 </div>
-                <div class="mb-3" col-md-3 style="margin-right: 30px;">
-                    <div style="width:100px; height:10opx">
-                        <img Width="100%" src="~/Upload/Deal/@Model.alldealphotos?.FirstOrDefault().ImgUrl" />
-                    </div>
-                    <label asp-for="dealphotos" class="form-label">hoverPhoto</label>
+                <div class="mb-4" col-md-3 style="width:30%; height:30%">
+                    @* <div style="width:100px; height:10opx">
+                        <img Width="100%" src="~/Upload/Deal/@Model.alldealphotos.FirstOrDefault().ImgUrl" />
+                    </div> *@
+                    @foreach (var item in Model.alldealphotos?.ToList())
+                    {
+                        <div class="col02 position-relative">
+                            <img style="width:40%; height150px; margin-top:10px" src="~/Upload/Deal/@item.ImgUrl" />
+                            <input type="hidden" value="@item.Id" name="ImageIds">
+
+                            <button class="btn btn-danger position-absolute custom-delete" style="right:20%;">X</button>
+
+                        </div>
+                    }
+                    <label asp-for="dealphotos" class="form-label">Multiple Photos</label>
                     <input asp-for="dealphotos" class="form-control">
                     <span asp-validation-for="dealphotos" style="color: red"></span>
                 </div>
@@ -67,3 +87,13 @@
 
 
 </div>
+
+<script>
+    var btn = document.querySelectorAll(".custom-delete")
+    btn.forEach(b => {
+        b.addEventListener("click", function ()
+        {
+            b.parentElement.remove()
+        })
+    })
+</script>

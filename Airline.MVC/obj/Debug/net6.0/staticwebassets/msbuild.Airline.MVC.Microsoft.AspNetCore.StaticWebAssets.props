@@ -8592,6 +8592,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\049de08e-a326-416d-975e-7fd7ceecd0fbthe-portal-ocean-pictures-tamarama.webp))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\0ad47328-edc5-4269-8046-013379e01362beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/0ad47328-edc5-4269-8046-013379e01362beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\0ad47328-edc5-4269-8046-013379e01362beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\0d75b45a-8971-4bc4-87ee-5f5383ee408bAP22106563559775.jpg.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Airline.MVC</SourceId>
@@ -8656,6 +8672,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\1f4aeabf-51c5-4d92-87e5-cb9c63d0c187spring-tulips.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\225d9a3e-2356-4e82-9a85-26f32aff0d50AP22106563559775.jpg.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/225d9a3e-2356-4e82-9a85-26f32aff0d50AP22106563559775.jpg.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\225d9a3e-2356-4e82-9a85-26f32aff0d50AP22106563559775.jpg.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\258ee484-66f3-46ff-9b20-473837823d88the-portal-ocean-pictures-tamarama.webp))">
       <SourceType>Package</SourceType>
       <SourceId>Airline.MVC</SourceId>
@@ -8672,6 +8704,70 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\258ee484-66f3-46ff-9b20-473837823d88the-portal-ocean-pictures-tamarama.webp))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\26ecdab2-c933-4566-ac28-6f35fd4c9d15beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/26ecdab2-c933-4566-ac28-6f35fd4c9d15beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\26ecdab2-c933-4566-ac28-6f35fd4c9d15beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\2ea880ac-c670-42a1-98cd-9ef02cfe2e6bsnowdrift-and-white-sky-in-norway-1024x683.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/2ea880ac-c670-42a1-98cd-9ef02cfe2e6bsnowdrift-and-white-sky-in-norway-1024x683.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\2ea880ac-c670-42a1-98cd-9ef02cfe2e6bsnowdrift-and-white-sky-in-norway-1024x683.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\3933eeba-ea8e-4faa-873f-5aa07b423477spring-tulips.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/3933eeba-ea8e-4faa-873f-5aa07b423477spring-tulips.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\3933eeba-ea8e-4faa-873f-5aa07b423477spring-tulips.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\3a174b0c-7c36-4b1a-9d60-f79119d89646AP22106563559775.jpg.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/3a174b0c-7c36-4b1a-9d60-f79119d89646AP22106563559775.jpg.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\3a174b0c-7c36-4b1a-9d60-f79119d89646AP22106563559775.jpg.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\405caa0b-f579-4b6d-a040-10df99118254Best-of-2016-Nasim-Mansurov-20.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Airline.MVC</SourceId>
@@ -8687,6 +8783,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\405caa0b-f579-4b6d-a040-10df99118254Best-of-2016-Nasim-Mansurov-20.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\45a3fa89-8e82-45a8-aca9-8e3640249f4dBest-of-2016-Nasim-Mansurov-20.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/45a3fa89-8e82-45a8-aca9-8e3640249f4dBest-of-2016-Nasim-Mansurov-20.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\45a3fa89-8e82-45a8-aca9-8e3640249f4dBest-of-2016-Nasim-Mansurov-20.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\4fffad35-7da7-4e22-a4b4-77c6f1202ff1spring-tulips.png))">
       <SourceType>Package</SourceType>
@@ -8720,6 +8832,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\5a1a2b14-84b7-45c1-b805-478419a3965espring-tulips.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\614dd199-cc4b-4952-be8f-e9735909b3d6snowdrift-and-white-sky-in-norway-1024x683.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/614dd199-cc4b-4952-be8f-e9735909b3d6snowdrift-and-white-sky-in-norway-1024x683.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\614dd199-cc4b-4952-be8f-e9735909b3d6snowdrift-and-white-sky-in-norway-1024x683.webp))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\6da28cbc-f3f1-4765-9f76-537482920804spring-tulips.png))">
       <SourceType>Package</SourceType>
       <SourceId>Airline.MVC</SourceId>
@@ -8752,6 +8880,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\7a741d6d-357a-4c16-b848-ab7ed6e32f3dBest-of-2016-Nasim-Mansurov-20.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\7f7cbd0a-085d-4a3e-9a59-0190f434fe03spring-tulips.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/7f7cbd0a-085d-4a3e-9a59-0190f434fe03spring-tulips.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\7f7cbd0a-085d-4a3e-9a59-0190f434fe03spring-tulips.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\8174c118-44cb-4fa0-a234-84fc9be0508dbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Airline.MVC</SourceId>
@@ -8767,6 +8911,38 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\8174c118-44cb-4fa0-a234-84fc9be0508dbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\83b5da12-51f7-4964-8656-6451f9a168c53915e089787345dfb291e379a28f396c.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/83b5da12-51f7-4964-8656-6451f9a168c53915e089787345dfb291e379a28f396c.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\83b5da12-51f7-4964-8656-6451f9a168c53915e089787345dfb291e379a28f396c.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\8797c3d5-3cf8-4929-8034-f1f494509be5Best-of-2016-Nasim-Mansurov-20.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/8797c3d5-3cf8-4929-8034-f1f494509be5Best-of-2016-Nasim-Mansurov-20.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\8797c3d5-3cf8-4929-8034-f1f494509be5Best-of-2016-Nasim-Mansurov-20.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\8f811463-7894-4f8b-a505-e136bbaa3beethe-portal-ocean-pictures-tamarama.webp))">
       <SourceType>Package</SourceType>
@@ -8784,6 +8960,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\8f811463-7894-4f8b-a505-e136bbaa3beethe-portal-ocean-pictures-tamarama.webp))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\90c314c9-faf5-42ca-9565-46e65182b75dBest-of-2016-Nasim-Mansurov-20.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/90c314c9-faf5-42ca-9565-46e65182b75dBest-of-2016-Nasim-Mansurov-20.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\90c314c9-faf5-42ca-9565-46e65182b75dBest-of-2016-Nasim-Mansurov-20.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\90e42a1b-dbad-48a8-9e4a-113b056ee7d5beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Airline.MVC</SourceId>
@@ -8799,6 +8991,38 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\90e42a1b-dbad-48a8-9e4a-113b056ee7d5beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\92366863-d0dd-472a-bba4-e65ca9cc34d0spring-tulips.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/92366863-d0dd-472a-bba4-e65ca9cc34d0spring-tulips.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\92366863-d0dd-472a-bba4-e65ca9cc34d0spring-tulips.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\93f5fcf6-b25f-4a02-bb62-00652b89a654beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/93f5fcf6-b25f-4a02-bb62-00652b89a654beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\93f5fcf6-b25f-4a02-bb62-00652b89a654beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\94f75a8b-6d90-4003-87d4-67eb2b869006spring-tulips.png))">
       <SourceType>Package</SourceType>
@@ -8832,6 +9056,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\99c36b7a-e0fe-4346-b241-43f3bc340012beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\9e225082-3503-45cd-80ae-c63b49a32a89spring-tulips.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/9e225082-3503-45cd-80ae-c63b49a32a89spring-tulips.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\9e225082-3503-45cd-80ae-c63b49a32a89spring-tulips.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\a62dd648-9d91-462f-8e54-e2c8a1737c5cBest-of-2016-Nasim-Mansurov-20.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Airline.MVC</SourceId>
@@ -8848,6 +9088,54 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\a62dd648-9d91-462f-8e54-e2c8a1737c5cBest-of-2016-Nasim-Mansurov-20.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\ab2ea2a2-0212-4d7c-b050-ee87dd42445dbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/ab2ea2a2-0212-4d7c-b050-ee87dd42445dbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\ab2ea2a2-0212-4d7c-b050-ee87dd42445dbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\ae6f8802-1334-494f-ad1f-4fd84a2f38casnowdrift-and-white-sky-in-norway-1024x683.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/ae6f8802-1334-494f-ad1f-4fd84a2f38casnowdrift-and-white-sky-in-norway-1024x683.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\ae6f8802-1334-494f-ad1f-4fd84a2f38casnowdrift-and-white-sky-in-norway-1024x683.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\af07a742-e950-42dd-9c15-d55554a7a99bbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/af07a742-e950-42dd-9c15-d55554a7a99bbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\af07a742-e950-42dd-9c15-d55554a7a99bbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\b609780c-c5c8-448f-9992-76e255fddd67beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Airline.MVC</SourceId>
@@ -8863,6 +9151,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\b609780c-c5c8-448f-9992-76e255fddd67beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\c3d73a8c-e931-46bb-8693-5624b3666478snowdrift-and-white-sky-in-norway-1024x683.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/c3d73a8c-e931-46bb-8693-5624b3666478snowdrift-and-white-sky-in-norway-1024x683.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\c3d73a8c-e931-46bb-8693-5624b3666478snowdrift-and-white-sky-in-norway-1024x683.webp))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\d0d7bfd7-55c8-4cba-bcb9-f1b194e22914beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))">
       <SourceType>Package</SourceType>
@@ -8911,6 +9215,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\dca0d744-c94b-4ab9-aa89-aafcac312e74spring-tulips.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\de878689-cd37-4ba9-bde0-b68942d8836cspring-tulips.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Deal/de878689-cd37-4ba9-bde0-b68942d8836cspring-tulips.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\de878689-cd37-4ba9-bde0-b68942d8836cspring-tulips.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\e90bce46-bb25-44b3-a008-4e4bd4bfffe7Best-of-2016-Nasim-Mansurov-20.jpg))">
       <SourceType>Package</SourceType>
