@@ -1,0 +1,85 @@
+﻿@using Airline.Core.Entities;
+@model List<Blog>
+@{
+    int count = 0;
+    int tagcount = 0;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                        <h6 class="text-white text-capitalize ps-3">Blog table</h6>
+                    </div>
+                    <a class="btn btn-primary" asp-controller="Blog" asp-action="Create" style="margin-top:20px">Create</a>
+                </div>
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-secondary opacity-7">No#</th
+                                    <th class="text-secondary opacity-7">Title</th>
+                                    <th class="text-secondary opacity-7">Description</th>
+                                    <th class="text-secondary opacity-7">About</th>
+                                    <th class="text-secondary opacity-7">DateTime</th>
+                                    <th class="text-secondary opacity-7">Tag</th>                                   
+                                    <th class="text-secondary opacity-7">Image</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <th scope="row"></th>
+                                         <td>
+                                            <p class="text-xs font-weight-bold mb-0">@count</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Title</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Description</p>
+                                        </td>
+
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.About</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.date</p>
+                                        </td>
+                                        <td>
+                                            @foreach (var pt in item.blogtags)
+                                            {
+                                                tagcount++;
+                                                @pt.tag.Name
+
+                                                @(item.blogtags.Count == tagcount ? "" : ", ")
+                                            }
+                                            @{
+                                                tagcount = 0;
+                                            }
+                                        </td>
+                                    
+                                        <td>
+                                            <div style="width:100px">
+                                                <img width="100%" src="~/Upload/Blog/@item.ImgUrl">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-warning" asp-controller="Blog" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                                            <a class="btn btn-danger " asp-controller="Blog" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

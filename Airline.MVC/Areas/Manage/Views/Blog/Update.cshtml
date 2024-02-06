@@ -1,0 +1,83 @@
+﻿@using Airline.Business.ViewModel.BlogVM;
+@using Airline.Core.Entities;
+@model UpdateBlogVM
+
+<div class="container">
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Title" class="form-label">Title</label>
+                <input asp-for="Title" class="form-control">
+                <span asp-validation-for="Title" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Description" class="form-label">Description</label>
+                <input asp-for="Description" class="form-control">
+                <span asp-validation-for="Description" style="color: red"></span>
+            </div>
+            
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="About" class="form-label">About</label>
+                <input asp-for="About" class="form-control">
+                <span asp-validation-for="About" style="color: red"></span>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="form-group">
+                <label asp-for="date"> date</label>
+                <input class="form-control" asp-for="date">
+                <span asp-validation-for="date" style=" color: red"></span>
+            </div>
+            <div class="row">
+                <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                    <div style="width:100px; height:10opx">
+                        <img Width="100%" src="~/Upload/Blog/@Model.ImageUrl" />
+                    </div>
+                    <label asp-for="Image" class="form-label">Image</label>
+                    <input asp-for="Image" class="form-control">
+                    <span asp-validation-for="Image" style="color: red"></span>
+                </div>
+                <div class="mb-4" col-md-3 style="width:30%; height:30%">
+                    @foreach (var item in Model.allblogphotos?.ToList())
+                    {
+                        <div class="col02 position-relative">
+                            <img style="width:40%; height150px; margin-top:10px" src="~/Upload/Blog/@item.ImgUrl" />
+                            <input type="hidden" value="@item.Id" name="ImageIds">
+
+                            <button class="btn btn-danger position-absolute custom-delete" style="right:20%;">X</button>
+
+                        </div>
+                    }
+                    <label asp-for="blogphotos" class="form-label">blogphotos</label>
+                    <input asp-for="blogphotos" class="form-control">
+                    <span asp-validation-for="blogphotos" style="color: red"></span>
+                </div>
+                <div class="mb-3 col-md-3">
+                    <label asp-for="tagIds" class="form-label">Tags</label>
+                    <select class="form-select" asp-for="tagIds" asp-items="new SelectList(ViewBag.Tags,nameof(Tag.Id),nameof(Tag.Name))">
+                    </select>
+                    <span asp-validation-for="tagIds" style="color: red"></span>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+
+
+</div>
+
+<script>
+    var btn = document.querySelectorAll(".custom-delete")
+    btn.forEach(b => {
+        b.addEventListener("click", function () {
+            b.parentElement.remove()
+        })
+    })
+</script>

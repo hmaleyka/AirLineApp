@@ -1,0 +1,454 @@
+﻿@using Airline.Business.ViewModel;
+@model DetailVM
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section inner-banner-section bg-overlay-black bg_img"
+         data-background="assets/images/bg/inner-bg.png">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-12 text-center">
+                <div class="banner-content">
+                    <h1 class="title">Tour Packages Single</h1>
+                    <div class="breadcrumb-area">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Tour Packages</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <i class="las la-dot-circle"></i>
+    <span>Top</span>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Call-widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="call-widget-wrapper">
+    <button type="button" class="call-widget-btn">
+        <span class="num">
+            <i class="icon-call-icon"></i> +1 814 929
+            4263
+        </span> <span class="arrow"></span>
+    </button>
+    <div class="call-widget-form-area">
+        <form class="book-form">
+            <div class="row justify-content-center mb-20-none">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                    <div class="book-select">
+                        <label>From</label>
+                        <div class="book-form-icon">
+                            <i class="icon-from-airplane"></i>
+                        </div>
+                        <select class="book-select form--control">
+                            <option value="dhaka" selected>Dhaka</option>
+                            <option value="london">London</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                    <div class="book-select">
+                        <label>To</label>
+                        <div class="book-form-icon">
+                            <i class="icon-to-airplane"></i>
+                        </div>
+                        <select class="book-select form--control">
+                            <option value="london" selected>London</option>
+                            <option value="dhaka">Dhaka</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                    <div class="book-select">
+                        <label>Date</label>
+                        <div class="book-form-icon">
+                            <i class="icon-schedule-icon"></i>
+                        </div>
+                        <select class="book-select form--control">
+                            <option value="25/12/2021" selected>25/12/2021</option>
+                            <option value="30/12/2021">30/12/2021</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 form-group">
+                    <label>Passenger</label>
+                    <div class="book-quantity">
+                        <div class="book-plus-minus">
+                            <div class="dec qtybutton">-</div>
+                            <input class="book-plus-minus-box qty" type="text" name="qty" value="1" readonly>
+                            <div class="inc qtybutton">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 form-group">
+                    <button type="submit" class="btn--base w-100 mt-10">
+                        <i class="icon-btn-icon"></i> Book
+                        Now
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Call-widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Package
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="package-section package--style package-details ptb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-12">
+                <div class="package-item">
+                    <div class="package-thumb">
+                        <img src="~/Upload/Package/@Model.package.ImgUrl" alt="package">
+                    </div>
+                    <div class="package-widget-area">
+                        <div class="row justify-content-center mb-20-none">
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-20">
+                                <div class="package-widget-item">
+                                    <div class="package-widget-icon">
+                                        <i class="icon-Duration"></i>
+                                    </div>
+                                    <div class="package-widget-content">
+                                        <h4 class="title">@Model.package.Duration</h4>
+                                        <span class="sub-title">4 Days</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-20">
+                                <div class="package-widget-item">
+                                    <div class="package-widget-icon">
+                                        <i class="icon-Start_From_icone"></i>
+                                    </div>
+                                    <div class="package-widget-content">
+                                        <h4 class="title">Start From</h4>
+                                        <span class="sub-title">@Model.package.Price</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-20">
+                                <div class="package-widget-item">
+                                    <div class="package-widget-icon">
+                                        <i class="icon-Date"></i>
+                                    </div>
+                                    <div class="package-widget-content">
+                                        <h4 class="title">Date</h4>
+                                        <span class="sub-title">@Model.package.Price</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-20">
+                                <div class="package-widget-item">
+                                    <div class="package-widget-icon">
+                                        <i class="icon-Person"></i>
+                                    </div>
+                                    <div class="package-widget-content">
+                                        <h4 class="title">Person</h4>
+                                        <span class="sub-title">@Model.package.Person</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="package-content-area pt-120">
+            <div class="row justify-content-center mb-30-none">
+                <div class="col-xl-8 col-lg-8 mb-30">
+                    <div class="package-content">
+                        <div class="package-content-header">
+                            <h3 class="title">@Model.package.Title</h3>
+                            <p>
+                                @Model.package.Description
+                               
+                            </p>
+                        </div>
+                        <div class="package-content-body">
+                            <h3 class="title">Tour Highlights</h3>
+                            <ul class="package-list">
+                                <li>This package trip requires a minimum of 2 people.</li>
+                                <li>
+                                    @Model.package.Perk
+                                </li>
+                                <li>Can be customized upon request, to meet travelers needs</li>
+                                <li>This package trip Duration 2 hours+</li>
+                                <li>
+                                    Accommodations on Quadra Island the night before you launch at one of
+                                    Quadra’s beautiful resorts
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            Our technology consistently delivers the best pricing for charters – and the unique
+                            ability to buy individual seats. Search the world with ease and transparency
+                        </p>
+                        <p>
+                            Our technology consistently delivers the best pricing for charters – and the unique
+                            ability to buy individual seats. Search the world with ease and transparency.As the
+                            only tech-forward private aviation company, XO is able to bring you innovative ways
+                            to buy and fly.
+                        </p>
+                        <div class="package-plan-area">
+                            <h3 class="title">Included/Excluded</h3>
+                            <ul class="package-plan-list">
+                                <li><i class="far fa-check-circle text--success"></i> Private Transport</li>
+                                <li><i class="far fa-times-circle text--danger"></i> Entry Fees</li>
+                                <li><i class="far fa-check-circle text--success"></i> Entrance fees </li>
+                                <li><i class="far fa-times-circle text--danger"></i> 5 Star Accommodation</li>
+                                <li>
+                                    <i class="far fa-check-circle text--success"></i> Box lunch water, banana
+                                    apple and chocolate
+                                </li>
+                                <li><i class="far fa-times-circle text--danger"></i> Airport Transfers</li>
+                            </ul>
+                        </div>
+                        <div class="package-gallery-slider-area">
+                            <h3 class="title">Gallery</h3>
+                            <div class="gallery-slider-two">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="gallery-item">
+                                            <img src="assets/images/gallery/gallery-5.png" alt="gallery">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-prev">
+                                    <i class="fas fa-chevron-left"></i>
+                                </div>
+                                <div class="slider-next">
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="package-faq-area">
+                            <div class="faq-header-area">
+                                <h3 class="title">Tour Plan</h3>
+                            </div>
+                            <div class="faq-wrapper">
+                                <div class="faq-item active open">
+                                    <h3 class="faq-title">
+                                        <span class="title">Day 1: The Westfjords </span><span class="right-icon"></span>
+                                    </h3>
+                                    <div class="faq-content">
+                                        <div class="faq-content-wrapper">
+                                            <div class="faq-thumb">
+                                                <img src="assets/images/faq-small.png" alt="faq">
+                                            </div>
+                                            <div class="faq-para">
+                                                <p>
+                                                    Our technology consistently delivers the best pricing for
+                                                    charters – and the unique ability to buy individual seats.
+                                                    Search the world with ease and transparency.As the only
+                                                    tech-forward private aviation company..
+                                                </p>
+                                                <ul class="faq-plan-list">
+                                                    <li>
+                                                        <i class="far fa-check-circle text--success"></i>
+                                                        Specialized bilingual guide
+                                                    </li>
+                                                    <li>
+                                                        <i class="far fa-times-circle text--danger"></i>
+                                                        Departure Taxes
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <h3 class="faq-title">
+                                        <span class="title">Day 2: The Westfjords</span><span class="right-icon"></span>
+                                    </h3>
+                                    <div class="faq-content">
+                                        <div class="faq-content-wrapper">
+                                            <div class="faq-thumb">
+                                                <img src="assets/images/faq-small.png" alt="faq">
+                                            </div>
+                                            <div class="faq-para">
+                                                <p>
+                                                    Our technology consistently delivers the best pricing for
+                                                    charters – and the unique ability to buy individual seats.
+                                                    Search the world with ease and transparency.As the only
+                                                    tech-forward private aviation company..
+                                                </p>
+                                                <ul class="faq-plan-list">
+                                                    <li>
+                                                        <i class="far fa-check-circle text--success"></i>
+                                                        Specialized bilingual guide
+                                                    </li>
+                                                    <li>
+                                                        <i class="far fa-times-circle text--danger"></i>
+                                                        Departure Taxes
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <h3 class="faq-title">
+                                        <span class="title">Day 3: The Westfjords</span><span class="right-icon"></span>
+                                    </h3>
+                                    <div class="faq-content">
+                                        <div class="faq-content-wrapper">
+                                            <div class="faq-thumb">
+                                                <img src="assets/images/faq-small.png" alt="faq">
+                                            </div>
+                                            <div class="faq-para">
+                                                <p>
+                                                    Our technology consistently delivers the best pricing for
+                                                    charters – and the unique ability to buy individual seats.
+                                                    Search the world with ease and transparency.As the only
+                                                    tech-forward private aviation company..
+                                                </p>
+                                                <ul class="faq-plan-list">
+                                                    <li>
+                                                        <i class="far fa-check-circle text--success"></i>
+                                                        Specialized bilingual guide
+                                                    </li>
+                                                    <li>
+                                                        <i class="far fa-times-circle text--danger"></i>
+                                                        Departure Taxes
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="package-map-area">
+                            <h3 class="title">Tour Location</h3>
+                            <div class="map-area">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.1899657893728!2d90.42380431666383!3d23.779746865573756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7499f257eab%3A0xe6b4b9eacea70f4a!2sManama+Tower!5e0!3m2!1sen!2sbd!4v1561542597668!5m2!1sen!2sbd"
+                                        style="border:0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 mb-30">
+                    <div class="sidebar">
+                        <div class="widget-box mb-30 bg-overlay-black bg_img"
+                             data-background="assets/images/book.png">
+                            <h4 class="widget-title text-white">Book This Tour</h4>
+                            <div class="package-book-widget-box">
+                                <form class="package-book-form mb-20-none">
+                                    <div class="form-group">
+                                        <label class="icon"><i class="icon-name_icone"></i></label>
+                                        <input type="text" class="form--control" name="name" placeholder="Name"
+                                               required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="icon"><i class="las la-envelope"></i></label>
+                                        <input type="email" class="form--control" name="email"
+                                               placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="icon"><i class="icon-call_icone"></i></label>
+                                        <input type="number" class="form--control" name="phone"
+                                               placeholder="Phone" required>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button type="submit" class="btn--base">
+                                            <i class="icon-btn-icon-v2"></i>
+                                            Book Now
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="widget-box mb-30">
+                            <h4 class="widget-title">Recent Tour Packages</h4>
+                            <div class="popular-widget-box">
+                                <div class="single-popular-item d-flex flex-wrap align-items-center">
+                                    <div class="popular-item-thumb">
+                                        <img src="assets/images/blog/small-blog-1.png" alt="blog">
+                                    </div>
+                                    <div class="popular-item-content">
+                                        <span class="blog-date">Aug 23,2021</span>
+                                        <h5 class="title">
+                                            <a href="package-details.html">Island of the Goods</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="single-popular-item d-flex flex-wrap align-items-center">
+                                    <div class="popular-item-thumb">
+                                        <img src="assets/images/blog/small-blog-2.png" alt="blog">
+                                    </div>
+                                    <div class="popular-item-content">
+                                        <span class="blog-date">Aug 23,2021</span>
+                                        <h5 class="title">
+                                            <a href="package-details.html">City of the Goods</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="single-popular-item d-flex flex-wrap align-items-center">
+                                    <div class="popular-item-thumb">
+                                        <img src="assets/images/blog/small-blog-3.png" alt="blog">
+                                    </div>
+                                    <div class="popular-item-content">
+                                        <span class="blog-date">Aug 23,2021</span>
+                                        <h5 class="title">
+                                            <a href="package-details.html">
+                                                Mordern of the
+                                                Goods
+                                            </a>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="single-popular-item d-flex flex-wrap align-items-center">
+                                    <div class="popular-item-thumb">
+                                        <img src="assets/images/blog/small-blog-4.png" alt="blog">
+                                    </div>
+                                    <div class="popular-item-content">
+                                        <span class="blog-date">Aug 23,2021</span>
+                                        <h5 class="title">
+                                            <a href="package-details.html">Sea of the Goods</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="widget-box">
+                            <h4 class="widget-title">Tags</h4>
+                            <div class="tag-widget-box">
+                                <ul class="tag-list">
+                                    <li><a href="#0">Airport</a></li>
+                                    <li><a href="#0">Private Jet</a></li>
+                                    <li><a href="#0">Helicopter</a></li>
+                                    <li><a href="#0">Gallery</a></li>
+                                    <li><a href="#0">Corporate</a></li>
+                                    <li><a href="#0">Business</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Package
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->

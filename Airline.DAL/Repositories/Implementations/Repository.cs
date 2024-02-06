@@ -82,6 +82,18 @@ namespace Airline.DAL.Repositories.Implementations
         {
             return _dbcontext.Set<TEntity>().Where(expression);
         }
-   
+        public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> expression, params string[] Includes)
+        {
+            var query = _dbcontext.Set<TEntity>().Where(expression);
+
+            if (Includes != null)
+            {
+                foreach (string include in Includes)
+                {
+                    query = query.Include(include);
+                }
+            }
+            return await query.FirstOrDefaultAsync(); ;
+        }
     }
 }

@@ -21,8 +21,8 @@ namespace Airline.Business.ViewModel.DealVM
         public double? Speed { get; set; }
         public double? Passenger { get; set; }
         public List<IFormFile>? dealphotos { get; set; }
-        public List<ProductImagesVm> alldealphotos { get; set; }
-        public List<int> ImageIds { get; set; }
+            public List<ProductImagesVm> alldealphotos { get; set; }
+            public List<int> ImageIds { get; set; }
     }
     public class ProductImagesVm
     {

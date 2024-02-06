@@ -148,7 +148,7 @@ namespace Airline.Business.Services.Implementations
                     foreach (var image in removeListImage)
                     {
                         existdeal.dealphotos.Remove(image);
-                        FileManager.DeleteFile(image.ImgUrl, _env.WebRootPath, @"\Upload\Product\");
+                        FileManager.DeleteFile(image.ImgUrl, _env.WebRootPath, @"\Upload\Deal\");
                     }
 
                 }

@@ -1,0 +1,54 @@
+﻿@using Airline.Business.ViewModel.TeamVM;
+
+@model UpdateTeamVM
+<div class=" container">
+
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Fullname">Fullname</label>
+            <input class="form-control" asp-for="Fullname">
+            <span asp-validation-for="Fullname" style=" color: red"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description"> Description</label>
+            <input class="form-control" asp-for="Description">
+            <span asp-validation-for="Description" style=" color: red"></span>
+        </div>
+        <div class="row">
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Image" class="form-label">Image</label>
+                <input asp-for="Image" class="form-control">
+                <span asp-validation-for="Image" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Position" class="form-label">Position</label>
+                <input asp-for="Position" class="form-control">
+                <span asp-validation-for="Position" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="AboutMe" class="form-label">AboutMe</label>
+                <input asp-for="AboutMe" class="form-control">
+                <span asp-validation-for="AboutMe" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="number" class="form-label">number</label>
+                <input asp-for="number" class="form-control">
+                <span asp-validation-for="number" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="email" class="form-label">email</label>
+                <input asp-for="email" class="form-control" type="email">
+                <span asp-validation-for="email" style="color: red"></span>
+            </div>
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Experience" class="form-label">Experience</label>
+                <input asp-for="Experience" class="form-control">
+                <span asp-validation-for="Experience" style="color: red"></span>
+            </div>
+
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

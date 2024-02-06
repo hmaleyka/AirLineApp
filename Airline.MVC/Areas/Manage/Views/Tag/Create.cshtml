@@ -1,0 +1,15 @@
+﻿@using Airline.Business.ViewModel.TagVM;
+@model CreateTagVM
+<div class=" container">
+
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input class="form-control" asp-for="Name">
+            <span asp-validation-for="Name" style=" color: red"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

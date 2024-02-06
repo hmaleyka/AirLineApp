@@ -388,7 +388,7 @@
                     <div class="statistics-item">
                         <div class="statistics-content">
                             <div class="odo-area">
-                                <h3 class="odo-title odometer" data-odometer-final="95">0</h3>
+                                <h3 class="odo-title odometer" data-odometer-final="@Model.teams.Count">0</h3>
                             </div>
                             <p>Professional Pilots</p>
                         </div>
@@ -418,7 +418,7 @@
                     <div class="statistics-item" data-aos="zoom-in" data-aos-duration="1200">
                         <div class="statistics-content">
                             <div class="odo-area">
-                                <h3 class="odo-title odometer" data-odometer-final="195">0</h3>
+                                <h3 class="odo-title odometer" data-odometer-final="@Model.packages.Count">0</h3>
                             </div>
                             <p>Directions</p>
                         </div>
@@ -459,90 +459,31 @@
             <div class="col-xl-12">
                 <div class="charter-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="charter-item">
-                                <div class="charter-thumb">
-                                    <img src="~/assets/images/charter/charter-1.png" alt="charter">
-                                </div>
-                                <div class="charter-content">
-                                    <h3 class="title"><a href="deals-details.html">Private Jet Charter</a></h3>
-                                    <span class="sub-title">Legacy 600</span>
-                                    <div class="charter-meta">
-                                        <span class="seat">8 - 14 Seats</span>
-                                        <span class="price">Price: $9,000/ hr</span>
+                        @foreach (var item in Model.deals)
+                        {
+                            <div class="swiper-slide">
+                                <div class="charter-item">
+                                    <div class="charter-thumb">
+                                        <img src="~/Upload/Deal/@item.MainPhoto" alt="charter">
                                     </div>
-                                    <div class="charter-btn">
-                                        <a href="service-details.html">
-                                            <i class="icon-btn-icon-v2"></i> Book
-                                            Now
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="charter-item">
-                                <div class="charter-thumb">
-                                    <img src="~/assets/images/charter/charter-2.png" alt="charter">
-                                </div>
-                                <div class="charter-content">
-                                    <h3 class="title"><a href="deals-details.html">Business Jet Charter</a></h3>
-                                    <span class="sub-title">Beech BE300 Super King</span>
-                                    <div class="charter-meta">
-                                        <span class="seat">8 - 14 Seats</span>
-                                        <span class="price">Price: $9,000/ hr</span>
-                                    </div>
-                                    <div class="charter-btn">
-                                        <a href="service-details.html">
-                                            <i class="icon-btn-icon-v2"></i> Book
-                                            Now
-                                        </a>
+                                    <div class="charter-content">
+                                        <h3 class="title"><a href="deals-details.html">@item.Title</a></h3>
+                                        <span class="sub-title">@item.Description</span>
+                                        <div class="charter-meta">
+                                            <span class="seat">@item.Range</span>
+                                            <span class="price">Price: @item.Price hr</span>
+                                        </div>
+                                        <div class="charter-btn">
+                                            <a href="service-details.html">
+                                                <i class="icon-btn-icon-v2"></i> Book
+                                                Now
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="charter-item">
-                                <div class="charter-thumb">
-                                    <img src="~/assets/images/charter/charter-3.png" alt="charter">
-                                </div>
-                                <div class="charter-content">
-                                    <h3 class="title"><a href="deals-details.html">Private Helicopter</a></h3>
-                                    <span class="sub-title">Charter a A500</span>
-                                    <div class="charter-meta">
-                                        <span class="seat">8 - 14 Seats</span>
-                                        <span class="price">Price: $9,000/ hr</span>
-                                    </div>
-                                    <div class="charter-btn">
-                                        <a href="service-details.html">
-                                            <i class="icon-btn-icon-v2"></i> Book
-                                            Now
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="charter-item">
-                                <div class="charter-thumb">
-                                    <img src="~/assets/images/charter/charter-4.png" alt="charter">
-                                </div>
-                                <div class="charter-content">
-                                    <h3 class="title"><a href="deals-details.html">Air Ambulance</a></h3>
-                                    <span class="sub-title">Beech BE300 Super King</span>
-                                    <div class="charter-meta">
-                                        <span class="seat">8 - 14 Seats</span>
-                                        <span class="price">Price: $9,000/ hr</span>
-                                    </div>
-                                    <div class="charter-btn">
-                                        <a href="service-details.html">
-                                            <i class="icon-btn-icon-v2"></i> Book
-                                            Now
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        }
+                        
                     </div>
                 </div>
             </div>
@@ -664,7 +605,7 @@
                                     <div class="package-content">
                                         <div class="package-content-header">
                                             <h3 class="title">
-                                                <a href="package-details.html">@item.Title</a>
+                                                <a asp-controller="Tour" asp-action="Detail" asp-route-id="@item.Id">@item.Title</a>
                                             </h3>
                                         </div>
                                         <div class="package-content-body">
@@ -674,7 +615,7 @@
                                             </ul>
                                             <div class="package-content-footer">
                                                 <div class="package-btn">
-                                                    <a href="service-details.html" class="custom-btn">
+                                                    <a asp-controller="Tour" asp-action="Detail" asp-route-id="@item.Id" class="custom-btn">
                                                         <i class="icon-btn-icon-v2 mr-2"></i> Book Now
                                                     </a>
                                                 </div>

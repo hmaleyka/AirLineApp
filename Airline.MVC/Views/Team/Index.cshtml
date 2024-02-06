@@ -1,0 +1,159 @@
+﻿@using Airline.Core.Entities;
+
+@model List<Team>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="banner-section inner-banner-section bg-overlay-black bg_img"
+         data-background="assets/images/bg/inner-bg.png">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-12 text-center">
+                <div class="banner-content">
+                    <h1 class="title">Our Team</h1>
+                    <div class="breadcrumb-area">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Team</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <i class="las la-dot-circle"></i>
+    <span>Top</span>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Call-widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="call-widget-wrapper">
+    <button type="button" class="call-widget-btn">
+        <span class="num">
+            <i class="icon-call-icon"></i> +1 814 929
+            4263
+        </span> <span class="arrow"></span>
+    </button>
+    <div class="call-widget-form-area">
+        <form class="book-form">
+            <div class="row justify-content-center mb-20-none">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                    <div class="book-select">
+                        <label>From</label>
+                        <div class="book-form-icon">
+                            <i class="icon-from-airplane"></i>
+                        </div>
+                        <select class="book-select form--control">
+                            <option value="dhaka" selected>Dhaka</option>
+                            <option value="london">London</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                    <div class="book-select">
+                        <label>To</label>
+                        <div class="book-form-icon">
+                            <i class="icon-to-airplane"></i>
+                        </div>
+                        <select class="book-select form--control">
+                            <option value="london" selected>London</option>
+                            <option value="dhaka">Dhaka</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                    <div class="book-select">
+                        <label>Date</label>
+                        <div class="book-form-icon">
+                            <i class="icon-schedule-icon"></i>
+                        </div>
+                        <select class="book-select form--control">
+                            <option value="25/12/2021" selected>25/12/2021</option>
+                            <option value="30/12/2021">30/12/2021</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 form-group">
+                    <label>Passenger</label>
+                    <div class="book-quantity">
+                        <div class="book-plus-minus">
+                            <div class="dec qtybutton">-</div>
+                            <input class="book-plus-minus-box qty" type="text" name="qty" value="1" readonly>
+                            <div class="inc qtybutton">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 form-group">
+                    <button type="submit" class="btn--base w-100 mt-10">
+                        <i class="icon-btn-icon"></i> Book
+                        Now
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Call-widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Team
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="team-section team--style pt-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section-header-wrapper">
+                    <div class="section-header" data-aos="fade-right" data-aos-duration="1200">
+                        <h2 class="section-title">Meet Our Team and Their Positions</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-30-none">
+            @foreach (var item in Model)
+            {
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="team-item" data-aos="zoom-in" data-aos-duration="1200">
+                        <div class="team-thumb">
+                            <img src="/Upload/Team/@item.ImgUrl" alt="team">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title"><a asp-controller="Team" asp-action="Details" asp-route-id="@item.Id">@item.Fullname</a></h3>
+                            <span class="sub-title">@item.Position</span>
+                        </div>
+                        <div class="team-social-area">
+           
+                        </div>
+                    </div>
+                </div>
+            }
+           
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Team
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Team
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Team
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+

@@ -1,0 +1,51 @@
+﻿@using Airline.Core.Entities;
+
+
+@model List<Tag>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                        <h6 class="text-white text-capitalize ps-3">Package table</h6>
+                    </div>
+                    <a class="btn btn-primary" asp-controller="Tag" asp-action="Create" style="margin-top:20px">Create</a>
+                </div>
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-secondary opacity-7">Title</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">@item.Name</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                       
+                                       <td>
+                                            <a class="btn btn-warning" asp-controller="Package" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                                            <a class="btn btn-danger " asp-controller="Package" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

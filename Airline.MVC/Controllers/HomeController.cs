@@ -2,6 +2,7 @@
 using Airline.Business.ViewModel;
 using Airline.DAL.Context;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace Airline.MVC.Controllers
@@ -20,8 +21,10 @@ namespace Airline.MVC.Controllers
         {
             HomeVM home = new HomeVM()
             {
-                benefits = _context.benefits.ToList(),
-                packages= _context.packages.ToList(),
+                benefits = _context.benefits.Where(b=>b.IsDeleted==false).ToList(),
+                packages= _context.packages.Where(b => b.IsDeleted == false).ToList(),
+                teams = _context.teams.Where(b => b.IsDeleted == false).ToList(),
+                deals= _context.deals.Include(d=>d.dealphotos).Where(b=>b.IsDeleted==false).ToList(),
             };
             return View(home);
         }

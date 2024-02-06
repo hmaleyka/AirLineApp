@@ -36,6 +36,7 @@ namespace Airline.Business.Services.Implementations
                 AboutMe = team.AboutMe,
                 number = team.number,
                 email = team.email,
+                Experience=team.Experience
             };
 
             if (!team.Image.CheckType("image/"))
@@ -88,6 +89,18 @@ namespace Airline.Business.Services.Implementations
                teams.AboutMe = team.AboutMe;
                 teams.number = team.number;
                 teams.email = team.email;
+            teams.Experience= team.Experience;
+
+            if (!team.Image.CheckType("image/"))
+            {
+                throw new Exception("Image type should be img");
+            }
+            if (!team.Image.CheckLong(2097152))
+            {
+                throw new Exception("Image size should not be large than 2mb");
+            }
+            teams.ImgUrl = team.Image.Upload(_env.WebRootPath, @"\Upload\Team\");
+
             _repo.Update(teams);
             await _repo.SaveChangesAsync();
             return teams;

@@ -92,14 +92,13 @@
                                             <ul class="sub-menu">
                                                 <li><a href="service.html">Service</a></li>
                                                 <li><a href="service-details.html">Service Details</a></li>
-                                                <li><a href="deals.html">Deals</a></li>
-                                                <li><a href="deals-details.html">Deals Details</a></li>
-                                                <li><a href="package.html">Package</a></li>
-                                                <li><a href="package-details.html">Package Details</a></li>
-                                                <li><a href="course.html">Our Course</a></li>
-                                                <li><a href="course-details.html">Course Details</a></li>
-                                                <li><a href="team.html">Our Team</a></li>
-                                                <li><a href="team-details.html">Team Details</a></li>
+                                                <li><a asp-controller="Plane" asp-action="Index">Deals</a></li>
+                                                <li><a asp-controller="Plane" asp-action="Details">Deals Details</a></li>
+                                                <li><a asp-controller="Tour" asp-action="Index">Package</a></li>
+                                                <li><a asp-controller="Tour" asp-action="Details">Package Details</a></li>
+
+                                                <li><a asp-controller="Team" asp-action="Index">Our Team</a></li>
+                                                <li><a asp-controller="Team" asp-action="Index">Team Details</a></li>
                                                 <li><a href="faq.html">FAQ</a></li>
                                                 <li><a href="register.html">Sign Up</a></li>
                                                 <li><a href="login.html">Sign In</a></li>
@@ -109,9 +108,9 @@
                                         <li class="menu_has_children">
                                             <a href="#0">Blog</a>
                                             <ul class="sub-menu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-classic.html">Blog Classic</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
+                                                <li><a asp-controller="Blog" asp-action="Index" >Blog</a></li>
+                                                <li><a asp-controller="Blog" asp-action="Details">Blog Details</a></li>
+                                                >
                                             </ul>
                                         </li>
                                         <li><a href="faq.html">Faq</a></li>

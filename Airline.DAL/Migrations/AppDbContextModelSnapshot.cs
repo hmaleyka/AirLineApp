@@ -126,6 +126,92 @@ namespace Airline.DAL.Migrations
                     b.ToTable("benefits");
                 });
 
+            modelBuilder.Entity("Airline.Core.Entities.Blog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("About")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImgUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("date")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("blogs");
+                });
+
+            modelBuilder.Entity("Airline.Core.Entities.BlogPhoto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("BlogId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Imgurl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BlogId");
+
+                    b.ToTable("BlogPhoto");
+                });
+
+            modelBuilder.Entity("Airline.Core.Entities.BlogTag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("BlogId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("TagId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BlogId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("blogtags");
+                });
+
             modelBuilder.Entity("Airline.Core.Entities.Deal", b =>
                 {
                     b.Property<int>("Id")
@@ -244,6 +330,26 @@ namespace Airline.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("packages");
+                });
+
+            modelBuilder.Entity("Airline.Core.Entities.Tag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("tags");
                 });
 
             modelBuilder.Entity("Airline.Core.Entities.Team", b =>
@@ -427,6 +533,30 @@ namespace Airline.DAL.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Airline.Core.Entities.BlogPhoto", b =>
+                {
+                    b.HasOne("Airline.Core.Entities.Blog", "blog")
+                        .WithMany("blogphotos")
+                        .HasForeignKey("BlogId");
+
+                    b.Navigation("blog");
+                });
+
+            modelBuilder.Entity("Airline.Core.Entities.BlogTag", b =>
+                {
+                    b.HasOne("Airline.Core.Entities.Blog", "blog")
+                        .WithMany("blogtags")
+                        .HasForeignKey("BlogId");
+
+                    b.HasOne("Airline.Core.Entities.Tag", "tag")
+                        .WithMany("blogtags")
+                        .HasForeignKey("TagId");
+
+                    b.Navigation("blog");
+
+                    b.Navigation("tag");
+                });
+
             modelBuilder.Entity("Airline.Core.Entities.DealPhoto", b =>
                 {
                     b.HasOne("Airline.Core.Entities.Deal", "deal")
@@ -487,9 +617,21 @@ namespace Airline.DAL.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Airline.Core.Entities.Blog", b =>
+                {
+                    b.Navigation("blogphotos");
+
+                    b.Navigation("blogtags");
+                });
+
             modelBuilder.Entity("Airline.Core.Entities.Deal", b =>
                 {
                     b.Navigation("dealphotos");
+                });
+
+            modelBuilder.Entity("Airline.Core.Entities.Tag", b =>
+                {
+                    b.Navigation("blogtags");
                 });
 #pragma warning restore 612, 618
         }
