@@ -14,6 +14,6 @@ namespace Airline.Business.ViewModel
         public List<Package> packages { get; set; }
         public List<Deal> deals { get; set; }
         public List<Team> teams { get; set; }
-        public DbSet<Blog> blogs { get; set; }
+        public List<Blog> blogs { get; set; }
     }
 }

@@ -81,9 +81,8 @@
                                         <li class="menu_has_children">
                                             <a href="#0">Home</a>
                                             <ul class="sub-menu">
-                                                <li><a href="index.html">Home One</a></li>
-                                                <li><a href="index-two.html">Home Two</a></li>
-                                                <li><a href="index-dark.html">Home Dark</a></li>
+                                                <li><a href="index.html">Home </a></li>
+                                                
                                             </ul>
                                         </li>
                                         <li><a href="about.html">About Us</a></li>
@@ -99,10 +98,9 @@
 
                                                 <li><a asp-controller="Team" asp-action="Index">Our Team</a></li>
                                                 <li><a asp-controller="Team" asp-action="Index">Team Details</a></li>
-                                                <li><a href="faq.html">FAQ</a></li>
-                                                <li><a href="register.html">Sign Up</a></li>
-                                                <li><a href="login.html">Sign In</a></li>
-                                                <li><a href="404.html">404 Page</a></li>
+                                               
+                                         
+                                              
                                             </ul>
                                         </li>
                                         <li class="menu_has_children">
@@ -113,7 +111,30 @@
                                                 >
                                             </ul>
                                         </li>
-                                        <li><a href="faq.html">Faq</a></li>
+                                        <li class="menu_has_children">
+                                            <a href="#0">Account</a>
+                                            <ul class="sub-menu">
+                                                
+
+                                                @if (User.Identity.IsAuthenticated)
+                                                {
+                                                    <li><a>@User.Identity.Name</a></li>
+                                                    <li><a asp-controller="Account" asp-action="Logout">Log Out</a></li>
+                                                    @*    if (User.IsInRole("Admin"))
+                                                {
+                                                <a asp-area="Manage" asp-controller="Doctor" asp-action="Index" class="btn btn-danger" style="height:50px">Go to Admin Panel</a>
+                                                } *@
+
+                                                }
+                                                else
+                                                {
+
+                                                    <li><a asp-controller="Account" asp-action="Register">Register</a></li>
+                                                    <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+                                                }
+
+                                            </ul>
+                                        </li>
                                         <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                     <div class="header-right">

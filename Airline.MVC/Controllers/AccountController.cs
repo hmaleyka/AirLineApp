@@ -101,15 +101,10 @@ namespace Airline.MVC.Controllers
 
         public async Task<IActionResult> Logout()
         {
-            if (User.Identity.IsAuthenticated)
-            {
                 await _service.Logout();
-                return RedirectToAction(nameof(Login));
-            }
-            else
-            {
                 return RedirectToAction("Index", "Home");
-            }
+            
+          
         }
     }
 }
