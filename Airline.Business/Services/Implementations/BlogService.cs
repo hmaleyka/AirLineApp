@@ -121,7 +121,7 @@ namespace Airline.Business.Services.Implementations
             //    .Include(x=>x.blogphotos)
             //    .FirstOrDefaultAsync();
             //ViewBag.tags = await .tag.ToListAsync();
-            Blog existblog = await _repo.GetAsync(x => !x.IsDeleted && x.Id == blogvm.Id, "blogtags.tag");
+            Blog? existblog = await _repo.GetAsync(x => !x.IsDeleted && x.Id == blogvm.Id, "blogtags.tag");
             if (existblog == null) throw new NotFoundException("Blog should not be null");
             existblog.Title = blogvm.Title;
             existblog.Description = blogvm.Description;

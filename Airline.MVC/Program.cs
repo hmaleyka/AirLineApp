@@ -1,3 +1,4 @@
+using Airline.Business;
 using Airline.Business.Services.Implementations;
 using Airline.Business.Services.Interfaces;
 using Airline.Core.Entities;
@@ -14,17 +15,13 @@ builder.Services.AddControllersWithViews();
 
 
 builder.Services.AddScoped<IBenefitRepository, BenefitRepository>();
-builder.Services.AddScoped<IBenefitService, BenefitService>();
-builder.Services.AddScoped<IPackageService, PackageService>();
 builder.Services.AddScoped<IPackageRepository, PackageRepository>();
 builder.Services.AddScoped<IDealRepository, DealRepository>();
-builder.Services.AddScoped<IDealService, DealService>();
 builder.Services.AddScoped<ITeamRepository, TeamRepository>();
-builder.Services.AddScoped<ITeamService, TeamService>();
-builder.Services.AddScoped<IBlogService, BlogService>();
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
-builder.Services.AddScoped<ITagService,  TagService>();
+
+builder.Services.AddServices();
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 {

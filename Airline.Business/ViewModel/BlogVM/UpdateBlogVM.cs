@@ -15,7 +15,7 @@ namespace Airline.Business.ViewModel.BlogVM
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime date { get; set; }
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
         [Required]
         public IFormFile Image { get; set; }
         public IEnumerable<CreateTagVM> tags { get; set; } = null!;

@@ -8,6 +8,7 @@ namespace Airline.Business.Helpers
 {
     public enum UserRole
     {
+        SuperAdmin,
         Admin,
         Moderator,
         Member
