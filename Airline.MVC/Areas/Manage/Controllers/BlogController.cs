@@ -57,17 +57,15 @@ namespace Airline.MVC.Areas.Manage.Controllers
                     Id = item.Id,
                 }).ToList(),
             };
-            return View(blogvm);
+            return View("Update" ,blogvm);
         }
         [HttpPost]
         public async Task<IActionResult> Update(UpdateBlogVM blogVM)
         {
-            if (!ModelState.IsValid)
-            {
-               
-                ViewBag.Tags = await _tagService.GetAllAsync();
-                return View(await _service.GetByIdAsync(blogVM.Id));
-            }
+                         
+            ViewBag.Tags = await _tagService.GetAllAsync();
+            await _service.GetByIdAsync(blogVM.Id);
+            
             var blogs = await _service.Update(blogVM);
             return RedirectToAction(nameof(Index));
         }

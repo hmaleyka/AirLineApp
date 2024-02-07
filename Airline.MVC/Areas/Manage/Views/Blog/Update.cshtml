@@ -1,5 +1,6 @@
 ﻿@using Airline.Business.ViewModel.BlogVM;
 @using Airline.Core.Entities;
+
 @model UpdateBlogVM
 
 <div class="container">
@@ -16,7 +17,7 @@
                 <input asp-for="Description" class="form-control">
                 <span asp-validation-for="Description" style="color: red"></span>
             </div>
-            
+
             <div class="mb-3" col-md-3 style="margin-right: 30px;">
                 <label asp-for="About" class="form-label">About</label>
                 <input asp-for="About" class="form-control">

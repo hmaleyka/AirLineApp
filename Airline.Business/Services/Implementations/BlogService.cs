@@ -129,11 +129,11 @@ namespace Airline.Business.Services.Implementations
             existblog.date = blogvm.date;
             if (blogvm.Image != null)
             {
-                if (blogvm.Image.CheckType("image/"))
+                if (!blogvm.Image.CheckType("image/"))
                 {
                     throw new Exception("image type should be img");
                 }
-                if (blogvm.Image.CheckLong(2097152))
+                if (!blogvm.Image.CheckLong(2097152))
                 {
                     throw new Exception("the long should not be large than 2mb");
                 }

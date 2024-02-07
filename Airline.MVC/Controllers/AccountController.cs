@@ -1,6 +1,7 @@
 ﻿using Airline.Business.Exceptions;
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.AccountVM;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol.Plugins;
 
@@ -101,10 +102,11 @@ namespace Airline.MVC.Controllers
 
         public async Task<IActionResult> Logout()
         {
-                await _service.Logout();
-                return RedirectToAction("Index", "Home");
-            
-          
+            await _service.Logout();
+            return RedirectToAction("Index", "Home");
+
+
         }
+
     }
 }

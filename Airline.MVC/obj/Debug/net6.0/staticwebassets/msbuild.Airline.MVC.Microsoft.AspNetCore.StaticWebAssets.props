@@ -8560,6 +8560,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Manage\assets\scss\material-dashboard\_variables.scss))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Blog\0910a4e3-38b5-428d-9100-f90790534c16Best-of-2016-Nasim-Mansurov-20.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Blog/0910a4e3-38b5-428d-9100-f90790534c16Best-of-2016-Nasim-Mansurov-20.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Blog\0910a4e3-38b5-428d-9100-f90790534c16Best-of-2016-Nasim-Mansurov-20.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Blog\2ba40a4b-f58a-40c6-bab5-22cc2658acb9beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Airline.MVC</SourceId>
@@ -8575,6 +8591,38 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Blog\2ba40a4b-f58a-40c6-bab5-22cc2658acb9beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Blog\e78c02dd-102e-4c97-af9f-ea05e6b40cd7beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Blog/e78c02dd-102e-4c97-af9f-ea05e6b40cd7beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Blog\e78c02dd-102e-4c97-af9f-ea05e6b40cd7beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Blog\f5f2f727-ae54-4187-b73b-228585fabbc2Best-of-2016-Nasim-Mansurov-20.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Blog/f5f2f727-ae54-4187-b73b-228585fabbc2Best-of-2016-Nasim-Mansurov-20.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Blog\f5f2f727-ae54-4187-b73b-228585fabbc2Best-of-2016-Nasim-Mansurov-20.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Deal\011128c5-aa1f-45c3-a940-c92ccd47091fbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg))">
       <SourceType>Package</SourceType>
