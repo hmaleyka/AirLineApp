@@ -31,7 +31,7 @@ namespace Airline.MVC.Controllers
                 deals = _context.deals.Where(p => p.Id != deals.Id).ToList(),
             };
 
-            return View(deals);
+            return View(details);
         }
     }
 }

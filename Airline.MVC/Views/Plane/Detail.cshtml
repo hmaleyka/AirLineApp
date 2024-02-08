@@ -1,0 +1,513 @@
+﻿@using Airline.Business.ViewModel;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+@model DetailVM
+<section class="banner-section inner-banner-section bg-overlay-black bg_img"
+         data-background="assets/images/bg/inner-bg.png">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-12 text-center">
+                <div class="banner-content">
+                    <h1 class="title">Deals Single</h1>
+                    <div class="breadcrumb-area">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Deals Single</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <i class="las la-dot-circle"></i>
+    <span>Top</span>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Call-widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="call-widget-wrapper">
+    <button type="button" class="call-widget-btn">
+        <span class="num">
+            <i class="icon-call-icon"></i> +1 814 929
+            4263
+        </span> <span class="arrow"></span>
+    </button>
+    <div class="call-widget-form-area">
+        <form class="book-form">
+            <div class="row justify-content-center mb-20-none">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                    <div class="book-select">
+                        <label>From</label>
+                        <div class="book-form-icon">
+                            <i class="icon-from-airplane"></i>
+                        </div>
+                        <select class="book-select form--control">
+                            <option value="dhaka" selected>Dhaka</option>
+                            <option value="london">London</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                    <div class="book-select">
+                        <label>To</label>
+                        <div class="book-form-icon">
+                            <i class="icon-to-airplane"></i>
+                        </div>
+                        <select class="book-select form--control">
+                            <option value="london" selected>London</option>
+                            <option value="dhaka">Dhaka</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                    <div class="book-select">
+                        <label>Date</label>
+                        <div class="book-form-icon">
+                            <i class="icon-schedule-icon"></i>
+                        </div>
+                        <select class="book-select form--control">
+                            <option value="25/12/2021" selected>25/12/2021</option>
+                            <option value="30/12/2021">30/12/2021</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 form-group">
+                    <label>Passenger</label>
+                    <div class="book-quantity">
+                        <div class="book-plus-minus">
+                            <div class="dec qtybutton">-</div>
+                            <input class="book-plus-minus-box qty" type="text" name="qty" value="1" readonly>
+                            <div class="inc qtybutton">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 form-group">
+                    <button type="submit" class="btn--base w-100 mt-10">
+                        <i class="icon-btn-icon"></i> Book
+                        Now
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Call-widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start About
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="about-section about--style about--style-three page-wrapper-two pt-120">
+    <div class="container">
+        <div class="row justify-content-center align-items-center mb-30-none">
+            <div class="col-xl-6 col-lg-6 mb-30">
+                <div class="about-thumb" data-aos="fade-right" data-aos-duration="1200">
+                    <img src="assets/images/about-three.png" alt="about">
+                    <div class="about-element-two" data-aos="fade-up" data-aos-duration="1200">
+                        <img src="~/Upload/Deal/@Model.deal.MainPhoto" alt="element">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 mb-30">
+                <div class="about-content" data-aos="fade-left" data-aos-duration="1200">
+                    <span class="sub-title text--base">Specification</span>
+                    <h2 class="title">Embraer P-300E</h2>
+                    <p>
+                        @Model.deal.Description
+                    </p>
+                    <p>
+                      @Model.deal.Feature
+                    </p>
+                    <div class="about-list-area about-list--style">
+                        <ul class="about-list">
+                            <li>Unmatched technology. Superior performance.</li>
+                            <li>With its next-generation avionics, generous cabin</li>
+                            <li>industry-exclusive upper technology panel</li>
+                            <li>The best-in-class cabin altitude.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End About
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Statistics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="statistics-section statistics--style ptb-120">
+    <div class="container">
+        <div class="statistics-area">
+            <div class="row justify-content-center mb-30-none">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="statistics-item">
+                        <div class="statistics-icon">
+                            <i class="icon-Take_off_Distance"></i>
+                        </div>
+                        <div class="statistics-content">
+                            <div class="odo-area">
+                                <h3 class="odo-title odometer" data-odometer-final="@Model.deal.Distance">0</h3>
+                                <span class="sub-title">ft</span>
+                            </div>
+                            <p>Take off Distance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="statistics-item">
+                        <div class="statistics-icon">
+                            <i class="icon-MAX_RANGE"></i>
+                        </div>
+                        <div class="statistics-content">
+                            <div class="odo-area">
+                                <h3 class="odo-title odometer" data-odometer-final="1275">0</h3>
+                                <span class="sub-title">nm</span>
+                            </div>
+                            <p>MAX RANGE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="statistics-item">
+                        <div class="statistics-icon">
+                            <i class="icon-Aircraft_Speed"></i>
+                        </div>
+                        <div class="statistics-content">
+                            <div class="odo-area">
+                                <h3 class="odo-title odometer" data-odometer-final="305">0</h3>
+                                <span class="sub-title">ktas</span>
+                            </div>
+                            <p>Aircraft Speed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-30">
+                    <div class="statistics-item">
+                        <div class="statistics-icon">
+                            <i class="icon-Max_Passenger"></i>
+                        </div>
+                        <div class="statistics-content">
+                            <div class="odo-area">
+                                <h3 class="odo-title odometer" data-odometer-final="7">0</h3>
+                            </div>
+                            <p>Max Passenger</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Statistics
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Gallery
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="gallery-section bg--gray ptb-120">
+    <div class="container-fluid p-0">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 text-center">
+                <div class="section-header">
+                    <span class="sub-title"><span>Gallery</span></span>
+                    <h2 class="section-title">Embraer P-300E Photo Gallery</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="gallery-slider">
+                    <div class="swiper-wrapper">
+                        @foreach (var item in Model.deal.dealphotos)
+                        {
+                            
+                        <div class="swiper-slide">
+                            <div class="gallery-item">
+                                    <img src="~/Upload/Deal/@item.ImgUrl" alt="gallery">
+                            </div>
+                        </div>
+                        }
+                        
+                    </div>
+                    <div class="slider-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="slider-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Gallery
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="service-section ptb-120">
+    <div class="service-element-one">
+        <img src="assets/images/element/element-16.png" alt="element">
+    </div>
+    <div class="service-element-two">
+        <img src="assets/images/element/element-17.png" alt="element">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 text-center">
+                <div class="section-header">
+                    <span class="sub-title"><span>Safety</span></span>
+                    <h2 class="section-title">Embraer P-300E Safety</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center mb-30-none">
+            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 mb-30">
+                <div class="service-item-wrapper mb-60-none" data-aos="fade-right" data-aos-duration="1200">
+                    <div class="service-item mb-60">
+                        <span class="num">1</span>
+                        <h3 class="title">User friendly system added</h3>
+                        <p>
+                            There is a very fast AVANCE L5
+                            system for internet access and it did
+                            not disappoint.
+                        </p>
+                    </div>
+                    <div class="service-item mb-60">
+                        <span class="num">2</span>
+                        <h3 class="title">Punching way above its weight</h3>
+                        <p>
+                            The first small jet-powered civil aircraft was the Morane-Saulnier MS.760 Paris,
+                            developed privately
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-4 col-md-4 col-sm-12 mb-30">
+                <div class="service-thumb text-center">
+                    <img src="assets/images/plane.png" alt="plane">
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 mb-30">
+                <div class="service-item-wrapper mb-60-none">
+                    <div class="service-item mb-60">
+                        <span class="num">3</span>
+                        <h3 class="title">
+                            Binge-watching on
+                            board
+                        </h3>
+                        <p>
+                            Our technology consistently delivers the best pricing for charters ability to buy.
+                        </p>
+                    </div>
+                    <div class="service-item mb-60">
+                        <span class="num">4</span>
+                        <h3 class="title">The most delivered jet of the decade</h3>
+                        <p>
+                            Charter an entire jet, or offer the seats you don’t need through our app. Either way,
+                            there’s no longer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Interior
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="interior-section pt-120">
+    <div class="interior-element bg-overlay-black bg_img" data-background="assets/images/bg/bg-6.png"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-5 text-center">
+                <div class="section-header white">
+                    <span class="sub-title"><span>Personal Flyet Interior</span></span>
+                    <h2 class="section-title">Our Cabin with Luxury Facilities</h2>
+                    <p>
+                        Designed around the largest cabin in its class, the carbon fiber fuselage creates
+                        spaciousness, with unexpected head and shoulder room and panoramic
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="interior-wrapper">
+            <div class="interior-area">
+                <div class="interior-content text-center">
+                    <div class="interior-icon">
+                        <i class="icon-Cabin_Comfort"></i>
+                    </div>
+                    <h2 class="title">Cabin Comfort</h2>
+                    <p>
+                        Our technology consistently delivers the best pricing for charters – and the unique
+                        ability to buy individual seats. Search the world with ease and transparency.As the only
+                        tech
+                    </p>
+                </div>
+                <div class="interior-thumb">
+                    <img src="assets/images/interior/interior-1.png" alt="interior">
+                </div>
+            </div>
+            <div class="interior-area flex-row-reverse">
+                <div class="interior-content text-center">
+                    <div class="interior-icon">
+                        <i class="icon-wifi"></i>
+                    </div>
+                    <h2 class="title">Inflight Wifi</h2>
+                    <p>
+                        XO is not simply a private jet service. Whether you’re traveling for business or leisure,
+                        XO Membership also delivers insider access to unique experiences, exclusive amenities
+                    </p>
+                </div>
+                <div class="interior-thumb">
+                    <img src="assets/images/interior/interior-2.png" alt="interior">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Interior
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Book-form
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="book-form-section ptb-120">
+    <div class="container">
+        <div class="book-form-area bg-overlay-black bg_img" data-background="assets/images/bg/bg-3.png">
+            <div class="row justify-content-center">
+                <div class="col-xl-12 text-center">
+                    <div class="section-header white">
+                        <span class="sub-title text-white"><span>Flynext</span> Book</span>
+                        <h2 class="section-title">Book A Personal Flight</h2>
+                    </div>
+                    <form class="book-form">
+                        <div class="row justify-content-center mb-20-none">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                                <div class="book-select">
+                                    <label>From</label>
+                                    <div class="book-form-icon">
+                                        <i class="icon-from-airplane"></i>
+                                    </div>
+                                    <select class="book-select form--control">
+                                        <option value="dhaka" selected>Dhaka</option>
+                                        <option value="london">London</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                                <div class="book-select">
+                                    <label>To</label>
+                                    <div class="book-form-icon">
+                                        <i class="icon-to-airplane"></i>
+                                    </div>
+                                    <select class="book-select form--control">
+                                        <option value="london" selected>London</option>
+                                        <option value="dhaka">Dhaka</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                                <div class="book-select">
+                                    <label>Date</label>
+                                    <div class="book-form-icon">
+                                        <i class="icon-schedule-icon"></i>
+                                    </div>
+                                    <select class="book-select form--control">
+                                        <option value="25/12/2021" selected>25/12/2021</option>
+                                        <option value="30/12/2021">30/12/2021</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                                <label>Passenger</label>
+                                <div class="book-quantity">
+                                    <div class="book-plus-minus">
+                                        <div class="dec qtybutton">-</div>
+                                        <input class="book-plus-minus-box qty" type="text" name="qty" value="1"
+                                               readonly>
+                                        <div class="inc qtybutton">+</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 form-group">
+                                <button type="submit" class="btn--base ml-auto mr-auto mt-30">
+                                    <i class="icon-btn-icon"></i> Book Now
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Book-form
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Brand
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="brand-section ptb-120">
+    <div class="container">
+        <div class="row justify-content-center mt-10-none mb-10-none">
+            <div class="col-xl-12 text-center">
+                <div class="brand-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="assets/images/brand/brand-1.png" alt="brand">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="assets/images/brand/brand-2.png" alt="brand">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="assets/images/brand/brand-3.png" alt="brand">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="assets/images/brand/brand-4.png" alt="brand">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="brand-item">
+                                <img src="assets/images/brand/brand-5.png" alt="brand">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Brand
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->

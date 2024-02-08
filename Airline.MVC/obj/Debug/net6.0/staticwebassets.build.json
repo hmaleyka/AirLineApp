@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0TAU3neDCj0lduS8LKHryuSKkII4aKE8NGpZJNq8N0Y=",
+  "Hash": "qlLgAp9Q1M4hU/FxlZDbkpdbLLMre24cp0EvBExjDzw=",
   "Source": "Airline.MVC",
   "BasePath": "_content/Airline.MVC",
   "Mode": "Default",
@@ -9129,23 +9129,6 @@
       "OriginalItemSpec": "wwwroot\\Manage\\assets\\scss\\material-dashboard\\variables\\_virtual-reality.scss"
     },
     {
-      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\0910a4e3-38b5-428d-9100-f90790534c16Best-of-2016-Nasim-Mansurov-20.jpg",
-      "SourceId": "Airline.MVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
-      "BasePath": "_content/Airline.MVC",
-      "RelativePath": "Upload/Blog/0910a4e3-38b5-428d-9100-f90790534c16Best-of-2016-Nasim-Mansurov-20.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Upload\\Blog\\0910a4e3-38b5-428d-9100-f90790534c16Best-of-2016-Nasim-Mansurov-20.jpg"
-    },
-    {
       "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\2ba40a4b-f58a-40c6-bab5-22cc2658acb9beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg",
       "SourceId": "Airline.MVC",
       "SourceType": "Discovered",
@@ -9163,12 +9146,12 @@
       "OriginalItemSpec": "wwwroot\\Upload\\Blog\\2ba40a4b-f58a-40c6-bab5-22cc2658acb9beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg"
     },
     {
-      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\e78c02dd-102e-4c97-af9f-ea05e6b40cd7beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg",
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\3deda182-3006-487c-9ac3-e1406857f76cblog-how-important-is-employee-belonging.png",
       "SourceId": "Airline.MVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
       "BasePath": "_content/Airline.MVC",
-      "RelativePath": "Upload/Blog/e78c02dd-102e-4c97-af9f-ea05e6b40cd7beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg",
+      "RelativePath": "Upload/Blog/3deda182-3006-487c-9ac3-e1406857f76cblog-how-important-is-employee-belonging.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -9177,7 +9160,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Upload\\Blog\\e78c02dd-102e-4c97-af9f-ea05e6b40cd7beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg"
+      "OriginalItemSpec": "wwwroot\\Upload\\Blog\\3deda182-3006-487c-9ac3-e1406857f76cblog-how-important-is-employee-belonging.png"
+    },
+    {
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\63e88439-cbd7-4d30-be71-780057b23d09Employee-Journey-What-it-is-and-how-to-improve-it.jpg",
+      "SourceId": "Airline.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
+      "BasePath": "_content/Airline.MVC",
+      "RelativePath": "Upload/Blog/63e88439-cbd7-4d30-be71-780057b23d09Employee-Journey-What-it-is-and-how-to-improve-it.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Blog\\63e88439-cbd7-4d30-be71-780057b23d09Employee-Journey-What-it-is-and-how-to-improve-it.jpg"
     },
     {
       "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\f5f2f727-ae54-4187-b73b-228585fabbc2Best-of-2016-Nasim-Mansurov-20.jpg",
@@ -9503,6 +9503,23 @@
       "OriginalItemSpec": "wwwroot\\Upload\\Deal\\45a3fa89-8e82-45a8-aca9-8e3640249f4dBest-of-2016-Nasim-Mansurov-20.jpg"
     },
     {
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\4991de5e-e4b6-4f55-abe5-f90cd5ea7c0cbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg",
+      "SourceId": "Airline.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
+      "BasePath": "_content/Airline.MVC",
+      "RelativePath": "Upload/Deal/4991de5e-e4b6-4f55-abe5-f90cd5ea7c0cbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Deal\\4991de5e-e4b6-4f55-abe5-f90cd5ea7c0cbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg"
+    },
+    {
       "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\4fffad35-7da7-4e22-a4b4-77c6f1202ff1spring-tulips.png",
       "SourceId": "Airline.MVC",
       "SourceType": "Discovered",
@@ -9569,6 +9586,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\Deal\\6da28cbc-f3f1-4765-9f76-537482920804spring-tulips.png"
+    },
+    {
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\76e47155-936b-471a-8a9f-8bf855fa1283photo.jpg",
+      "SourceId": "Airline.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
+      "BasePath": "_content/Airline.MVC",
+      "RelativePath": "Upload/Deal/76e47155-936b-471a-8a9f-8bf855fa1283photo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Deal\\76e47155-936b-471a-8a9f-8bf855fa1283photo.jpg"
     },
     {
       "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\7a741d6d-357a-4c16-b848-ab7ed6e32f3dBest-of-2016-Nasim-Mansurov-20.jpg",

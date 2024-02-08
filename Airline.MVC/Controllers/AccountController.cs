@@ -1,4 +1,5 @@
 ﻿using Airline.Business.Exceptions;
+using Airline.Business.Services.Implementations;
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.AccountVM;
 using Microsoft.AspNetCore.Authorization;
@@ -106,6 +107,30 @@ namespace Airline.MVC.Controllers
             return RedirectToAction("Index", "Home");
 
 
+        }
+        public IActionResult Subscription()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Subscription(SubscribeVM vm, string? returnUrl)
+        {
+            try
+            {
+                await _service.Subscription(vm);
+
+                if (returnUrl is not null) return Redirect(returnUrl);
+
+                return RedirectToAction("Index", "Home");
+            }
+            catch (UsedEmailException ex)
+            {
+                ModelState.AddModelError(ex.name, ex.Message);
+
+                if (returnUrl is not null) return Redirect(returnUrl);
+
+                return RedirectToAction("Index", "Home", vm);
+            }
         }
 
     }

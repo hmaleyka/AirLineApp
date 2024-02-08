@@ -26,6 +26,7 @@ namespace Airline.MVC.Controllers
                 teams = _context.teams.Where(b => b.IsDeleted == false).ToList(),
                 deals= _context.deals.Include(d=>d.dealphotos).Where(b=>b.IsDeleted==false).ToList(),
                 blogs = _context.blogs.Include(b=>b.blogphotos).Include(b=>b.blogtags).ThenInclude(b=>b.tag).Where(b=>b.IsDeleted==false).ToList(),
+                subscribes = _context.subscribe.Where(b => b.IsDeleted == false).ToList()
             };
             return View(home);
         }

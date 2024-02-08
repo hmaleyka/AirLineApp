@@ -1,0 +1,22 @@
+﻿@using Airline.Business.ViewModel.AccountVM;
+@model SubscribeVM
+
+
+
+<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+    <div class="footer-widget">
+        <h4 class="title">Newsletter</h4>
+        <p>Flynext was founded in 1991 by a group of safety-focused professionals erators.</p>
+        <form class="subscribe-form" method="post">
+            <label asp-for="EmailAddress" class="subscribe-icon"><i class="las la-envelope"></i></label>
+            <input asp-for="EmailAddress" type="email" class="form--control" placeholder="Enter Email">
+            <div asp-validation-summary=All class="mt-2 mb-2"></div>
+            <button type="submit" class="btn--base" asp-controller="Account" asp-action="Subscription">
+                Subscribe Us <i class="icon-btn-icon ml-1"></i>
+            </button>
+        </form>
+
+
+
+    </div>
+</div>

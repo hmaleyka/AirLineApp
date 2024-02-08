@@ -112,6 +112,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/owner/source/repos/AirlineApp/Airline.MVC/Views/Account/Subscription.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxTdWJzY3JpcHRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/owner/source/repos/AirlineApp/Airline.MVC/Views/Blog/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -122,6 +126,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/owner/source/repos/AirlineApp/Airline.MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/owner/source/repos/AirlineApp/Airline.MVC/Views/Plane/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmVcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/owner/source/repos/AirlineApp/Airline.MVC/Views/Team/Details.cshtml]

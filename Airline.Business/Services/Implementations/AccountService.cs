@@ -4,7 +4,9 @@ using Airline.Business.Helpers;
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.AccountVM;
 using Airline.Core.Entities;
+using Airline.DAL.Context;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,11 +20,13 @@ namespace Airline.Business.Services.Implementations
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-        public AccountService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager , RoleManager<IdentityRole> roleManager )
+        private readonly AppDbContext _context;
+        public AccountService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager, AppDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
+            _context = context;
         }
 
 
@@ -103,6 +107,28 @@ namespace Airline.Business.Services.Implementations
 
         }
 
+        public async Task Subscription(SubscribeVM vm)
+        {
+            var existsEmail = await _context.subscribe.FirstOrDefaultAsync(x => x.EmailAddress == vm.EmailAddress);
 
+            if (existsEmail is null)
+            {
+                Subscribe newSubscription = new()
+                {
+                    EmailAddress = vm.EmailAddress,
+                    CreatedDate = DateTime.Now,
+                    //UpdatedDate = DateTime.Now,
+                };
+
+                await _context.subscribe.AddAsync(newSubscription);
+                await _context.SaveChangesAsync();
+                SendEmailService.SendEmail(to: vm.EmailAddress, name: "Airline Team");
+            }
+            else
+            {
+                throw new UsedEmailException("This email address used before, try another!", nameof(vm.EmailAddress));
+            }
+
+        }
     }
 }
