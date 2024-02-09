@@ -515,7 +515,10 @@
                                     </div>
                                     <select class="book-select form--control">
                                         <option value="dhaka" selected>Dhaka</option>
-                                        <option value="london">London</option>
+                                        @foreach (var item in Model.benefits)
+                                        {
+                                            <option value="london">@item.Title</option>
+                                        }
                                     </select>
                                 </div>
                             </div>

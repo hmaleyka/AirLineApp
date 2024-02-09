@@ -2,7 +2,10 @@
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.TeamVM;
 using Airline.Core.Entities;
+using Airline.DAL.Context;
+using Airline.MVC.Pagination;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Airline.MVC.Areas.Manage.Controllers
 {
@@ -10,16 +13,19 @@ namespace Airline.MVC.Areas.Manage.Controllers
     public class TeamController : Controller
     {
         private readonly ITeamService _service;
-
-        public TeamController(ITeamService service)
+        private readonly AppDbContext _context;
+        public TeamController(ITeamService service, AppDbContext context)
         {
             _service = service;
+            _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page =1)
         {
-            var teams = await _service.GetAllAsync();
-            return View(teams);
+            var query = _context.teams.AsQueryable();
+            PaginatedList<Team> paginatedOrders = PaginatedList<Team>.Create(query, page, 3);
+            //var teams = await _service.GetAllAsync();
+            return View(paginatedOrders);
         }
 
         public IActionResult Create()
