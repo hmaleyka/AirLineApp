@@ -1,4 +1,5 @@
-﻿using Airline.Business.Exceptions.Common;
+﻿using Airline.Business.Exceptions;
+using Airline.Business.Exceptions.Common;
 using Airline.Business.Helpers;
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.PackageVM;
@@ -42,11 +43,11 @@ namespace Airline.Business.Services.Implementations
             };
             if (!packagevm.Image.CheckType("image/"))
             {
-                throw new Exception("Image type should be img");
+                throw new ImageException("Image type should be img" , nameof(packagevm.Image));
             }
             if (!packagevm.Image.CheckLong(2097152))
             {
-                throw new Exception("Image size should not be large than 2mb");
+                throw new ImageException("Image size should not be large than 2mb", nameof(packagevm.Image));
             }
             package.ImgUrl = packagevm.Image.Upload(_env.WebRootPath, @"/Upload/Package/");
 
@@ -94,11 +95,11 @@ namespace Airline.Business.Services.Implementations
 
             if (!packagevm.Image.CheckType("image/"))
             {
-                throw new Exception("Image type should be img");
+                throw new ImageException("Image type should be img" , nameof(packagevm.Image));
             }
             if (!packagevm.Image.CheckLong(2097152))
             {
-                throw new Exception("Image size should not be large than 2mb");
+                throw new ImageException("Image size should not be large than 2mb" , nameof(packagevm.Image));
             }
             package.ImgUrl = packagevm.Image.Upload(_env.WebRootPath, @"/Upload/Package/");
             _repo.Update(package);

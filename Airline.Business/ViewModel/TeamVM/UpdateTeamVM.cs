@@ -17,7 +17,7 @@ namespace Airline.Business.ViewModel.TeamVM
         public string number { get; set; }
         public string email { get; set; }
         public string Experience { get; set; }
-        public string ImgUrl { get; set; }
+        public string? ImgUrl { get; set; }
         public IFormFile Image { get; set; }
     }
 }

@@ -26,11 +26,16 @@ namespace Airline.MVC.Areas.Manage.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(BenefitCreateVM benefitvm)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             await _service.Create(benefitvm);
             return RedirectToAction(nameof(Index));
         }
         public async Task<IActionResult> Update(int id)
         {
+            
             var benefit = await _service.GetByIdAsync(id);
             BenefitUpdateVM vm = new BenefitUpdateVM()
             {
@@ -44,6 +49,10 @@ namespace Airline.MVC.Areas.Manage.Controllers
         [HttpPost]
         public async Task<IActionResult> Update (BenefitUpdateVM benefitvm)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             var benefits = await _service.Update(benefitvm);
             return RedirectToAction(nameof(Index));
         }

@@ -1,4 +1,5 @@
-﻿using Airline.Business.Exceptions.Common;
+﻿using Airline.Business.Exceptions;
+using Airline.Business.Exceptions.Common;
 using Airline.Business.Helpers;
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel;
@@ -44,11 +45,11 @@ namespace Airline.Business.Services.Implementations
 
             if (!blogvm.Image.CheckType("image/"))
             {
-                throw new Exception("Image type should be img");
+                throw new ImageException("Image type should be img" , nameof(blogvm.Image));
             }
             if (!blogvm.Image.CheckLong(2097152))
             {
-                throw new Exception("Image size should not be large than 2mb");
+                throw new ImageException("Image size should not be large than 2mb", nameof(blogvm.Image));
             }
             blogs.ImgUrl = blogvm.Image.Upload(_env.WebRootPath, @"\Upload\Blog\");
 
@@ -131,11 +132,11 @@ namespace Airline.Business.Services.Implementations
             {
                 if (!blogvm.Image.CheckType("image/"))
                 {
-                    throw new Exception("image type should be img");
+                    throw new ImageException("image type should be img", nameof(blogvm.Image));
                 }
                 if (!blogvm.Image.CheckLong(2097152))
                 {
-                    throw new Exception("the long should not be large than 2mb");
+                    throw new ImageException("the long should not be large than 2mb" , nameof(blogvm.Image));
                 }
                 existblog.ImgUrl = blogvm.Image.Upload(_env.WebRootPath, @"\Upload\Blog\");
             }

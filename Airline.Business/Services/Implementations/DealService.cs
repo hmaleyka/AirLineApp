@@ -1,4 +1,5 @@
-﻿using Airline.Business.Exceptions.Common;
+﻿using Airline.Business.Exceptions;
+using Airline.Business.Exceptions.Common;
 using Airline.Business.Helpers;
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.DealVM;
@@ -44,11 +45,11 @@ namespace Airline.Business.Services.Implementations
             };
             if (!dealvm.MainPhoto.CheckType("image/"))
             {
-                throw new Exception("Image type should be img");
+                throw new ImageException("Image type should be img" , nameof(dealvm.MainPhoto));
             }
             if (!dealvm.MainPhoto.CheckLong(2097152))
             {
-                throw new Exception("Image size should not be large than 2mb");
+                throw new ImageException("Image size should not be large than 2mb" , nameof(dealvm.MainPhoto));
             }
             deals.MainPhoto = dealvm.MainPhoto.Upload(_env.WebRootPath, @"\Upload\Deal\");
             if (dealvm.dealphotos != null)
@@ -57,11 +58,11 @@ namespace Airline.Business.Services.Implementations
                 {
                     if (!photo.CheckType("image/"))
                     {
-                        throw new Exception("Image type should be img");
+                        throw new ImageException("Image type should be img", nameof(dealvm.dealphotos));
                     }
                     if (!photo.CheckLong(2097152))
                     {
-                        throw new Exception("Image size should not be large than 2mb");
+                        throw new ImageException("Image size should not be large than 2mb" , nameof(dealvm.dealphotos));
                     }
                     DealPhoto dealphoto = new DealPhoto()
                     {
@@ -116,25 +117,30 @@ namespace Airline.Business.Services.Implementations
             existdeal.Speed = dealvm.Speed;
             existdeal.Passenger = dealvm.Passenger;
             existdeal.Price = dealvm.Price;
-           // existdeal.MainPhoto = dealvm.MainphotoUrl;
-            
-            
+            // existdeal.MainPhoto = dealvm.MainphotoUrl;
+
+            if (dealvm.MainPhoto == null)
+            {
+                throw new Exception("Image should not be null");
+            }
+
             if (dealvm.MainPhoto != null)
             {
 
                 if (!dealvm.MainPhoto.CheckType("image/"))
                 {
-                    throw new Exception("Image type should be img");
+                    throw new ImageException("Image type should be img" , nameof(dealvm.MainPhoto));
                 }
                 if (!dealvm.MainPhoto.CheckLong(2097152))
                 {
-                    throw new Exception("Image size should not be large than 2mb");
+                    throw new ImageException("Image size should not be large than 2mb" , nameof(dealvm.MainPhoto));
                 }
                 //var oldphoto = existdeal.dealphotos.FirstOrDefault();
                 //existdeal.MainPhoto.Remove(oldphoto);
                 existdeal.MainPhoto = dealvm.MainPhoto.Upload(_env.WebRootPath, @"\Upload\Deal\");
                 
             }
+           
 
             if (dealvm.ImageIds == null)
             {
@@ -158,9 +164,12 @@ namespace Airline.Business.Services.Implementations
                 }
 
             }
+            if (dealvm.alldealphotos == null)
+            {
+                throw new Exception("Deal Photos should not be null");
+            }
 
-
-
+          
 
             if (dealvm.dealphotos != null)
             {
@@ -168,11 +177,11 @@ namespace Airline.Business.Services.Implementations
                 {
                     if (!photo.CheckType("image/"))
                     {
-                        throw new Exception("Image type should be img");
+                        throw new ImageException("Image type should be img" , nameof(dealvm.dealphotos));
                     }
                     if (!photo.CheckLong(2097152))
                     {
-                        throw new Exception("Image size should not be large than 2mb");
+                        throw new ImageException("Image size should not be large than 2mb", nameof(dealvm.dealphotos));
                     }
                     DealPhoto multiplephotos = new DealPhoto()
                     {

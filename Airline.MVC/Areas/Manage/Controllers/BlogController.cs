@@ -1,4 +1,5 @@
-﻿using Airline.Business.Services.Implementations;
+﻿using Airline.Business.Exceptions;
+using Airline.Business.Services.Implementations;
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.BlogVM;
 using Airline.Core.Entities;
@@ -25,20 +26,32 @@ namespace Airline.MVC.Areas.Manage.Controllers
         }
         public async Task<IActionResult> Create()
         {
+            
             ViewBag.Tags = await _tagService.GetAllAsync();
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> Create(CreateBlogVM blogVM)
         {
-            if (!ModelState.IsValid)
+            try
             {
-               
-                ViewBag.Tags = await _tagService.GetAllAsync();
-                return View();
+                if (!ModelState.IsValid)
+                {
+
+                    ViewBag.Tags = await _tagService.GetAllAsync();
+                    return View();
+                }
+                await _service.Create(blogVM);
+                return RedirectToAction(nameof(Index));
             }
-            await _service.Create(blogVM);
-            return RedirectToAction(nameof(Index));
+            catch (ImageException ex)
+            {
+                ModelState.AddModelError(ex.name, ex.Message);
+
+                return View();
+
+            }
+           
         }
         public async Task<IActionResult> Update(int id)
         {
@@ -62,12 +75,28 @@ namespace Airline.MVC.Areas.Manage.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(UpdateBlogVM blogVM)
         {
-                         
-            ViewBag.Tags = await _tagService.GetAllAsync();
-            await _service.GetByIdAsync(blogVM.Id);
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+                ViewBag.Tags = await _tagService.GetAllAsync();
+                await _service.GetByIdAsync(blogVM.Id);
+
+                var blogs = await _service.Update(blogVM);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (ImageException ex)
+            {
+
+                ModelState.AddModelError(ex.name, ex.Message);
+
+                return View();
+            }
+           
+
             
-            var blogs = await _service.Update(blogVM);
-            return RedirectToAction(nameof(Index));
         }
 
         public async Task<IActionResult> Delete(int id)

@@ -27,6 +27,10 @@ namespace Airline.MVC.Areas.Manage.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateTagVM tagvm)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             await _service.Create(tagvm);
             return RedirectToAction(nameof(Index));
         }
@@ -49,6 +53,10 @@ namespace Airline.MVC.Areas.Manage.Controllers
 
         public async Task<IActionResult> Delete(int id)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             await _service.Delete(id);
             return RedirectToAction(nameof(Index));
         }

@@ -13,7 +13,7 @@ namespace Airline.Business.ViewModel.DealVM
         public string Title { get; set; }
         public string Description { get; set; }
         public string Feature { get; set; }
-        public string MainphotoUrl { get; set; }
+        public string? MainphotoUrl { get; set; }
         public IFormFile MainPhoto { get; set; }
         public double Price { get; set; }
         public double? Distance { get; set; }

@@ -1,4 +1,5 @@
-﻿using Airline.Business.Services.Interfaces;
+﻿using Airline.Business.Exceptions;
+using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.PackageVM;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,8 +27,24 @@ namespace Airline.MVC.Areas.Manage.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(PackageCreateVM packagevm)
         {
-            await _service.Create(packagevm);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+                await _service.Create(packagevm);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (ImageException ex)
+            {
+                ModelState.AddModelError(ex.name, ex.Message);
+
+                return View();
+
+            }
+
+           
         }
         public async Task<IActionResult> Update(int id)
         {
@@ -41,16 +58,30 @@ namespace Airline.MVC.Areas.Manage.Controllers
                 Perk = package.Perk,
                 Price = package.Price,
                 date = package.date,
-                ImgUrl=package.ImgUrl,
-                Person=package.Person,
+                ImgUrl = package.ImgUrl,
+                Person = package.Person,
             };
             return View(packagevm);
         }
         [HttpPost]
         public async Task<IActionResult> Update(PackageUpdateVM packagevm)
         {
-            var packages = await _service.Update(packagevm);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+                var packages =  await _service.Update(packagevm);
+                return RedirectToAction(nameof(Index));
+            }
+            catch(ImageException ex)
+            {
+                ModelState.AddModelError(ex.name, ex.Message);
+
+                return View();
+            }
+           
         }
         public async Task<IActionResult> Delete(int id)
         {

@@ -1,4 +1,5 @@
-﻿using Airline.Business.Exceptions.Common;
+﻿using Airline.Business.Exceptions;
+using Airline.Business.Exceptions.Common;
 using Airline.Business.Helpers;
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.TeamVM;
@@ -41,11 +42,11 @@ namespace Airline.Business.Services.Implementations
 
             if (!team.Image.CheckType("image/"))
             {
-                throw new Exception("Image type should be img");
+                throw new ImageException("Image type should be img" , nameof(team.Image));
             }
             if (!team.Image.CheckLong(2097152))
             {
-                throw new Exception("Image size should not be large than 2mb");
+                throw new ImageException("Image size should not be large than 2mb", nameof(team.Image));
             }
             teams.ImgUrl = team.Image.Upload(_env.WebRootPath, @"\Upload\Team\");
 
@@ -93,11 +94,11 @@ namespace Airline.Business.Services.Implementations
 
             if (!team.Image.CheckType("image/"))
             {
-                throw new Exception("Image type should be img");
+                throw new ImageException("Image type should be img", nameof(team.Image));
             }
             if (!team.Image.CheckLong(2097152))
             {
-                throw new Exception("Image size should not be large than 2mb");
+                throw new ImageException("Image size should not be large than 2mb", nameof(team.Image));
             }
             teams.ImgUrl = team.Image.Upload(_env.WebRootPath, @"\Upload\Team\");
 

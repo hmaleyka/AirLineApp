@@ -9744,6 +9744,54 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\c9ef63aa-0e68-40ed-863b-b8e65aee57a8blog-how-important-is-employee-belonging.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\d7c41c52-f8d4-4e22-a36f-fe61e4e06f31confident-cheerful-young-businesswoman_1262-20881.avif))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Team/d7c41c52-f8d4-4e22-a36f-fe61e4e06f31confident-cheerful-young-businesswoman_1262-20881.avif</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\d7c41c52-f8d4-4e22-a36f-fe61e4e06f31confident-cheerful-young-businesswoman_1262-20881.avif))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\ea00272d-fa34-467d-a964-c599d4ecd5a9New-employee-onboarding.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Team/ea00272d-fa34-467d-a964-c599d4ecd5a9New-employee-onboarding.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\ea00272d-fa34-467d-a964-c599d4ecd5a9New-employee-onboarding.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\eff2fa8e-06b8-42b1-a395-c95c04d56fecEmployee-Journey-What-it-is-and-how-to-improve-it.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Team/eff2fa8e-06b8-42b1-a395-c95c04d56fecEmployee-Journey-What-it-is-and-how-to-improve-it.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\eff2fa8e-06b8-42b1-a395-c95c04d56fecEmployee-Journey-What-it-is-and-how-to-improve-it.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\fb08f45c-305d-477a-80e1-cb48a1cb22a1Employee-Journey-What-it-is-and-how-to-improve-it.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Airline.MVC</SourceId>

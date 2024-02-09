@@ -1,4 +1,5 @@
-﻿using Airline.Business.Services.Interfaces;
+﻿using Airline.Business.Exceptions;
+using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.DealVM;
 using Airline.Core.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -28,8 +29,23 @@ namespace Airline.MVC.Areas.Manage.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(DealCreateVM dealvm)
         {
-            await _service.Create(dealvm);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+                await _service.Create(dealvm);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (ImageException ex)
+            {
+
+                ModelState.AddModelError(ex.name, ex.Message);
+
+                return View();
+            }
+           
         }
         public async  Task<IActionResult> Update(int id)
         {
@@ -57,8 +73,23 @@ namespace Airline.MVC.Areas.Manage.Controllers
         [HttpPost]
         public async Task<IActionResult> Update (DealUpdateVM dealvm)
         {
-            var deals = await _service.Update(dealvm);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View();
+                }
+                var deals = await _service.Update(dealvm);
+                return RedirectToAction(nameof(Index));
+            }
+            catch (ImageException ex)
+            {
+                ModelState.AddModelError(ex.name, ex.Message);
+
+                return View();
+
+            }
+            
         }
         public async Task<IActionResult> Delete(int id)
         {

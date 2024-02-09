@@ -39,7 +39,7 @@ namespace Airline.Business.Services.Implementations
         {
             var benefit = await _repo.GetByIdAsync(id);
             if (benefit == null) throw new NotFoundException("Id should not be null");
-            _repo.Delete(benefit);
+            benefit.IsDeleted = true;
             await _repo.SaveChangesAsync();
             return benefit;
         }
