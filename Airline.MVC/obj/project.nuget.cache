@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1QjdHG7EBWpnpMk5IT8qyUa387kXR4JhhBV8uDqDjkX4VjwMr64jzeBewktYBnKGLwlTKsXoVzvbK4O+GzfP7A==",
+  "dgSpecHash": "sKY2jZWFaOCKbTdNSIgUkNEsZpfeYVS5pi39GaXUl+ZoN7lN/R7SXtpkH9a046s9hB2bdZRCUg6Vmm+jI+cvyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\Airline.MVC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\owner\\.nuget\\packages\\googleauthenticator\\3.2.0\\googleauthenticator.3.2.0.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
@@ -129,6 +130,7 @@
     "C:\\Users\\owner\\.nuget\\packages\\nuget.projectmodel\\6.6.1\\nuget.projectmodel.6.6.1.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\nuget.protocol\\6.6.1\\nuget.protocol.6.6.1.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\nuget.versioning\\6.6.1\\nuget.versioning.6.6.1.nupkg.sha512",
+    "C:\\Users\\owner\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

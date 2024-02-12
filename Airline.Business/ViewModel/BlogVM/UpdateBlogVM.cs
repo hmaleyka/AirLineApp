@@ -11,20 +11,30 @@ namespace Airline.Business.ViewModel.BlogVM
 {
     public class UpdateBlogVM
     {
+      
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime date { get; set; }
         public string? ImageUrl { get; set; }
-        [Required]
-        public IFormFile Image { get; set; }
-        public IEnumerable<CreateTagVM> tags { get; set; } = null!;
+        public IFormFile? Image { get; set; }
+        public IEnumerable<CreateTagVM>? tags { get; set; } = null!;
         public string About { get; set; }
-        public List<int>? tagIds { get; set; }
+        [Display(Name = "Tag")]
+        public List<int> tagIds { get; set; }
         [Required]
         public List<IFormFile>? blogphotos { get; set; }
-        public List<ProductImagesVm> allblogphotos { get; set; }
-        public List<int> ImageIds { get; set; }
+        public List<ProductImagesVm>? allblogphotos { get; set; }
+        [Display(Name = "Image")]
+        public List<int>? ImageIds { get; set; }
+
+        public UpdateBlogVM()
+        {
+            ImageIds=new List<int>();
+            blogphotos=new List<IFormFile>();
+            tagIds=new List<int>();
+            allblogphotos = new List<ProductImagesVm>();
+        }
 
         public class ProductImagesVm
         {

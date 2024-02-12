@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="mb-3" col-md-3 style="margin-right: 30px;">
                     <div style="width:100px; height:10opx">
-                        <img Width="100%" src="~/Upload/Blog/@Model.ImageUrl" />
+                        <img Width="100%" src="~/Upload/Blog/@Model?.ImageUrl" />
                     </div>
                     <label asp-for="Image" class="form-label">Image</label>
                     <input asp-for="Image" class="form-control">

@@ -2,7 +2,9 @@
 using Airline.Business.Services.Implementations;
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.AccountVM;
+using Airline.Core.Entities;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol.Plugins;
 
@@ -11,10 +13,11 @@ namespace Airline.MVC.Controllers
     public class AccountController : Controller
     {
         private readonly IAccountService _service;
-
-        public AccountController(IAccountService service)
+        private readonly UserManager<AppUser> _userManager;
+        public AccountController(IAccountService service, UserManager<AppUser> userManager)
         {
             _service = service;
+            _userManager = userManager;
         }
 
         public IActionResult Register()
@@ -31,6 +34,7 @@ namespace Airline.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterVM register)
         {
+            if(!ModelState.IsValid)return View();
             try
             {
                 await _service.Register(register);
@@ -59,6 +63,7 @@ namespace Airline.MVC.Controllers
 
         public async Task<IActionResult> Login(string? ReturnUrl)
         {
+            if (!ModelState.IsValid) return View();
             if (!User.Identity.IsAuthenticated)
             {
                 if (ReturnUrl is not null) return Redirect(ReturnUrl);
@@ -73,6 +78,7 @@ namespace Airline.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginVM vm, string? returnUrl)
         {
+            if (!ModelState.IsValid) return View();
             try
             {
                 await _service.Login(vm);
@@ -93,6 +99,12 @@ namespace Airline.MVC.Controllers
 
                 return View();
             }
+            catch (UsedEmailException ex)
+            {
+                ModelState.AddModelError(ex.name, ex.Message);
+                return View();
+            }
+            
         }
         public async Task<IActionResult> CreateRoles()
         {
@@ -131,6 +143,21 @@ namespace Airline.MVC.Controllers
 
                 return RedirectToAction("Index", "Home", vm);
             }
+        }
+
+        public async Task<IActionResult> ConfirmEmail(string Id, string token)
+        {
+            var user = await _userManager.FindByIdAsync(Id);
+            var result = await _userManager.ConfirmEmailAsync(user, token);
+            if (result.Succeeded)
+            {
+                ViewBag.IsSuccess = true;
+            }
+            else
+            {
+                ViewBag.IsSuccess = false;
+            }
+            return View();
         }
 
     }

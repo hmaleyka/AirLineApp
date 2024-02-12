@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllersWithViews();
-
 
 builder.Services.AddScoped<IBenefitRepository, BenefitRepository>();
 builder.Services.AddScoped<IPackageRepository, PackageRepository>();
@@ -20,6 +20,7 @@ builder.Services.AddScoped<IDealRepository, DealRepository>();
 builder.Services.AddScoped<ITeamRepository, TeamRepository>();
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddScoped<IFlightRepository, FlightRepository>();
 
 builder.Services.AddServices();
 

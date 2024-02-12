@@ -188,7 +188,7 @@ namespace Airline.Business.Services.Implementations
                         ImgUrl = photo.Upload(_env.WebRootPath, @"\Upload\Deal\"),
                         deal = existdeal,
                     };
-                    existdeal.dealphotos.Add(multiplephotos);
+                    existdeal.dealphotos?.Add(multiplephotos);
                 }
             }   
             _repo.Update(existdeal);

@@ -5,7 +5,11 @@ using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.AccountVM;
 using Airline.Core.Entities;
 using Airline.DAL.Context;
+using Google.Authenticator;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.ActionConstraints;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,16 +21,23 @@ namespace Airline.Business.Services.Implementations
 {
     public class AccountService : IAccountService
     {
+        //private const string key = "salam123!@@)(*";
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly AppDbContext _context;
-        public AccountService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager, AppDbContext context)
+        private readonly LinkGenerator _linkgenerator;
+        private readonly IHttpContextAccessor _http;
+
+
+        public AccountService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager, AppDbContext context, LinkGenerator linkgenerator, IHttpContextAccessor http)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _context = context;
+            _linkgenerator = linkgenerator;
+            _http = http;
         }
 
 
@@ -61,6 +72,15 @@ namespace Airline.Business.Services.Implementations
             {
                 throw new UserNotFoundException("Username/Email or Password is not valid!", nameof(vm.Password));
             }
+            if(!await _userManager.IsEmailConfirmedAsync(user))
+            {
+                throw new UsedEmailException("Please confirm your email" , nameof(vm.UsernameOrEmail));
+                
+            }
+            //TwoFactorAuthenticator tfa = new TwoFactorAuthenticator();
+            //string UserUniqueKey = vm.UsernameOrEmail + key;
+            //Session["UserUniqueKEy"] = UserUniqueKey;
+            //var setupinfo = tfa.GenerateSetupCode("Airline Team", vm.UsernameOrEmail, UserUniqueKey, 300, 300);
 
             await _signInManager.SignInAsync(user, true);
         }
@@ -96,6 +116,12 @@ namespace Airline.Business.Services.Implementations
                         throw new UserRegistrationException($"{item.Description}", nameof(item));
                     }
                 }
+
+                string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                string url = _linkgenerator.GetUriByAction(_http.HttpContext, action: "ConfirmEmail", controller: "Account",
+                    values: new { token, user.Id });
+                SendEmailService.SendEmail(to: user.Email, name: user.Name);
+                SendConfirmationService.SendEmail(to: user.Email, url: url);
             }
             else
             {
@@ -106,6 +132,7 @@ namespace Airline.Business.Services.Implementations
 
 
         }
+
 
         public async Task Subscription(SubscribeVM vm)
         {
@@ -130,5 +157,9 @@ namespace Airline.Business.Services.Implementations
             }
 
         }
+
+      
+
+
     }
 }

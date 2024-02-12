@@ -84,20 +84,20 @@
                                         <li class="menu_has_children">
                                             <a href="#0">Home</a>
                                             <ul class="sub-menu">
-                                                <li><a href="index.html">Home </a></li>
+                                                <li><a asp-controller="Home" asp-action="Index">Home </a></li>
                                                 
                                             </ul>
                                         </li>
-                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a asp-controller="About" asp-action="Index">About Us</a></li>
                                         <li class="menu_has_children">
                                             <a href="#0">Pages</a>
                                             <ul class="sub-menu">
                                                 <li><a href="service.html">Service</a></li>
                                                 <li><a href="service-details.html">Service Details</a></li>
                                                 <li><a asp-controller="Plane" asp-action="Index">Deals</a></li>
-                                                <li><a asp-controller="Plane" asp-action="Details">Deals Details</a></li>
+                                             
                                                 <li><a asp-controller="Tour" asp-action="Index">Package</a></li>
-                                                <li><a asp-controller="Tour" asp-action="Details">Package Details</a></li>
+                                                
 
                                                 <li><a asp-controller="Team" asp-action="Index">Our Team</a></li>
                                                 <li><a asp-controller="Team" asp-action="Index">Team Details</a></li>
@@ -110,7 +110,7 @@
                                             <a href="#0">Blog</a>
                                             <ul class="sub-menu">
                                                 <li><a asp-controller="Blog" asp-action="Index" >Blog</a></li>
-                                                <li><a asp-controller="Blog" asp-action="Details">Blog Details</a></li>
+                                               
                                                 >
                                             </ul>
                                         </li>
@@ -123,6 +123,7 @@
                                                 {
                                                     <li><a>@User.Identity.Name</a></li>
                                                     <li><a asp-controller="Account" asp-action="Logout">Log Out</a></li>
+                                                    <li><a asp-controller="Ticket" asp-action="Index">Your Ticket</a></li>
                                                     @*    if (User.IsInRole("Admin"))
                                                 {
                                                 <a asp-area="Manage" asp-controller="Doctor" asp-action="Index" class="btn btn-danger" style="height:50px">Go to Admin Panel</a>
@@ -135,31 +136,20 @@
                                                     <li><a asp-controller="Account" asp-action="Register">Register</a></li>
                                                     <li><a asp-controller="Account" asp-action="Login">Login</a></li>
                                                 }
-
+                                                <li><a asp-controller="Account" asp-action="Subscription">Subscribe</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                        
                                     </ul>
+                                    
                                     <div class="header-right">
-                                        <div class="search-bar d-none d-lg-block">
-                                            <a href="#0"><i class="fas fa-search"></i></a>
-                                            <div class="header-top-search-area">
-                                                <form class="header-search-form"
-                                                      action="https://gamblingscript.com/search" method="GET">
-                                                    <input type="search" name="keyword" id="header_search"
-                                                           placeholder="Search Product...">
-                                                    <button class="header-search-btn">
-                                                        <i class="fas fa-search"></i>
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </div>
+                                       
                                         <div class="header-action-area">
                                             <a href="service-details.html" class="action-btn two">
                                                 <i class="icon-btn-icon"></i>
                                             </a>
                                             <div class="header-action">
-                                                <a href="service-details.html" class="btn--base">
+                                                <a href="service-details.html" class="btn--base" >
                                                     <i class="icon-btn-icon"></i> Book Now
                                                 </a>
                                             </div>

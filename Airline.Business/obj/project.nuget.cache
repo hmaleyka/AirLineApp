@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OccsIF9ClXNv8YmR3dDq8jq7k877OfRnxRYGHPbbKySe0xsHEzMtfUHLw5/5zRRsEMY9ZFtHy5Z5HfPn5hjUTQ==",
+  "dgSpecHash": "i5E7RPBhmc5uN/+dj/WP52xTfBrvat2yNu2vhRdvP8McW6Ux5pGIdr2gfgq1FRPlyoCkmV/8xfgMI2pW0je79A==",
   "success": true,
   "projectFilePath": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.Business\\Airline.Business.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\owner\\.nuget\\packages\\googleauthenticator\\3.2.0\\googleauthenticator.3.2.0.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.26\\microsoft.aspnetcore.cryptography.internal.6.0.26.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.26\\microsoft.aspnetcore.cryptography.keyderivation.6.0.26.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
@@ -36,6 +37,7 @@
     "C:\\Users\\owner\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\owner\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",

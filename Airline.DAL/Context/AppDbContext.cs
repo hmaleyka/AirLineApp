@@ -24,5 +24,7 @@ namespace Airline.DAL.Context
         public DbSet<Tag> tags { get; set; }
         public DbSet<BlogTag> blogtags { get; set; }
         public DbSet<Subscribe> subscribe { get; set; }
+        public DbSet<Flight> flights { get; set; }
+        public DbSet<Ticket> tickets { get; set; }
     }
 }

@@ -283,6 +283,39 @@ namespace Airline.DAL.Migrations
                     b.ToTable("dealPhotos");
                 });
 
+            modelBuilder.Entity("Airline.Core.Entities.Flight", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("From")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<int>("Seat")
+                        .HasColumnType("int");
+
+                    b.Property<string>("To")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("flightdate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("flights");
+                });
+
             modelBuilder.Entity("Airline.Core.Entities.Package", b =>
                 {
                     b.Property<int>("Id")
@@ -420,6 +453,32 @@ namespace Airline.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("teams");
+                });
+
+            modelBuilder.Entity("Airline.Core.Entities.Ticket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("FlightId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("seat")
+                        .HasColumnType("int");
+
+                    b.Property<string>("userId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FlightId");
+
+                    b.HasIndex("userId");
+
+                    b.ToTable("tickets");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -588,6 +647,19 @@ namespace Airline.DAL.Migrations
                     b.Navigation("deal");
                 });
 
+            modelBuilder.Entity("Airline.Core.Entities.Ticket", b =>
+                {
+                    b.HasOne("Airline.Core.Entities.Flight", null)
+                        .WithMany("People")
+                        .HasForeignKey("FlightId");
+
+                    b.HasOne("Airline.Core.Entities.AppUser", "user")
+                        .WithMany()
+                        .HasForeignKey("userId");
+
+                    b.Navigation("user");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -649,6 +721,11 @@ namespace Airline.DAL.Migrations
             modelBuilder.Entity("Airline.Core.Entities.Deal", b =>
                 {
                     b.Navigation("dealphotos");
+                });
+
+            modelBuilder.Entity("Airline.Core.Entities.Flight", b =>
+                {
+                    b.Navigation("People");
                 });
 
             modelBuilder.Entity("Airline.Core.Entities.Tag", b =>

@@ -60,7 +60,7 @@
                     @* <div style="width:100px; height:10opx">
                         <img Width="100%" src="~/Upload/Deal/@Model.alldealphotos.FirstOrDefault().ImgUrl" />
                     </div> *@
-                    @foreach (var item in Model?.alldealphotos.ToList())
+                    @foreach (var item in Model.alldealphotos?.ToList())
                     {
                         <div class="col02 position-relative">
                             <img style="width:40%; height150px; margin-top:10px" src="~/Upload/Deal/@item.ImgUrl?" />

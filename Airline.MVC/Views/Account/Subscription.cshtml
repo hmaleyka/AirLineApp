@@ -1,12 +1,37 @@
 ﻿@using Airline.Business.ViewModel.AccountVM;
 @model SubscribeVM
 
-
-
-<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+<section class="banner-section inner-banner-section bg-overlay-black bg_img"
+         data-background="assets/images/bg/inner-bg.png">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-12 text-center">
+                <div class="banner-content">
+                    <h1 class="title">Get News From Us</h1>
+                    <div class="breadcrumb-area">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Account</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Subscribe</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container" style="margin-right:60px">
+<div class="col-xl-12 col-lg-12 col-md-6 mb-30">
     <div class="footer-widget">
-        <h4 class="title">Newsletter</h4>
-        <p>Flynext was founded in 1991 by a group of safety-focused professionals erators.</p>
+        <h4 class="title" style="color:black">Newsletter</h4>
+            <p style="color:black">
+                Flynext was founded in 1991 by a group of safety-focused professionals erators.We promise to only send you emails that we believe will genuinely interest or benefit you. And we’ll always respect your inbox, never overloading it.
+
+                Your journey with us starts here, and we can't wait to share it with you. Keep an eye on your inbox for our welcome gift coming your way soon!
+              <br />  Inspiring Stories: We love to share success stories from our community, and we hope you find them as motivating as we do.
+              <br />  Special Offers: Yes, you'll get access to exclusive deals and discounts that are not available anywhere else.
+            </p>
         <form class="subscribe-form" method="post">
             <label asp-for="EmailAddress" class="subscribe-icon"><i class="las la-envelope"></i></label>
             <input asp-for="EmailAddress" type="email" class="form--control" placeholder="Enter Email">
@@ -19,4 +44,5 @@
 
 
     </div>
+</div>
 </div>

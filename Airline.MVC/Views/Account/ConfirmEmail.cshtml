@@ -1,0 +1,48 @@
+﻿
+
+<section class="banner-section inner-banner-section bg-overlay-black bg_img"
+         data-background="assets/images/bg/inner-bg.png">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-12 text-center">
+                <div class="banner-content">
+                    <h1 class="title">Email Confirmation</h1>
+                    <div class="breadcrumb-area">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Account</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Email Confirm</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container" style="margin-right:60px">
+
+    <div class="row text-center">
+
+
+        @if(ViewBag.IsSuccess)
+        {
+            <div class="alert alert-success" role="alert">
+
+                Email is Confirmed, Thank you Our Member
+
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-success" role="alert">
+
+                Email is not confirmed
+
+            </div>
+        }
+
+    </div>
+
+
+</div>

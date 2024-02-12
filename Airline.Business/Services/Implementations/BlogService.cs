@@ -40,18 +40,25 @@ namespace Airline.Business.Services.Implementations
                 date = blogvm.date,
                 About = blogvm.About,
                 blogtags = new List<BlogTag>(),
-                blogphotos= new List<BlogPhoto>()
+                blogphotos = new List<BlogPhoto>()
             };
+            if (blogvm.Image != null)
+            {
 
-            if (!blogvm.Image.CheckType("image/"))
-            {
-                throw new ImageException("Image type should be img" , nameof(blogvm.Image));
+                if (!blogvm.Image.CheckType("image/"))
+                {
+                    throw new ImageException("Image type should be img", nameof(blogvm.Image));
+                }
+                if (!blogvm.Image.CheckLong(2097152))
+                {
+                    throw new ImageException("Image size should not be large than 2mb", nameof(blogvm.Image));
+                }
+                blogs.ImgUrl = blogvm.Image.Upload(_env.WebRootPath, @"\Upload\Blog\");
             }
-            if (!blogvm.Image.CheckLong(2097152))
+            else
             {
-                throw new ImageException("Image size should not be large than 2mb", nameof(blogvm.Image));
+                throw new ImageException("Please enter the image", nameof(blogvm.Image));
             }
-            blogs.ImgUrl = blogvm.Image.Upload(_env.WebRootPath, @"\Upload\Blog\");
 
             if (blogvm.blogphotos != null)
             {
@@ -73,6 +80,10 @@ namespace Airline.Business.Services.Implementations
                     blogs.blogphotos.Add(blogphoto);
 
                 }
+            }
+            else
+            {
+                throw new ImageException("Image should not be null", nameof(blogvm.Image));
             }
             foreach (var item in blogvm.tagIds)
             {
@@ -97,12 +108,12 @@ namespace Airline.Business.Services.Implementations
             return blog;
         }
 
-        public async  Task<ICollection<Blog>> GetAllAsync()
+        public async Task<ICollection<Blog>> GetAllAsync()
         {
-           var blogs = await  _repo.GetQuery(x=> x.IsDeleted==false)
-                .Include(x=>x.blogtags)
-                .ThenInclude(x=>x.tag).Include(x=>x.blogphotos)
-                .ToListAsync();
+            var blogs = await _repo.GetQuery(x => x.IsDeleted == false)
+                 .Include(x => x.blogtags)
+                 .ThenInclude(x => x.tag).Include(x => x.blogphotos)
+                 .ToListAsync();
             return blogs;
         }
 
@@ -110,9 +121,9 @@ namespace Airline.Business.Services.Implementations
         {
             if (id <= 0) throw new NegativeIdException("Id should not be less than zero");
             var blogs = await _repo.GetQuery(x => x.IsDeleted == false && x.Id == id)
-                .Include(x=>x.blogtags).ThenInclude(x=>x.tag).Include(x=>x.blogphotos).FirstOrDefaultAsync();
+                .Include(x => x.blogtags).ThenInclude(x => x.tag).Include(x => x.blogphotos).FirstOrDefaultAsync();
             if (blogs == null) throw new NotFoundException("Id should not be null");
-            return blogs ;
+            return blogs;
         }
 
         public async Task<Blog> Update(UpdateBlogVM blogvm)
@@ -136,10 +147,11 @@ namespace Airline.Business.Services.Implementations
                 }
                 if (!blogvm.Image.CheckLong(2097152))
                 {
-                    throw new ImageException("the long should not be large than 2mb" , nameof(blogvm.Image));
+                    throw new ImageException("the long should not be large than 2mb", nameof(blogvm.Image));
                 }
                 existblog.ImgUrl = blogvm.Image.Upload(_env.WebRootPath, @"\Upload\Blog\");
             }
+
             if (blogvm.ImageIds == null)
             {
                 existblog.blogphotos.RemoveAll(d => d.IsDeleted = false);
@@ -154,16 +166,15 @@ namespace Airline.Business.Services.Implementations
                         existblog.blogphotos.Remove(image);
                         FileManager.DeleteFile(image.Imgurl, _env.WebRootPath, @"\Upload\Blog\");
                     }
-
                 }
-                else
-                {
-                    existblog.blogphotos.RemoveAll(p => p.IsDeleted = false);
-                }
+                //else
+                //{
+                //    existblog.blogphotos.RemoveAll(p => p.IsDeleted = false);
+                //}
 
             }
 
-            if(blogvm.blogphotos != null)
+            if (blogvm.blogphotos != null)
             {
                 foreach (var photo in blogvm.blogphotos)
                 {
@@ -182,6 +193,10 @@ namespace Airline.Business.Services.Implementations
                     };
                     existblog.blogphotos.Add(blogPhoto);
                 }
+            }
+            else
+            {
+                throw new ImageException("Please Enter the email" , nameof(blogvm.blogphotos));
             }
 
             existblog.blogtags.Clear();

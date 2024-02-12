@@ -16,7 +16,8 @@ namespace Airline.Business.Services.Interfaces
         Task Logout();
         Task CreateRoles();
         Task Subscription(SubscribeVM vm);
+        
 
-       
+
     }
 }

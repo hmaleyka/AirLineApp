@@ -1,0 +1,35 @@
+﻿@using Airline.Business.ViewModel.FlightVM;
+@model CreateFlightVM
+
+<div class=" container">
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="From">From</label>
+            <input class="form-control" asp-for="From">
+            <span asp-validation-for="From" style=" color: red"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="To"> Description</label>
+            <input class="form-control" asp-for="To">
+            <span asp-validation-for="To" style=" color: red"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="flightdate"> Date</label>
+            <input class="form-control" asp-for="flightdate">
+            <span asp-validation-for="flightdate" style=" color: red"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price"> Price</label>
+            <input class="form-control" asp-for="Price">
+            <span asp-validation-for="Price" style=" color: red"></span>
+        </div>
+        <div class="row">
+            <div class="mb-3" col-md-3 style="margin-right: 30px;">
+                <label asp-for="Seat" class="form-label">Seat</label>
+                <input asp-for="Seat" class="form-control">
+                <span asp-validation-for="Seat" style="color: red"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

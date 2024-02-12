@@ -1,0 +1,177 @@
+﻿@using Airline.Core.Entities;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+@model List<Deal>
+
+<section class="banner-section inner-banner-section bg-overlay-black bg_img"
+         data-background="assets/images/bg/inner-bg.png">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-12 text-center">
+                <div class="banner-content">
+                    <h1 class="title">Our Deals</h1>
+                    <div class="breadcrumb-area">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Our Aircraft</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <i class="las la-dot-circle"></i>
+    <span>Top</span>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Call-widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div class="call-widget-wrapper">
+    <button type="button" class="call-widget-btn">
+        <span class="num">
+            <i class="icon-call-icon"></i> +1 814 929
+            4263
+        </span> <span class="arrow"></span>
+    </button>
+    <div class="call-widget-form-area">
+        <form class="book-form">
+            <div class="row justify-content-center mb-20-none">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                    <div class="book-select">
+                        <label>From</label>
+                        <div class="book-form-icon">
+                            <i class="icon-from-airplane"></i>
+                        </div>
+                        <select class="book-select form--control">
+                            <option value="dhaka" selected>Dhaka</option>
+                            <option value="london">London</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                    <div class="book-select">
+                        <label>To</label>
+                        <div class="book-form-icon">
+                            <i class="icon-to-airplane"></i>
+                        </div>
+                        <select class="book-select form--control">
+                            <option value="london" selected>London</option>
+                            <option value="dhaka">Dhaka</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 form-group">
+                    <div class="book-select">
+                        <label>Date</label>
+                        <div class="book-form-icon">
+                            <i class="icon-schedule-icon"></i>
+                        </div>
+                        <select class="book-select form--control">
+                            <option value="25/12/2021" selected>25/12/2021</option>
+                            <option value="30/12/2021">30/12/2021</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 form-group">
+                    <label>Passenger</label>
+                    <div class="book-quantity">
+                        <div class="book-plus-minus">
+                            <div class="dec qtybutton">-</div>
+                            <input class="book-plus-minus-box qty" type="text" name="qty" value="1" readonly>
+                            <div class="inc qtybutton">+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 form-group">
+                    <button type="submit" class="btn--base w-100 mt-10">
+                        <i class="icon-btn-icon"></i> Book
+                        Now
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Call-widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Charter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="charter-section pt-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section-header-wrapper">
+                    <div class="section-header">
+                        <span class="sub-title text--base">Luxury Charters</span>
+                        <h2 class="section-title">Private Jet Model</h2>
+                    </div>
+                    <div class="slider-nav-area">
+                        <div class="slider-prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="slider-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-12">
+                <div class="charter-slider">
+                    <div class="swiper-wrapper">
+                        @foreach (var item in Model)
+                        {
+                            
+                        <div class="swiper-slide">
+                            <div class="charter-item">
+                                <div class="charter-thumb">
+                                    <img src="~/Upload/Deal/@item.MainPhoto" alt="charter">
+                                </div>
+                                <div class="charter-content">
+                                    <h3 class="title"><a asp-controller="Plane" asp-action="Detail" asp-route-id="@item.Id">@item.Title</a></h3>
+                                    <span class="sub-title">Private Jet</span>
+                                    <div class="charter-meta">
+                                        <span class="seat">@item.Passenger</span>
+                                        <span class="price">Price: @item.Price/ hr</span>
+                                    </div>
+                                    <div class="charter-btn">
+                                            <a asp-controller="Plane" asp-action="Detail" asp-route-id="@item.Id">
+                                            <i class="icon-btn-icon-v2"></i> Learn about
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Charter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->

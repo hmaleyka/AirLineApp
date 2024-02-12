@@ -16,6 +16,6 @@ namespace Airline.Business.ViewModel
         public List<Team> teams { get; set; }
         public List<Blog> blogs { get; set; }
         public List<Subscribe> subscribes { get; set; }
-        //public Subscribe subscribe { get; set; }
+        public List<Flight> flights { get; set; }
     }
 }

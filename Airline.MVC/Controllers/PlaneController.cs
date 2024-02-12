@@ -15,6 +15,11 @@ namespace Airline.MVC.Controllers
             _context = context;
         }
 
+        public IActionResult Index()
+        {
+          List<Deal> deals = _context.deals.Include(d=>d.dealphotos).Where(d=>d.IsDeleted== false).ToList();
+            return View(deals);
+        }
         public IActionResult Detail(int? id)
         {
             if (id == null) return BadRequest();

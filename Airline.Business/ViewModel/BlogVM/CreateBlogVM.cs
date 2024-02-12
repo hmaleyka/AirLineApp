@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,9 @@ namespace Airline.Business.ViewModel.BlogVM
         public DateTime date { get; set; }
         public IFormFile Image { get; set; }
         public string About { get; set; }
-        public List<int>? tagIds { get; set; }
+        [Display(Name ="Tag")]
+        public List<int> tagIds { get; set; }
+        [Required]
         public List<IFormFile>? blogphotos { get; set; }
     }
 }
