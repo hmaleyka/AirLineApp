@@ -33,15 +33,29 @@
                                 <tr>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">From</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">To</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Flight Date</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Seat</th>
-                                    <th class="text-secondary opacity-7"></th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Flight Date</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Price</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Seat</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach (var item in Model)
+                               @foreach (var item in Model)
                                 {
+                                    
+                                
                                     <tr>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.flight.From</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.flight.To</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.flight.flightdate</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.flight.Price</p>
+                                        </td>
                                         <td>
                                             <div class="d-flex px-2 py-1">
 
@@ -50,9 +64,9 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>
+                                       @*  <td>
                                             <p class="text-xs font-weight-bold mb-0">@item.</p>
-                                        </td>
+                                        </td> *@    
                                        
 
 

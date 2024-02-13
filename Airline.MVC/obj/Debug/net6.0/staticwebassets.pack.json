@@ -1153,6 +1153,10 @@
       "PackagePath": "staticwebassets\\Upload\\Blog\\0f654f1c-2f98-4ce0-b230-28198ad8de85photo.jpg"
     },
     {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\1672f64a-2fac-45c5-8508-83057ce3c55cbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Blog\\1672f64a-2fac-45c5-8508-83057ce3c55cbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg"
+    },
+    {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\1bc5c2db-5d8e-463d-8b94-32044248282abeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg",
       "PackagePath": "staticwebassets\\Upload\\Blog\\1bc5c2db-5d8e-463d-8b94-32044248282abeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg"
     },
@@ -1211,6 +1215,10 @@
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\8ccba2b2-387e-4ab8-904a-72836ba5c33aphoto.jpg",
       "PackagePath": "staticwebassets\\Upload\\Blog\\8ccba2b2-387e-4ab8-904a-72836ba5c33aphoto.jpg"
+    },
+    {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\b8a7682e-581f-43b0-a5d1-8d237d7f3c41blog-flight-tips-4.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Blog\\b8a7682e-581f-43b0-a5d1-8d237d7f3c41blog-flight-tips-4.jpg"
     },
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\e97c90de-540f-4f3b-8c59-31abe99c1e5bBest-of-2016-Nasim-Mansurov-20.jpg",
@@ -1299,6 +1307,10 @@
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\281ae89b-46b9-4993-923e-44d54c39e75bphoto.jpg",
       "PackagePath": "staticwebassets\\Upload\\Deal\\281ae89b-46b9-4993-923e-44d54c39e75bphoto.jpg"
+    },
+    {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\2b93185b-80ee-4231-8982-c3efe41a7b1fimages (1).jpg",
+      "PackagePath": "staticwebassets\\Upload\\Deal\\2b93185b-80ee-4231-8982-c3efe41a7b1fimages (1).jpg"
     },
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\2ea880ac-c670-42a1-98cd-9ef02cfe2e6bsnowdrift-and-white-sky-in-norway-1024x683.webp",
@@ -1433,6 +1445,10 @@
       "PackagePath": "staticwebassets\\Upload\\Deal\\a10400d5-a735-4d93-ae1d-4dd6e04c6de2photo.jpg"
     },
     {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\a11e1029-c4d5-4679-a33f-254631d4731fimages.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Deal\\a11e1029-c4d5-4679-a33f-254631d4731fimages.jpg"
+    },
+    {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\a62dd648-9d91-462f-8e54-e2c8a1737c5cBest-of-2016-Nasim-Mansurov-20.jpg",
       "PackagePath": "staticwebassets\\Upload\\Deal\\a62dd648-9d91-462f-8e54-e2c8a1737c5cBest-of-2016-Nasim-Mansurov-20.jpg"
     },
@@ -1463,6 +1479,10 @@
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\c42b81c5-deb3-4850-b6a1-43fb568e168dbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg",
       "PackagePath": "staticwebassets\\Upload\\Deal\\c42b81c5-deb3-4850-b6a1-43fb568e168dbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\c7a0033f-ac4a-46f6-848f-189053a7abc3tphotos_384446708-stock-photo-travel-airplane-blue-sky-cloud.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Deal\\c7a0033f-ac4a-46f6-848f-189053a7abc3tphotos_384446708-stock-photo-travel-airplane-blue-sky-cloud.jpg"
     },
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\cb88427d-c768-415c-a172-bf1d9f9a3c27photo.jpg",
@@ -1505,16 +1525,16 @@
       "PackagePath": "staticwebassets\\Upload\\Deal\\e90bce46-bb25-44b3-a008-4e4bd4bfffe7Best-of-2016-Nasim-Mansurov-20.jpg"
     },
     {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\eb72627a-3c41-4efa-9cf5-a22e06a6c406airplane-water-25191045.webp",
+      "PackagePath": "staticwebassets\\Upload\\Deal\\eb72627a-3c41-4efa-9cf5-a22e06a6c406airplane-water-25191045.webp"
+    },
+    {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\f11e32a6-3eb3-4819-8ac4-65ec282e8a9bsnowdrift-and-white-sky-in-norway-1024x683.webp",
       "PackagePath": "staticwebassets\\Upload\\Deal\\f11e32a6-3eb3-4819-8ac4-65ec282e8a9bsnowdrift-and-white-sky-in-norway-1024x683.webp"
     },
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\f3e5998f-69f5-4ccf-8ee5-7499147cd95cthe-portal-ocean-pictures-tamarama.webp",
       "PackagePath": "staticwebassets\\Upload\\Deal\\f3e5998f-69f5-4ccf-8ee5-7499147cd95cthe-portal-ocean-pictures-tamarama.webp"
-    },
-    {
-      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\f8f11a35-0f46-47ce-8fd6-3e9ed0a21b1349d1f16efb33ba0fe1582d290c695-scaled-e1648646677372-1920x638.jpg",
-      "PackagePath": "staticwebassets\\Upload\\Deal\\f8f11a35-0f46-47ce-8fd6-3e9ed0a21b1349d1f16efb33ba0fe1582d290c695-scaled-e1648646677372-1920x638.jpg"
     },
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\ff2115c9-03e3-4385-bb0d-4d7c99b9e118spring-tulips.png",

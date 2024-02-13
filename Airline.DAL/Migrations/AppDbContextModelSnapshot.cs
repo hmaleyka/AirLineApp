@@ -463,13 +463,14 @@ namespace Airline.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int?>("FlightId")
+                    b.Property<int>("FlightId")
                         .HasColumnType("int");
 
                     b.Property<int>("seat")
                         .HasColumnType("int");
 
                     b.Property<string>("userId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -649,13 +650,19 @@ namespace Airline.DAL.Migrations
 
             modelBuilder.Entity("Airline.Core.Entities.Ticket", b =>
                 {
-                    b.HasOne("Airline.Core.Entities.Flight", null)
+                    b.HasOne("Airline.Core.Entities.Flight", "flight")
                         .WithMany("People")
-                        .HasForeignKey("FlightId");
+                        .HasForeignKey("FlightId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Airline.Core.Entities.AppUser", "user")
                         .WithMany()
-                        .HasForeignKey("userId");
+                        .HasForeignKey("userId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("flight");
 
                     b.Navigation("user");
                 });

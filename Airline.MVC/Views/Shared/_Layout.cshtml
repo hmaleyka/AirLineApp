@@ -70,7 +70,7 @@
                     <div class="container-fluid">
                         <div class="header-menu-content">
                             <nav class="navbar navbar-expand-lg p-0">
-                                <a class="site-logo site-title" href="index.html">
+                                <a class="site-logo site-title" asp-controller="Home" asp-action="Index">
                                     <img src="~/assets/images/logo.png"
                                          alt="site-logo">
                                 </a>
@@ -82,25 +82,23 @@
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav main-menu ml-auto">
                                         <li class="menu_has_children">
-                                            <a href="#0">Home</a>
-                                            <ul class="sub-menu">
-                                                <li><a asp-controller="Home" asp-action="Index">Home </a></li>
-                                                
-                                            </ul>
+                                            <a asp-controller="Home" asp-action="Index">Home</a>
+                                           
                                         </li>
                                         <li><a asp-controller="About" asp-action="Index">About Us</a></li>
                                         <li class="menu_has_children">
                                             <a href="#0">Pages</a>
                                             <ul class="sub-menu">
-                                                <li><a href="service.html">Service</a></li>
-                                                <li><a href="service-details.html">Service Details</a></li>
+                                                <li><a asp-controller="Benefit" asp-action="Index">Service</a></li>
+                                               
                                                 <li><a asp-controller="Plane" asp-action="Index">Deals</a></li>
                                              
                                                 <li><a asp-controller="Tour" asp-action="Index">Package</a></li>
                                                 
 
                                                 <li><a asp-controller="Team" asp-action="Index">Our Team</a></li>
-                                                <li><a asp-controller="Team" asp-action="Index">Team Details</a></li>
+                                                <li><a asp-controller="Blog" asp-action="Index">Blogs</a></li>
+                                              
                                                
                                          
                                               
@@ -110,8 +108,6 @@
                                             <a href="#0">Blog</a>
                                             <ul class="sub-menu">
                                                 <li><a asp-controller="Blog" asp-action="Index" >Blog</a></li>
-                                               
-                                                >
                                             </ul>
                                         </li>
                                         <li class="menu_has_children">
@@ -124,10 +120,10 @@
                                                     <li><a>@User.Identity.Name</a></li>
                                                     <li><a asp-controller="Account" asp-action="Logout">Log Out</a></li>
                                                     <li><a asp-controller="Ticket" asp-action="Index">Your Ticket</a></li>
-                                                    @*    if (User.IsInRole("Admin"))
+                                                    if (User.IsInRole("Admin") || User.IsInRole("SuperAdmin"))
                                                 {
                                                 <a asp-area="Manage" asp-controller="Doctor" asp-action="Index" class="btn btn-danger" style="height:50px">Go to Admin Panel</a>
-                                                } *@
+                                                }
 
                                                 }
                                                 else
@@ -185,8 +181,8 @@
                                     </a>
                                 </div>
                                 <p>
-                                    Flynext was founded in 1991 by a group of safety-focused professionals who created
-                                    The Wingman Standard for rigorously vetting air charter operators.
+                                    Airline started in 2024 by a group of safety-focused professionals who created
+                                    In this website you can find your comfortable ticket .
                                 </p>
                             </div>
                         </div>
@@ -194,9 +190,9 @@
                             <div class="footer-widget">
                                 <h4 class="widget-title">EUROPE</h4>
                                 <ul class="footer-list">
-                                    <li><a href="#0">Europe 45 Gloucester Road</a></li>
-                                    <li><a href="#0">London DT1M 3BF</a></li>
-                                    <li><a href="#0">+44 (0)20 3671 5709</a></li>
+                                    <li><a >Turkey</a></li>
+                                    <li><a >Georgia</a></li>
+                                    <li><a >+994 55 255 12 21</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -204,19 +200,19 @@
                             <div class="footer-widget">
                                 <h4 class="widget-title">ASIA & PACIFIC</h4>
                                 <ul class="footer-list">
-                                    <li><a href="#0">2473 Red Road Ste 98</a></li>
-                                    <li><a href="#0">Singapore SG</a></li>
-                                    <li><a href="#0">+ 1 623 211 6319</a></li>
+                                    <li><a >China</a></li>
+                                    <li><a >Singapore </a></li>
+                                   
                                 </ul>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
                             <div class="footer-widget">
-                                <h4 class="widget-title">NORTH AMERICA</h4>
+                                <h4 class="widget-title">Azerbaijan</h4>
                                 <ul class="footer-list">
-                                    <li><a href="#0">Europe 45 Gloucester Road</a></li>
-                                    <li><a href="#0">London DT1M 3BF</a></li>
-                                    <li><a href="#0">+44 (0)20 3671 5709</a></li>
+                                    <li><a >Baku, White City</a></li>
+                                    <li><a >Baku, Icherisheher</a></li>
+                                    <li><a >+994 77 677 12 21</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -228,41 +224,30 @@
                             <div class="footer-widget">
                                 <h4 class="title">Get started</h4>
                                 <ul class="footer-list">
-                                    <li><a href="#0">Private jet</a></li>
-                                    <li><a href="#0">Register</a></li>
-                                    <li><a href="#0">Current Jet Deals</a></li>
-                                    <li><a href="#0">Flynext mobile app</a></li>
+                                    
+                                    <li><a asp-controller="Account" asp-action="Register">Register</a></li>
+                                    <li><a asp-controller="Plane" asp-action="Index">Current Jet Deals</a></li>
+                                    
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-                            <div class="footer-widget">
-                                <h4 class="title">How it works</h4>
-                                <ul class="footer-list">
-                                    <li><a href="#0">How it works</a></li>
-                                    <li><a href="#0">Ways to fly</a></li>
-                                    <li><a href="#0">Ways to buy</a></li>
-                                    <li><a href="#0">Private charter</a></li>
-                                    <li><a href="#0">Private Jet Cost</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                       
                         <div class="col-xl-2 col-lg-2 col-md-6 mb-30">
                             <div class="footer-widget">
                                 <h4 class="title">About us</h4>
                                 <ul class="footer-list">
-                                    <li><a href="#0">About us</a></li>
-                                    <li><a href="#0">News & press</a></li>
-                                    <li><a href="#0">Blog</a></li>
-                                    <li><a href="#0">FAQs</a></li>
-                                    <li><a href="#0">Careers</a></li>
+                                    <li><a asp-controller="About" asp-action="Index">About us</a></li>
+                                   
+                                    <li><a asp-controller="Blog" asp-action="Index">Blog</a></li>
+                                    
+                                    <li><a asp-controller="Team" asp-action="Index">Teams</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
                             <div class="footer-widget">
                                 <h4 class="title">Newsletter</h4>
-                                <p>Flynext was founded in 1991 by a group of safety-focused professionals erators.</p>
+                                <p>Airline started to facilate in 2024 by a group of safety-focused professionals erators.</p>
                               
                                    
                                 
@@ -279,7 +264,7 @@
                             <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
                         </ul>
                     </div>
-                    <p>© 2022 Fly Next Airlines. All rights reserved.</p>
+                    <p>© 2024 Fly Next Airlines. All rights reserved.</p>
                 </div>
             </div>
         </footer>

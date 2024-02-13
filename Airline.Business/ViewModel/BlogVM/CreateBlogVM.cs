@@ -11,7 +11,11 @@ namespace Airline.Business.ViewModel.BlogVM
 {
     public class CreateBlogVM
     {
+        [Required]
+        [MaxLength(10)]
         public string Title { get; set; }
+        [Required]
+        [MaxLength(20)]
         public string Description { get; set; }
         public DateTime date { get; set; }
         public IFormFile Image { get; set; }

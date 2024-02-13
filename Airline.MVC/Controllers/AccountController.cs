@@ -41,12 +41,12 @@ namespace Airline.MVC.Controllers
 
                 return RedirectToAction(nameof(Login));
             }
-            catch (UsedEmailException ex)
-            {
-                ModelState.AddModelError(ex.name, ex.Message);
+            //catch (UsedEmailException ex)
+            //{
+            //    ModelState.AddModelError(ex.name, ex.Message);
 
-                return View();
-            }
+            //    return View();
+            //}
             catch (UserRegistrationException ex)
             {
                 ModelState.AddModelError(ex.name, ex.Message);
@@ -99,11 +99,11 @@ namespace Airline.MVC.Controllers
 
                 return View();
             }
-            catch (UsedEmailException ex)
-            {
-                ModelState.AddModelError(ex.name, ex.Message);
-                return View();
-            }
+            //catch (UsedEmailException ex)
+            //{
+            //    ModelState.AddModelError(ex.name, ex.Message);
+            //    return View();
+            //}
             
         }
         public async Task<IActionResult> CreateRoles()

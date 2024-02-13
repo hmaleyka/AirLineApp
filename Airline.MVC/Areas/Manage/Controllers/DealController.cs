@@ -77,7 +77,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    return View();
+                    return View(dealvm);
                 }
                 var deals = await _service.Update(dealvm);
                 return RedirectToAction(nameof(Index));

@@ -4,6 +4,7 @@ using Airline.Core.Entities;
 using Airline.DAL.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace Airline.MVC.Controllers
@@ -20,17 +21,50 @@ namespace Airline.MVC.Controllers
 
         public IActionResult Index()
         {
+
+            
+            //int flightId;
+            //var flight = _context.flights.FirstOrDefault(f => f.Id == flightId);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            List<Ticket> tickets = _context.tickets.Include(t=>t.flight).Where(t => t.user.Id == userId).ToList();
+            var user = _context.Users.Find(userId);
+            //Flight flight = _context.flights.FirstOrDefault(f => f.Id == flightId);
+            //Ticket ticket = new Ticket()
+            //{
+            //    userId = userId,
+            //    FlightId = flightId,
+            //    seat = 1,
+
+            //};
+            //_context.Add(ticket);
+            //_context.SaveChanges();
+            return View(tickets);
+
+        }
+        public IActionResult Book(int flightId )
+        {
             try
             {
 
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                List<Ticket> ticket = _context.tickets.Where(t => t.user.Id == userId).ToList();
+                //List<Ticket> tickets = _context.tickets.Where(t => t.user.Id == userId).ToList();
                 var user = _context.Users.Find(userId);
                 //Ticket tickets = _context.tickets.Where;
                 if (user != null)
                 {
                     SendBookEmailService.SendEmail(to: user.Email, name: user.Name);
-                    return View(ticket);
+                    var flightExists = _context.flights.Any(f => f.Id == flightId);
+                    Ticket ticket = new Ticket()
+                    {
+                        userId = userId,
+                        FlightId = flightId,
+                        seat = 1,
+
+                    };
+                    _context.Add(ticket);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index", "Ticket");
                 }
                 else
                 {
@@ -42,22 +76,8 @@ namespace Airline.MVC.Controllers
             {
                 ModelState.AddModelError(ex.name, ex.Message);
                 return View("Error");
-                
-            }
 
-
-            
-        }
-        public IActionResult Book(AppUser user)
-        {
-            if (!ModelState.IsValid)
-            {
-                return View();
             }
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var ticket = _context.tickets.Where(t => t.user.Id == userId).ToList();
-            SendBookEmailService.SendEmail(to: user.Email, name: user.Name);
-            return RedirectToAction(nameof(Index));
         }
     }
 }

@@ -51,6 +51,7 @@ namespace Airline.Business.Services.Implementations
             {
                 throw new ImageException("Image size should not be large than 2mb" , nameof(dealvm.MainPhoto));
             }
+
             deals.MainPhoto = dealvm.MainPhoto.Upload(_env.WebRootPath, @"\Upload\Deal\");
             if (dealvm.dealphotos != null)
             {
@@ -137,14 +138,25 @@ namespace Airline.Business.Services.Implementations
                 }
                 //var oldphoto = existdeal.dealphotos.FirstOrDefault();
                 //existdeal.MainPhoto.Remove(oldphoto);
+                //var oldPhoto = existdeal.dealphotos?.FirstOrDefault();
+                //existdeal.dealphotos?.Remove(oldPhoto);
+                //DealPhoto newdealphoto = new DealPhoto()
+                //{
+                    
+                //    DealId = existdeal.Id,
+                //    ImgUrl = dealvm.MainPhoto.Upload(_env.WebRootPath, @"\Upload\Deal\")
+
+
+                //};
+                //existdeal.dealphotos?.Add(newdealphoto);
                 existdeal.MainPhoto = dealvm.MainPhoto.Upload(_env.WebRootPath, @"\Upload\Deal\");
                 
             }
-           
+
 
             if (dealvm.ImageIds == null)
             {
-                existdeal.dealphotos.RemoveAll(d=>d.IsDeleted=false);
+                existdeal.dealphotos.Clear();
             }
             else
             {
@@ -160,7 +172,7 @@ namespace Airline.Business.Services.Implementations
                 }
                 else
                 {
-                    existdeal.dealphotos.RemoveAll(p =>p.IsDeleted=false);
+                    existdeal.dealphotos.Clear();
                 }
 
             }
@@ -185,10 +197,10 @@ namespace Airline.Business.Services.Implementations
                     }
                     DealPhoto multiplephotos = new DealPhoto()
                     {
-                        ImgUrl = photo.Upload(_env.WebRootPath, @"\Upload\Deal\"),
                         deal = existdeal,
+                        ImgUrl = photo.Upload(_env.WebRootPath, @"\Upload\Deal\"),
                     };
-                    existdeal.dealphotos?.Add(multiplephotos);
+                    existdeal.dealphotos.Add(multiplephotos);
                 }
             }   
             _repo.Update(existdeal);

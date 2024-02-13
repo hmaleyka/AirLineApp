@@ -24,7 +24,7 @@ namespace Airline.Business.Services.Implementations
                 {
                     From = new MailAddress("maleykaheybatova1011@gmail.com"),
                     Subject = "Welcome to Airline App Website",
-                    Body = $"Hello please confirm your email with this url <a href='{url}'</a>",
+                    Body = $"Hello please confirm your email with this url {url}",
                     IsBodyHtml = true
                 };
 
