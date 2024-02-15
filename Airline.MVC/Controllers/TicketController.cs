@@ -1,11 +1,14 @@
 ﻿using Airline.Business.Exceptions;
 using Airline.Business.Services.Implementations;
+using Airline.Business.ViewModel;
 using Airline.Core.Entities;
 using Airline.DAL.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using QRCoder;
 using System.Security.Claims;
+using static QRCoder.PayloadGenerator;
 
 namespace Airline.MVC.Controllers
 {
@@ -22,12 +25,12 @@ namespace Airline.MVC.Controllers
         public IActionResult Index()
         {
 
-            
+
             //int flightId;
             //var flight = _context.flights.FirstOrDefault(f => f.Id == flightId);
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            List<Ticket> tickets = _context.tickets.Include(t=>t.flight).Where(t => t.user.Id == userId).ToList();
+            List<Ticket> tickets = _context.tickets.Include(t => t.flight).Where(t => t.user.Id == userId).ToList();
             var user = _context.Users.Find(userId);
             //Flight flight = _context.flights.FirstOrDefault(f => f.Id == flightId);
             //Ticket ticket = new Ticket()
@@ -42,7 +45,7 @@ namespace Airline.MVC.Controllers
             return View(tickets);
 
         }
-        public IActionResult Book(int flightId )
+        public IActionResult Book(int flightId)
         {
             try
             {
@@ -78,6 +81,34 @@ namespace Airline.MVC.Controllers
                 return View("Error");
 
             }
+
+        }
+
+        public IActionResult BarCode()
+        {
+            QRCodeVM model = new();
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult BarCode(QRCodeVM model)
+        {
+            Payload? payload = null;
+            switch (model.QRCodeType)
+            {
+                
+                case 1:
+                    payload = new Mail(model.ReceiverEmailAddress, model.EmailSubject, model.EmailMessage);
+                    break;
+                
+            }
+
+            QRCodeGenerator qrGenerator = new();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(payload);
+            BitmapByteQRCode qrCode = new(qrCodeData);
+            string base64String = Convert.ToBase64String(qrCode.GetGraphic(20));
+            model.QRImageURL = "data:image/png;base64," + base64String;
+            return View("BarCode", model);
         }
     }
 }

@@ -120,9 +120,9 @@
                                                     <li><a>@User.Identity.Name</a></li>
                                                     <li><a asp-controller="Account" asp-action="Logout">Log Out</a></li>
                                                     <li><a asp-controller="Ticket" asp-action="Index">Your Ticket</a></li>
-                                                    if (User.IsInRole("Admin") || User.IsInRole("SuperAdmin"))
+                                                    if (User.IsInRole("SuperAdmin"))
                                                 {
-                                                <a asp-area="Manage" asp-controller="Doctor" asp-action="Index" class="btn btn-danger" style="height:50px">Go to Admin Panel</a>
+                                                        <li><a asp-area="Manage" asp-controller="Benefit" asp-action="Index" class="btn btn-danger" style="height:50px">Go to Admin Panel</a></li>
                                                 }
 
                                                 }
@@ -213,6 +213,10 @@
                                     <li><a >Baku, White City</a></li>
                                     <li><a >Baku, Icherisheher</a></li>
                                     <li><a >+994 77 677 12 21</a></li>
+                                   @*  @foreach (var item in Model.settings)
+                                    {
+                                        <li><a> @item.Value</a></li>
+                                    } *@
                                 </ul>
                             </div>
                         </div>
@@ -257,12 +261,7 @@
                 </div>
                 <div class="copyright-area">
                     <div class="social-area">
-                        <ul class="footer-social">
-                            <li><a href="#0"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#0" class="active"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#0"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#0"><i class="fab fa-instagram"></i></a></li>
-                        </ul>
+                       
                     </div>
                     <p>© 2024 Fly Next Airlines. All rights reserved.</p>
                 </div>
@@ -275,7 +274,7 @@
 
 
 
-
+    @await RenderSectionAsync("Scripts", required: false)
     <!-- jquery -->
     <script src="~/assets/js/jquery.js"></script>
     <!-- bootstrap js -->

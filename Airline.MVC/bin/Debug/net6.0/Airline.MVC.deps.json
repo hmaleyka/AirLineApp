@@ -10,7 +10,8 @@
         "dependencies": {
           "Airline.Business": "1.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.26",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
+          "QRCoder": "1.4.3"
         },
         "runtime": {
           "Airline.MVC.dll": {}

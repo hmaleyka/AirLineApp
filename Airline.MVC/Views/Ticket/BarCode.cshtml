@@ -1,0 +1,93 @@
+﻿@using Airline.Business.ViewModel;
+@model QRCodeVM
+
+@* @{
+    ViewData["Title"] = "Generate QR Code";
+} *@
+
+
+
+<form asp-action="BarCode"  >
+
+    <div class="row mt-2">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <label>Select QR Code Type</label>
+            <select asp-for="QRCodeType" id="QRCodeType" class="form-control" onchange="onQRCodeTypeChange()">
+              
+                <option value="3">Email</option>
+              
+          </select>
+        </div>
+    </div> 
+
+
+    <!--  SMS  -->
+  
+
+    <!--  Whats App Message  -->
+ 
+
+    <!--  Compose Email  -->
+   @*  <div id="DIV3" class="hideDiv">
+        <div class="row mt-2">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <label>Enter Receive's Email Address</label>
+                <input type="text" asp-for="ReceiverEmailAddress" class="form-control" autocomplete="off" />
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <label>Enter Email Subject</label>
+                <input type="text" asp-for="EmailSubject" class="form-control" autocomplete="off" />
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <label>Enter Email Message</label>
+                <textarea asp-for="EmailMessage" class="form-control"></textarea>
+            </div>
+        </div>
+    </div>   *@
+
+   
+
+    <div class="row mt-2">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <button type="submit" class="btn btn-primary">Generate</button>
+            <button type="reset" id="btn-reset" class="btn btn-secondary">Reset</button>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.QRImageURL))
+    {
+        <div class="row mt-2" id="qrCodeImage">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img height="250" width="250" src="@Model.QRImageURL" />
+            </div>
+        </div>
+    }
+
+</form>
+
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+            $(".hideDiv").hide();
+            $("#QRCodeType").trigger("change");
+            $("#btn-reset").on("click", function () {
+                window.location.reload();
+            });
+        });
+
+        function onQRCodeTypeChange() {
+            let qrcodeType = $("#QRCodeType").val();
+            $(".hideDiv").hide();
+            $("#DIV" + qrcodeType).show();
+        }
+    </script>
+}
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>

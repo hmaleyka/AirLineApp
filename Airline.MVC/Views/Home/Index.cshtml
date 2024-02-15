@@ -29,11 +29,15 @@
         <div class="row justify-content-center align-items-center mb-30-none">
             <div class="col-xxl-5 col-xl-6 col-lg-12 mb-30">
                 <div class="banner-content" data-aos="fade-right" data-aos-duration="1800">
-                    
+                    @foreach (var item in Model.settings)
+                    {
+                        <li><a> @item.Value</a></li>
+                    }
                     <h1 class="title">Book your a Plane Ticket </h1>
                     <h3 class="title"> Next, You can fly our Member</h3>
                     <p>
-                        Welcome to Airline website. We pride ourselves on offering a professional service. 
+                        Welcome to Airline website. We pride ourselves on offering a professional service.
+                       
                     </p>
                     
                 </div>
@@ -75,141 +79,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Start Overview
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<div class="overview-section ptb-120">
-    <div class="container-fluid">
-        <div class="overview-area">
-            <div class="overview-element" data-aos="fade-up" data-aos-duration="1200">
-                <img src="~/assets/images/element/element-6.png" alt="element">
-            </div>
-            <div class="overview-tab">
-                <nav>
-                    <div class="overview-tab-thumb" data-aos="fade-left" data-aos-duration="1200">
-                        <img src="assets/images/overview/overview-2.png" alt="overview">
-                        <div class="nav-tab-area">
-                            <div class="nav-tab-header">
-                                <span class="sub-title"><span>#1</span> Private Jet Charter</span>
-                                <h2 class="title">Find the Best Service For You</h2>
-                            </div>
-                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <button class="nav-link" id="private-jet-tab" data-toggle="tab"
-                                        data-target="#private-jet" type="button" role="tab"
-                                        aria-controls="private-jet" aria-selected="true">
-                                    <span>01</span> Private Jet
-                                    Charter
-                                </button>
-                                <button class="nav-link active" id="business-jet-tab" data-toggle="tab"
-                                        data-target="#business-jet" type="button" role="tab"
-                                        aria-controls="business-jet" aria-selected="false">
-                                    <span>02</span> Business
-                                    Jet Charter
-                                </button>
-                                <button class="nav-link" id="private-helicopter-tab" data-toggle="tab"
-                                        data-target="#private-helicopter" type="button" role="tab"
-                                        aria-controls="private-helicopter" aria-selected="false">
-                                    <span>03</span>
-                                    Private Helicopter
-                                </button>
-                                <button class="nav-link" id="air-ambulance-tab" data-toggle="tab"
-                                        data-target="#air-ambulance" type="button" role="tab"
-                                        aria-controls="air-ambulance" aria-selected="false">
-                                    <span>04</span> Air
-                                    Ambulance
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <div class="tab-content" id="nav-tabContent" data-aos="fade-right" data-aos-duration="1200">
-                    <div class="tab-pane fade" id="private-jet" role="tabpanel"
-                         aria-labelledby="private-jet-tab">
-                        <div class="overview-item">
-                            <div class="overview-thumb">
-                                <img src="~/assets/images/overview/overview-1.png" alt="overview">
-                                <div class="overview-thumb-content">
-                                    <h3 class="title">
-                                        <a href="service-details.html">Private Jet Charter</a>
-                                    </h3>
-                                    <p>
-                                        Trade crowded airports and wasted time for the ease, comfort, and
-                                        convenience of travel by private jet.
-                                    </p>
-                                    <div class="overview-btn">
-                                        <a href="service-details.html" class="custom-btn">
-                                            <i class="icon-btn-icon-v2"></i> 
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade show active" id="business-jet" role="tabpanel"
-                         aria-labelledby="business-jet-tab">
-                        <div class="overview-item">
-                            <div class="overview-thumb">
-                                <img src="~/assets/images/overview/overview-1.png" alt="overview">
-                                <div class="overview-thumb-content">
-                                    <h3 class="title">
-                                        <a href="service-details.html">Business Jet Charter</a>
-                                    </h3>
-                                    <p>
-                                        Trade crowded airports and wasted time for the ease, comfort, and
-                                        convenience of travel by private jet.
-                                    </p>
-                                    <div class="overview-btn">
-                                        <a href="service-details.html" class="custom-btn">
-                                            <i class="icon-btn-icon-v2"></i> 
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="private-helicopter" role="tabpanel"
-                         aria-labelledby="private-helicopter-tab">
-                        <div class="overview-item">
-                            <div class="overview-thumb">
-                                <img src="~/assets/images/overview/overview-1.png" alt="overview">
-                                <div class="overview-thumb-content">
-                                    <h3 class="title"><a href="service-details.html">Private Helicopter</a></h3>
-                                    <p>
-                                        Trade crowded airports and wasted time for the ease, comfort, and
-                                        convenience of travel by private jet.
-                                    </p>
-                                    <div class="overview-btn">
-                                        <a href="service-details.html" class="custom-btn">
-                                            <i class="icon-btn-icon-v2"></i> 
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="air-ambulance" role="tabpanel"
-                         aria-labelledby="air-ambulance-tab">
-                        <div class="overview-item">
-                            <div class="overview-thumb">
-                                <img src="~/assets/images/overview/overview-1.png" alt="overview">
-                                <div class="overview-thumb-content">
-                                    <h3 class="title"><a href="service-details.html">Air Ambulance</a></h3>
-                                    <p>
-                                        Trade crowded airports and wasted time for the ease, comfort, and
-                                        convenience of travel by private jet.
-                                    </p>
-                                    <div class="overview-btn">
-                                        <a href="service-details.html" class="custom-btn">
-                                            <i class="icon-btn-icon-v2"></i> 
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     End Overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -239,13 +109,13 @@
                         </div>
                         <div class="about-book-left">
                             <h3 class="call-title">Call for book an order</h3>
-                            <span class="call"><a href="tel:8-800-10-500">8-800-10-500</a></span>
+                            <span class="call"><a >+994 77 677 89 98</a></span>
                         </div>
                         <div class="about-book-right">
-                            <a href="service-details.html" class="btn--base">
+                           @*  <a href="service-details.html" class="btn--base">
                                 <i class="icon-btn-icon-v2"></i>
                                 Book Now
-                            </a>
+                            </a> *@
                         </div>
                     </div>
                 </div>

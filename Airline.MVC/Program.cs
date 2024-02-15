@@ -21,6 +21,7 @@ builder.Services.AddScoped<ITeamRepository, TeamRepository>();
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<IFlightRepository, FlightRepository>();
+builder.Services.AddScoped<ISettingRepository, SettingRepository>();
 
 builder.Services.AddServices();
 
@@ -57,7 +58,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
             name: "areas",
-            pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+            pattern: "{area:exists}/{controller=Benefit}/{action=Index}/{id?}"
           );
 app.MapControllerRoute(
     name: "default",

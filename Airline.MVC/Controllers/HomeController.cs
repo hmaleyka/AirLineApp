@@ -28,6 +28,7 @@ namespace Airline.MVC.Controllers
                 blogs = _context.blogs.Include(b=>b.blogphotos).Include(b=>b.blogtags).ThenInclude(b=>b.tag).Where(b=>b.IsDeleted==false).ToList(),
                 subscribes = _context.subscribe.Where(b => b.IsDeleted == false).ToList(),
                 flights = _context.flights.Where(f=>f.IsDeleted==false).ToList(),
+                settings = _context.setting.Where(s=>s.IsDeleted==false).ToList(),  
             };
             return View(home);
         }

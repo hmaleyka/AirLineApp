@@ -24,7 +24,7 @@ namespace Airline.Business
             services.AddScoped<ITagService, TagService>();
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IFlightService, FlightService>();
-            
+            services.AddScoped<ISettingService, SettingService>();
         }
     }
 }

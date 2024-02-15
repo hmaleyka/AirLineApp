@@ -26,5 +26,6 @@ namespace Airline.DAL.Context
         public DbSet<Subscribe> subscribe { get; set; }
         public DbSet<Flight> flights { get; set; }
         public DbSet<Ticket> tickets { get; set; }
+        public DbSet<Setting> setting { get; set; }
     }
 }

@@ -15,6 +15,11 @@ namespace Airline.MVC.Controllers
         {
             _context = context;
         }
+        public IActionResult Index ()
+        {
+            List<Package> packages = _context.packages.Where(p=>p.IsDeleted==false).ToList();
+            return View(packages);
+        }
 
         public IActionResult Detail(int id)
         {

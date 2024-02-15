@@ -364,6 +364,30 @@ namespace Airline.DAL.Migrations
                     b.ToTable("packages");
                 });
 
+            modelBuilder.Entity("Airline.Core.Entities.Setting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Key")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Value")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("setting");
+                });
+
             modelBuilder.Entity("Airline.Core.Entities.Subscribe", b =>
                 {
                     b.Property<int>("Id")
