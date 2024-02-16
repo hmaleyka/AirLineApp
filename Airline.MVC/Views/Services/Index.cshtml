@@ -1,0 +1,90 @@
+﻿@using Airline.Core.Entities;
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+@model List<Benefit>
+<section class="banner-section inner-banner-section bg-overlay-black bg_img"
+        >
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xl-12 text-center">
+                <div class="banner-content">
+                    <h1 class="title">Services</h1>
+                    <div class="breadcrumb-area">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                             
+                                <li class="breadcrumb-item active" aria-current="page">Services</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Banner
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<a href="#" class="scrollToTop">
+    <i class="las la-dot-circle"></i>
+    <span>Top</span>
+</a>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Scroll-To-Top
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Call-widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Call-widget
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Feature
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section class="feature-section page-wrapper-two ptb-120">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 text-center">
+                <div class="section-header" data-aos="fade-up" data-aos-duration="1200">
+                    <span class="sub-title text--base">Our Services</span>
+                    <h2 class="section-title">Find the Best Service For You</h2>
+                </div>
+            </div>
+        </div>
+        <div class="feature-area" data-aos="fade-up" data-aos-duration="1200">
+            <div class="row justify-content-center m-0">
+               @foreach (var item in Model)
+                {
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 p-0">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                @Html.Raw(item.Icon)
+                            </div>
+                            <div class="feature-content">
+                                <h3 class="title">@item.Title</h3>
+                                <p>
+                                    @item.Description
+                                </p>
+                                <div class="feature-btn">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                
+            </div>
+        </div>
+    </div>
+</section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    End Feature
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+

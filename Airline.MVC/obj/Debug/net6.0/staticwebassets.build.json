@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+C+Ho0HHshzt4b+Pg3EIDXeyL6otI1kQr8UXF+G3fk0=",
+  "Hash": "zVSCiwjzgPxy7b/ewrtfVPiZZLnqU8hnDQpP2zwPB3Y=",
   "Source": "Airline.MVC",
   "BasePath": "_content/Airline.MVC",
   "Mode": "Default",
@@ -9418,6 +9418,23 @@
       "OriginalItemSpec": "wwwroot\\Upload\\Blog\\8ccba2b2-387e-4ab8-904a-72836ba5c33aphoto.jpg"
     },
     {
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\a1651b1c-4091-4189-bf21-e048003f34dcbest-travel-blogs-header.webp",
+      "SourceId": "Airline.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
+      "BasePath": "_content/Airline.MVC",
+      "RelativePath": "Upload/Blog/a1651b1c-4091-4189-bf21-e048003f34dcbest-travel-blogs-header.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Blog\\a1651b1c-4091-4189-bf21-e048003f34dcbest-travel-blogs-header.webp"
+    },
+    {
       "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\b8a7682e-581f-43b0-a5d1-8d237d7f3c41blog-flight-tips-4.jpg",
       "SourceId": "Airline.MVC",
       "SourceType": "Discovered",
@@ -9775,6 +9792,23 @@
       "OriginalItemSpec": "wwwroot\\Upload\\Deal\\2b93185b-80ee-4231-8982-c3efe41a7b1fimages (1).jpg"
     },
     {
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\2c130d87-b28a-4afb-9189-eec4a3718ff6images (1).jpg",
+      "SourceId": "Airline.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
+      "BasePath": "_content/Airline.MVC",
+      "RelativePath": "Upload/Deal/2c130d87-b28a-4afb-9189-eec4a3718ff6images (1).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Deal\\2c130d87-b28a-4afb-9189-eec4a3718ff6images (1).jpg"
+    },
+    {
       "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\2ea880ac-c670-42a1-98cd-9ef02cfe2e6bsnowdrift-and-white-sky-in-norway-1024x683.webp",
       "SourceId": "Airline.MVC",
       "SourceType": "Discovered",
@@ -9892,6 +9926,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\Deal\\45a3fa89-8e82-45a8-aca9-8e3640249f4dBest-of-2016-Nasim-Mansurov-20.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\483e54d4-cbe4-499b-81e2-d0f0e75a29bfSukhoiBusinessJet-660x404.jpg",
+      "SourceId": "Airline.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
+      "BasePath": "_content/Airline.MVC",
+      "RelativePath": "Upload/Deal/483e54d4-cbe4-499b-81e2-d0f0e75a29bfSukhoiBusinessJet-660x404.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Deal\\483e54d4-cbe4-499b-81e2-d0f0e75a29bfSukhoiBusinessJet-660x404.jpg"
     },
     {
       "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\4991de5e-e4b6-4f55-abe5-f90cd5ea7c0cbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg",
@@ -10353,6 +10404,23 @@
       "OriginalItemSpec": "wwwroot\\Upload\\Deal\\a11e1029-c4d5-4679-a33f-254631d4731fimages.jpg"
     },
     {
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\a3ffa5c4-3292-4615-84e5-611bbea1f0f2images.jpg",
+      "SourceId": "Airline.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
+      "BasePath": "_content/Airline.MVC",
+      "RelativePath": "Upload/Deal/a3ffa5c4-3292-4615-84e5-611bbea1f0f2images.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Deal\\a3ffa5c4-3292-4615-84e5-611bbea1f0f2images.jpg"
+    },
+    {
       "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\a62dd648-9d91-462f-8e54-e2c8a1737c5cBest-of-2016-Nasim-Mansurov-20.jpg",
       "SourceId": "Airline.MVC",
       "SourceType": "Discovered",
@@ -10727,6 +10795,23 @@
       "OriginalItemSpec": "wwwroot\\Upload\\Deal\\f3e5998f-69f5-4ccf-8ee5-7499147cd95cthe-portal-ocean-pictures-tamarama.webp"
     },
     {
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\f456e136-fa92-4baa-9306-fb5fc81af41dMy-50-favourite-travel-blogs-1.jpg",
+      "SourceId": "Airline.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
+      "BasePath": "_content/Airline.MVC",
+      "RelativePath": "Upload/Deal/f456e136-fa92-4baa-9306-fb5fc81af41dMy-50-favourite-travel-blogs-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Deal\\f456e136-fa92-4baa-9306-fb5fc81af41dMy-50-favourite-travel-blogs-1.jpg"
+    },
+    {
       "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\ff2115c9-03e3-4385-bb0d-4d7c99b9e118spring-tulips.png",
       "SourceId": "Airline.MVC",
       "SourceType": "Discovered",
@@ -10897,6 +10982,40 @@
       "OriginalItemSpec": "wwwroot\\Upload\\Package\\03adc966-87da-4936-924a-9af276e57d9fspring-tulips.png"
     },
     {
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\14b41e9d-3200-46dc-8dc5-593e46736b50valentina-in-dubrovnik-portfolio-photo-78_1920.jpeg",
+      "SourceId": "Airline.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
+      "BasePath": "_content/Airline.MVC",
+      "RelativePath": "Upload/Package/14b41e9d-3200-46dc-8dc5-593e46736b50valentina-in-dubrovnik-portfolio-photo-78_1920.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Package\\14b41e9d-3200-46dc-8dc5-593e46736b50valentina-in-dubrovnik-portfolio-photo-78_1920.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\402d017c-63ae-4979-a992-1141a77e5efcistockphoto-1227552766-170667a.jpg",
+      "SourceId": "Airline.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
+      "BasePath": "_content/Airline.MVC",
+      "RelativePath": "Upload/Package/402d017c-63ae-4979-a992-1141a77e5efcistockphoto-1227552766-170667a.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Package\\402d017c-63ae-4979-a992-1141a77e5efcistockphoto-1227552766-170667a.jpg"
+    },
+    {
       "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\6d494b9d-727c-4a02-a0f0-03a3017039f0spring-tulips.png",
       "SourceId": "Airline.MVC",
       "SourceType": "Discovered",
@@ -10946,6 +11065,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\Package\\8ee8d2e9-c3f6-4eab-ab24-d3e23d48fb6eBest-of-2016-Nasim-Mansurov-20.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\b32779d4-a458-4e39-99bd-43b9b372da5awhen-is-new-years-day-2024-65709f84da4f6.jpg",
+      "SourceId": "Airline.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
+      "BasePath": "_content/Airline.MVC",
+      "RelativePath": "Upload/Package/b32779d4-a458-4e39-99bd-43b9b372da5awhen-is-new-years-day-2024-65709f84da4f6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Package\\b32779d4-a458-4e39-99bd-43b9b372da5awhen-is-new-years-day-2024-65709f84da4f6.jpg"
     },
     {
       "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\bb18006f-b087-4922-b41e-1ebdbf7cb7463915e089787345dfb291e379a28f396c.jpg",

@@ -1,9 +1,11 @@
 ﻿using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.TagVM;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Airline.MVC.Areas.Manage.Controllers
 {
+    [AutoValidateAntiforgeryToken]
     [Area("Manage")]
     public class TagController : Controller
     {
@@ -13,17 +15,18 @@ namespace Airline.MVC.Areas.Manage.Controllers
         {
             _service = service;
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Index()
         {
             var tags = await _service.GetAllAsync();
             return View(tags);
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public IActionResult Create()
         {
             return View();
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(CreateTagVM tagvm)
         {
@@ -34,7 +37,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             await _service.Create(tagvm);
             return RedirectToAction(nameof(Index));
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Update(int id)
         {
             var tags = await _service.GetByIdAsync(id);
@@ -44,13 +47,14 @@ namespace Airline.MVC.Areas.Manage.Controllers
             };
             return View(tagvm);
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost]
         public async Task<IActionResult> Update(UpdateTagVM tagvm)
         {
             await _service.Update(tagvm);
             return RedirectToAction(nameof(Index));
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             if (!ModelState.IsValid)

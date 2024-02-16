@@ -4,11 +4,13 @@ using Airline.Business.ViewModel.TeamVM;
 using Airline.Core.Entities;
 using Airline.DAL.Context;
 using Airline.MVC.Pagination;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Airline.MVC.Areas.Manage.Controllers
 {
+    [AutoValidateAntiforgeryToken]
     [Area("Manage")]
     public class TeamController : Controller
     {
@@ -19,7 +21,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             _service = service;
             _context = context;
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Index(int page =1)
         {
             var query = _context.teams.AsQueryable();
@@ -27,11 +29,12 @@ namespace Airline.MVC.Areas.Manage.Controllers
             //var teams = await _service.GetAllAsync();
             return View(paginatedOrders);
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public IActionResult Create()
         {
             return View();
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(CreateTeamVM teamvm)
         {
@@ -53,6 +56,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             }
            
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Update(int id)
         {
             var team = await _service.GetByIdAsync(id);
@@ -68,6 +72,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             };
             return View(teamvm);
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost]
         public async Task<IActionResult> Update (UpdateTeamVM teamvm)
         {
@@ -89,6 +94,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             }
         
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _service.Delete(id);

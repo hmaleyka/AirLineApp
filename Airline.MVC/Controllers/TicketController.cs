@@ -96,11 +96,20 @@ namespace Airline.MVC.Controllers
             Payload? payload = null;
             switch (model.QRCodeType)
             {
-                
-                case 1:
+
+                case 1: 
+                    payload = new SMS(model.SMSPhoneNumber, model.SMSBody);
+                    break;
+                case 2: 
+                    payload = new WhatsAppMessage(model.WhatsAppNumber, model.WhatsAppMessage);
+                    break;
+                case 3:
                     payload = new Mail(model.ReceiverEmailAddress, model.EmailSubject, model.EmailMessage);
                     break;
-                
+                case 4: 
+                    payload = new WiFi(model.WIFIName, model.WIFIPassword, WiFi.Authentication.WPA);
+                    break;
+
             }
 
             QRCodeGenerator qrGenerator = new();

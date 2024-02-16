@@ -1217,6 +1217,10 @@
       "PackagePath": "staticwebassets\\Upload\\Blog\\8ccba2b2-387e-4ab8-904a-72836ba5c33aphoto.jpg"
     },
     {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\a1651b1c-4091-4189-bf21-e048003f34dcbest-travel-blogs-header.webp",
+      "PackagePath": "staticwebassets\\Upload\\Blog\\a1651b1c-4091-4189-bf21-e048003f34dcbest-travel-blogs-header.webp"
+    },
+    {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\b8a7682e-581f-43b0-a5d1-8d237d7f3c41blog-flight-tips-4.jpg",
       "PackagePath": "staticwebassets\\Upload\\Blog\\b8a7682e-581f-43b0-a5d1-8d237d7f3c41blog-flight-tips-4.jpg"
     },
@@ -1313,6 +1317,10 @@
       "PackagePath": "staticwebassets\\Upload\\Deal\\2b93185b-80ee-4231-8982-c3efe41a7b1fimages (1).jpg"
     },
     {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\2c130d87-b28a-4afb-9189-eec4a3718ff6images (1).jpg",
+      "PackagePath": "staticwebassets\\Upload\\Deal\\2c130d87-b28a-4afb-9189-eec4a3718ff6images (1).jpg"
+    },
+    {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\2ea880ac-c670-42a1-98cd-9ef02cfe2e6bsnowdrift-and-white-sky-in-norway-1024x683.webp",
       "PackagePath": "staticwebassets\\Upload\\Deal\\2ea880ac-c670-42a1-98cd-9ef02cfe2e6bsnowdrift-and-white-sky-in-norway-1024x683.webp"
     },
@@ -1339,6 +1347,10 @@
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\45a3fa89-8e82-45a8-aca9-8e3640249f4dBest-of-2016-Nasim-Mansurov-20.jpg",
       "PackagePath": "staticwebassets\\Upload\\Deal\\45a3fa89-8e82-45a8-aca9-8e3640249f4dBest-of-2016-Nasim-Mansurov-20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\483e54d4-cbe4-499b-81e2-d0f0e75a29bfSukhoiBusinessJet-660x404.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Deal\\483e54d4-cbe4-499b-81e2-d0f0e75a29bfSukhoiBusinessJet-660x404.jpg"
     },
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\4991de5e-e4b6-4f55-abe5-f90cd5ea7c0cbeautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg",
@@ -1449,6 +1461,10 @@
       "PackagePath": "staticwebassets\\Upload\\Deal\\a11e1029-c4d5-4679-a33f-254631d4731fimages.jpg"
     },
     {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\a3ffa5c4-3292-4615-84e5-611bbea1f0f2images.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Deal\\a3ffa5c4-3292-4615-84e5-611bbea1f0f2images.jpg"
+    },
+    {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\a62dd648-9d91-462f-8e54-e2c8a1737c5cBest-of-2016-Nasim-Mansurov-20.jpg",
       "PackagePath": "staticwebassets\\Upload\\Deal\\a62dd648-9d91-462f-8e54-e2c8a1737c5cBest-of-2016-Nasim-Mansurov-20.jpg"
     },
@@ -1537,6 +1553,10 @@
       "PackagePath": "staticwebassets\\Upload\\Deal\\f3e5998f-69f5-4ccf-8ee5-7499147cd95cthe-portal-ocean-pictures-tamarama.webp"
     },
     {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\f456e136-fa92-4baa-9306-fb5fc81af41dMy-50-favourite-travel-blogs-1.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Deal\\f456e136-fa92-4baa-9306-fb5fc81af41dMy-50-favourite-travel-blogs-1.jpg"
+    },
+    {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\ff2115c9-03e3-4385-bb0d-4d7c99b9e118spring-tulips.png",
       "PackagePath": "staticwebassets\\Upload\\Deal\\ff2115c9-03e3-4385-bb0d-4d7c99b9e118spring-tulips.png"
     },
@@ -1565,6 +1585,14 @@
       "PackagePath": "staticwebassets\\Upload\\Package\\03adc966-87da-4936-924a-9af276e57d9fspring-tulips.png"
     },
     {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\14b41e9d-3200-46dc-8dc5-593e46736b50valentina-in-dubrovnik-portfolio-photo-78_1920.jpeg",
+      "PackagePath": "staticwebassets\\Upload\\Package\\14b41e9d-3200-46dc-8dc5-593e46736b50valentina-in-dubrovnik-portfolio-photo-78_1920.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\402d017c-63ae-4979-a992-1141a77e5efcistockphoto-1227552766-170667a.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Package\\402d017c-63ae-4979-a992-1141a77e5efcistockphoto-1227552766-170667a.jpg"
+    },
+    {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\6d494b9d-727c-4a02-a0f0-03a3017039f0spring-tulips.png",
       "PackagePath": "staticwebassets\\Upload\\Package\\6d494b9d-727c-4a02-a0f0-03a3017039f0spring-tulips.png"
     },
@@ -1575,6 +1603,10 @@
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\8ee8d2e9-c3f6-4eab-ab24-d3e23d48fb6eBest-of-2016-Nasim-Mansurov-20.jpg",
       "PackagePath": "staticwebassets\\Upload\\Package\\8ee8d2e9-c3f6-4eab-ab24-d3e23d48fb6eBest-of-2016-Nasim-Mansurov-20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\b32779d4-a458-4e39-99bd-43b9b372da5awhen-is-new-years-day-2024-65709f84da4f6.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Package\\b32779d4-a458-4e39-99bd-43b9b372da5awhen-is-new-years-day-2024-65709f84da4f6.jpg"
     },
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\bb18006f-b087-4922-b41e-1ebdbf7cb7463915e089787345dfb291e379a28f396c.jpg",

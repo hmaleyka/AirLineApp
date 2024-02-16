@@ -2,10 +2,12 @@
 using Airline.Business.ViewModel.FlightVM;
 using Airline.Core.Entities;
 using Airline.DAL.Context;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Airline.MVC.Areas.Manage.Controllers
 {
+    [AutoValidateAntiforgeryToken]
     [Area("Manage")]
     public class FlightController : Controller
     {
@@ -17,16 +19,18 @@ namespace Airline.MVC.Areas.Manage.Controllers
             _service = service;
             _context = context;
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Index()
         {
             var flights = await _service.GetAllAsync();
             return View(flights);
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public IActionResult Create()
         {
             return View();
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(CreateFlightVM flightvm)
         {
@@ -37,7 +41,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             await _service.Create(flightvm);
             return RedirectToAction(nameof(Index));
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _service.Delete(id);
