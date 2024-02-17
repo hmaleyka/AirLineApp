@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FluentValidation;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,17 +12,17 @@ namespace Airline.Business.ViewModel.DealVM
     public class DealUpdateVM
     {
         public int Id { get; set; }
-        [Required]
-        [MaxLength(10)]
-        public string Title { get; set; }
-        [Required]
+       
+        
+        public string? Title { get; set; }
+        
         [MaxLength(50)]
-        public string Description { get; set; }
-        [Required]
-        [MaxLength(10)]
-        public string Feature { get; set; }
+        public string? Description { get; set; }
+       
+        
+        public string? Feature { get; set; }
+        public IFormFile? MainPhoto { get; set; }
         public string? MainphotoUrl { get; set; }
-        public IFormFile MainPhoto { get; set; }
             
         public double Price { get; set; }
         
@@ -35,12 +36,21 @@ namespace Airline.Business.ViewModel.DealVM
         
         //public List<string> dealphotosUrl { get; set; }
         public List<IFormFile>? dealphotos { get; set; }
-        public List<ProductImagesVm>? alldealphotos { get; set; }
-        public List<int> ImageIds { get; set; }
+        public List<DealImagesVm>? multipledealphotos { get; set; }
+        public List<int>? ImageIds { get; set; }
     }
-    public class ProductImagesVm
+    public class DealImagesVm
     {
         public int Id { get; set; }
         public string ImgUrl { get; set; }
     }
+
+    public class UpdateDealVMValidator : AbstractValidator<DealUpdateVM>
+    {
+        public UpdateDealVMValidator()
+        {
+            RuleFor(x => x.Title).NotEmpty().WithMessage("Please enter the title");
+        }
+    }
+
 }

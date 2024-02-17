@@ -5,8 +5,11 @@ using Airline.Core.Entities;
 using Airline.DAL.Context;
 using Airline.DAL.Repositories.Implementations;
 using Airline.DAL.Repositories.Interfaces;
+using Airline.DAL.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,15 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IBenefitRepository, BenefitRepository>();
-builder.Services.AddScoped<IPackageRepository, PackageRepository>();
-builder.Services.AddScoped<IDealRepository, DealRepository>();
-builder.Services.AddScoped<ITeamRepository, TeamRepository>();
-builder.Services.AddScoped<IBlogRepository, BlogRepository>();
-builder.Services.AddScoped<ITagRepository, TagRepository>();
-builder.Services.AddScoped<IFlightRepository, FlightRepository>();
-builder.Services.AddScoped<ISettingRepository, SettingRepository>();
-
+builder.Services.AddRepositories();
 builder.Services.AddServices();
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>

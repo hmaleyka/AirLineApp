@@ -111,6 +111,7 @@ namespace Airline.MVC.Controllers
                     break;
 
             }
+            
 
             QRCodeGenerator qrGenerator = new();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(payload);

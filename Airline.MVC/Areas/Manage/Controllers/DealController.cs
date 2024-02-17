@@ -3,6 +3,8 @@ using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.DealVM;
 using Airline.Core.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using static Airline.Business.ViewModel.BlogVM.UpdateBlogVM;
 
 namespace Airline.MVC.Areas.Manage.Controllers
 {
@@ -49,24 +51,36 @@ namespace Airline.MVC.Areas.Manage.Controllers
         }
         public async  Task<IActionResult> Update(int id)
         {
-            var deals = await _service.GetByIdAsync(id);
+            Deal existdeals = await _service.GetByIdAsync(id);
             DealUpdateVM dealvm = new DealUpdateVM()
             {
-                Title = deals.Title,
-                Description = deals.Description,
-                Feature = deals.Feature,
-                Distance = deals.Distance,
-                Range = deals.Range,
-                Speed = deals.Speed,
-                Passenger = deals.Passenger,
-                Price = deals.Price,
-                MainphotoUrl=deals.MainPhoto,
-                alldealphotos = deals.dealphotos.Select(item => new ProductImagesVm
-                {
-                    ImgUrl = item.ImgUrl,
-                    Id = item.Id,
-                }).ToList(),
+                Title = existdeals.Title,
+                Description = existdeals.Description,
+                Feature = existdeals.Feature,
+                Distance = existdeals.Distance,
+                Range = existdeals.Range,
+                Speed = existdeals.Speed,
+                Passenger = existdeals.Passenger,
+                Price = existdeals.Price,
+                MainphotoUrl= existdeals.MainPhoto,
+                multipledealphotos = new List<DealImagesVm>(),
+                //alldealphotos = deals.dealphotos.Select(item => new ProductImagesVm
+                //{
+                //    ImgUrl = item.ImgUrl,
+                //    Id = item.Id,
+                //}).ToList(),
             };
+
+            foreach (var item in existdeals.dealphotos)
+            {
+                DealImagesVm productImageVM = new()
+                {
+                    Id = item.Id,
+                    ImgUrl = item.ImgUrl,
+                };
+
+                dealvm.multipledealphotos.Add(productImageVM);
+            }
 
             return View(dealvm);
         }
@@ -75,6 +89,27 @@ namespace Airline.MVC.Areas.Manage.Controllers
         {
             try
             {
+                UpdateDealVMValidator validations = new UpdateDealVMValidator();
+                var resultvalidations = await validations.ValidateAsync(dealvm);
+                if (!resultvalidations.IsValid)
+                {
+                    ModelState.Clear();
+                    resultvalidations.Errors.ForEach(x => ModelState.AddModelError("",x.ErrorMessage));
+                    Deal existdeals = await _service.GetByIdAsync(dealvm.Id);
+                    dealvm.multipledealphotos = new List<DealImagesVm>();
+                    dealvm.MainphotoUrl = existdeals.MainPhoto;
+                    foreach (var item in existdeals.dealphotos)
+                    {
+                        DealImagesVm productImageVM = new()
+                        {
+                            Id = item.Id,
+                            ImgUrl = item.ImgUrl,
+                        };
+
+                        dealvm.multipledealphotos.Add(productImageVM);
+                    }
+                    return View(dealvm);
+                }
                 if (!ModelState.IsValid)
                 {
                     return View(dealvm);
@@ -86,7 +121,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             {
                 ModelState.AddModelError(ex.name, ex.Message);
 
-                return View();
+                return View(dealvm);
 
             }
             

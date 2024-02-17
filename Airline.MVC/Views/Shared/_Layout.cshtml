@@ -139,15 +139,15 @@
                                     </ul>
                                     
                                     <div class="header-right">
-                                       
+
                                         <div class="header-action-area">
                                             <a href="service-details.html" class="action-btn two">
                                                 <i class="icon-btn-icon"></i>
                                             </a>
                                             <div class="header-action">
-                                                <a href="service-details.html" class="btn--base" >
+                                                <button  class="btn--base" onclick="scrollToBookingSection()">
                                                     <i class="icon-btn-icon"></i> Book Now
-                                                </a>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -295,7 +295,12 @@
     <script src="~/assets/js/jquery.nice-select.js"></script>
     <!-- main -->
     <script src="~/assets/js/main.js"></script>
-
+    <script>
+        function scrollToBookingSection() {
+            var bookingSection = document.getElementById('book-form-section');
+            bookingSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 
 </body>
 

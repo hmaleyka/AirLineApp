@@ -261,3 +261,5 @@ C:\Users\owner\source\repos\AirlineApp\Airline.MVC\bin\Debug\net6.0\runtimes\win
 C:\Users\owner\source\repos\AirlineApp\Airline.MVC\obj\Debug\net6.0\Airline.MVC.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\owner\source\repos\AirlineApp\Airline.MVC\bin\Debug\net6.0\Google.Authenticator.dll
 C:\Users\owner\source\repos\AirlineApp\Airline.MVC\bin\Debug\net6.0\QRCoder.dll
+C:\Users\owner\source\repos\AirlineApp\Airline.MVC\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\owner\source\repos\AirlineApp\Airline.MVC\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

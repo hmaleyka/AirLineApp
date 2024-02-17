@@ -100,5 +100,12 @@ namespace Airline.MVC.Areas.Manage.Controllers
             await _service.Delete(id);
             return RedirectToAction(nameof(Index));
         }
+
+        [Authorize(Roles = "SuperAdmin, Admin")]
+        public async Task<IActionResult> Details(int id)
+        {
+            Team teams = await _context.teams.FindAsync(id);
+            return View(teams);
+        }
     }
 }

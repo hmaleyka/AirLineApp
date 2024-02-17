@@ -45,11 +45,11 @@ namespace Airline.Business.Services.Implementations
             };
             if (!dealvm.MainPhoto.CheckType("image/"))
             {
-                throw new ImageException("Image type should be img" , nameof(dealvm.MainPhoto));
+                throw new ImageException("Image type should be img", nameof(dealvm.MainPhoto));
             }
             if (!dealvm.MainPhoto.CheckLong(2097152))
             {
-                throw new ImageException("Image size should not be large than 2mb" , nameof(dealvm.MainPhoto));
+                throw new ImageException("Image size should not be large than 2mb", nameof(dealvm.MainPhoto));
             }
 
             deals.MainPhoto = dealvm.MainPhoto.Upload(_env.WebRootPath, @"\Upload\Deal\");
@@ -63,7 +63,7 @@ namespace Airline.Business.Services.Implementations
                     }
                     if (!photo.CheckLong(2097152))
                     {
-                        throw new ImageException("Image size should not be large than 2mb" , nameof(dealvm.dealphotos));
+                        throw new ImageException("Image size should not be large than 2mb", nameof(dealvm.dealphotos));
                     }
                     DealPhoto dealphoto = new DealPhoto()
                     {
@@ -108,7 +108,7 @@ namespace Airline.Business.Services.Implementations
 
         public async Task<Deal> Update(DealUpdateVM dealvm)
         {
-            Deal existdeal = await _repo.GetQuery(x => x.IsDeleted == false && x.Id == dealvm.Id).Include(d=>d.dealphotos).FirstOrDefaultAsync();
+            Deal existdeal = await _repo.GetQuery(x => x.IsDeleted == false && x.Id == dealvm.Id).Include(d => d.dealphotos).FirstOrDefaultAsync();
             if (existdeal == null) throw new NotFoundException("Id should not be null!");
             existdeal.Title = dealvm.Title;
             existdeal.Description = dealvm.Description;
@@ -120,38 +120,40 @@ namespace Airline.Business.Services.Implementations
             existdeal.Price = dealvm.Price;
             // existdeal.MainPhoto = dealvm.MainphotoUrl;
 
-            if (dealvm.MainPhoto == null)
-            {
-                throw new Exception("Image should not be null");
-            }
+            //if (dealvm.MainPhoto == null)
+            //{
+            //    throw new Exception("Image should not be null");
+            //}
 
-            if (dealvm.MainPhoto != null)
+            if (dealvm.MainPhoto is not null)
             {
-
                 if (!dealvm.MainPhoto.CheckType("image/"))
                 {
-                    throw new ImageException("Image type should be img" , nameof(dealvm.MainPhoto));
+                    throw new ImageException("Image type should be img", nameof(dealvm.MainPhoto));
                 }
                 if (!dealvm.MainPhoto.CheckLong(2097152))
                 {
-                    throw new ImageException("Image size should not be large than 2mb" , nameof(dealvm.MainPhoto));
+                    throw new ImageException("Image size should not be large than 2mb", nameof(dealvm.MainPhoto));
                 }
-                //var oldphoto = existdeal.dealphotos.FirstOrDefault();
-                //existdeal.MainPhoto.Remove(oldphoto);
-                //var oldPhoto = existdeal.dealphotos?.FirstOrDefault();
-                //existdeal.dealphotos?.Remove(oldPhoto);
-                //DealPhoto newdealphoto = new DealPhoto()
-                //{
-                    
-                //    DealId = existdeal.Id,
-                //    ImgUrl = dealvm.MainPhoto.Upload(_env.WebRootPath, @"\Upload\Deal\")
-
-
-                //};
-                //existdeal.dealphotos?.Add(newdealphoto);
-                existdeal.MainPhoto = dealvm.MainPhoto.Upload(_env.WebRootPath, @"\Upload\Deal\");
-                
+                existdeal.MainPhoto = dealvm.MainPhoto.Upload(_env.WebRootPath, @"/Upload/Deal/");
             }
+
+            //var oldphoto = existdeal.dealphotos.FirstOrDefault();
+            //existdeal.MainPhoto.Remove(oldphoto);
+            //var oldPhoto = existdeal.dealphotos?.FirstOrDefault();
+            //existdeal.dealphotos?.Remove(oldPhoto);
+            //DealPhoto newdealphoto = new DealPhoto()
+            //{
+
+            //    DealId = existdeal.Id,
+            //    ImgUrl = dealvm.MainPhoto.Upload(_env.WebRootPath, @"\Upload\Deal\")
+
+
+            //};
+            //existdeal.dealphotos?.Add(newdealphoto);
+
+
+
 
 
             if (dealvm.ImageIds == null)
@@ -160,8 +162,8 @@ namespace Airline.Business.Services.Implementations
             }
             else
             {
-                var removeListImage = existdeal.dealphotos?.Where(p => !dealvm.ImageIds.Contains(p.Id)).ToList();
-                if (removeListImage != null)
+                List<DealPhoto> removeListImage = existdeal.dealphotos?.Where(p => !dealvm.ImageIds.Contains(p.Id)).ToList();
+                if (removeListImage.Count > 0)
                 {
                     foreach (var image in removeListImage)
                     {
@@ -170,18 +172,18 @@ namespace Airline.Business.Services.Implementations
                     }
 
                 }
-                else
-                {
-                    existdeal.dealphotos.Clear();
-                }
+                //else
+                //{
+                //    existdeal.dealphotos.Clear();
+                //}
 
             }
-            if (dealvm.alldealphotos == null)
-            {
-                throw new Exception("Deal Photos should not be null");
-            }
+            //if (dealvm.multipledealphotos == null)
+            //{
+            //    throw new Exception("Deal Photos should not be null");
+            //}
 
-          
+
 
             if (dealvm.dealphotos != null)
             {
@@ -189,7 +191,7 @@ namespace Airline.Business.Services.Implementations
                 {
                     if (!photo.CheckType("image/"))
                     {
-                        throw new ImageException("Image type should be img" , nameof(dealvm.dealphotos));
+                        throw new ImageException("Image type should be img", nameof(dealvm.dealphotos));
                     }
                     if (!photo.CheckLong(2097152))
                     {
@@ -202,8 +204,8 @@ namespace Airline.Business.Services.Implementations
                     };
                     existdeal.dealphotos.Add(multiplephotos);
                 }
-            }   
-            _repo.Update(existdeal);
+            }
+            // _repo.Update(existdeal);
             await _repo.SaveChangesAsync();
             return existdeal;
 

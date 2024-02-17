@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "XntZmGeSb0Jdpvd5U7eN9oaOFrVPG0tdyWGqs7+cw8yUQVsMdnbupfzoh/pUFDC9rAKx1ktLaov7WNAyn/pWtA==",
+  "dgSpecHash": "kOCEzfLiqubPFiAmA+5abWeBZdkT2XnmtOUuWjNJQyJkJzP0zdtXv1rrebaLN74LRHfSJ7kgfC1123H+YRaN5g==",
   "success": true,
   "projectFilePath": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\Airline.MVC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\owner\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\owner\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\googleauthenticator\\3.2.0\\googleauthenticator.3.2.0.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
