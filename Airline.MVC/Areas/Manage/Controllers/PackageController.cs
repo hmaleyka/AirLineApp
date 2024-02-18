@@ -1,11 +1,13 @@
 ﻿using Airline.Business.Exceptions;
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.PackageVM;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Airline.MVC.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [AutoValidateAntiforgeryToken]
     public class PackageController : Controller
     {
         private readonly IPackageService _service;
@@ -14,16 +16,18 @@ namespace Airline.MVC.Areas.Manage.Controllers
         {
             _service = service;
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Index()
         {
             var packages = await _service.GetAllAsync();
             return View(packages);
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public IActionResult Create()
         {
             return View();
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(PackageCreateVM packagevm)
         {
@@ -46,6 +50,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
 
            
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Update(int id)
         {
             var package = await _service.GetByIdAsync(id);
@@ -63,6 +68,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             };
             return View(packagevm);
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost]
         public async Task<IActionResult> Update(PackageUpdateVM packagevm)
         {
@@ -83,6 +89,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             }
            
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _service.Delete(id);

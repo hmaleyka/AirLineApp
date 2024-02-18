@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Airline.MVC.Areas.Manage.Controllers
 {
+    [Area("Manage")]
     public class SubscribeController : Controller
     {
         private readonly AppDbContext _context;
@@ -16,7 +17,8 @@ namespace Airline.MVC.Areas.Manage.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            List<Subscribe> subscriptions = _table.ToList();
+            return View(subscriptions);
         }
     }
 }

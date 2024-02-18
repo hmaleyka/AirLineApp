@@ -61,8 +61,17 @@ namespace Airline.Business.Services.Implementations
 
         public async Task<Flight> Update(UpdateFlightVM flightvm)
         {
-            // Flight flights = await _repo.GetByIdAsync(flightvm.);
-            throw new Exception();
+            Flight flights = await _repo.GetByIdAsync(flightvm.Id);
+            if (flights == null) throw new NotFoundException("Id should not be null!");
+            flights.Seat = flightvm.Seat;
+            flights.From = flightvm.From;
+            flights.To = flightvm.To;
+            flights.flightdate = flightvm.flightdate;
+            //flights.People = flightvm.People;
+            flights.Price = flightvm.Price;
+            _repo.Update(flights);
+            await _repo.SaveChangesAsync();
+            return flights;
         }
     }
 }

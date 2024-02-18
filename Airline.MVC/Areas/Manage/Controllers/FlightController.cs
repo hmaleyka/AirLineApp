@@ -47,13 +47,36 @@ namespace Airline.MVC.Areas.Manage.Controllers
             await _service.Delete(id);
             return RedirectToAction(nameof(Index));
         }
-        
-        public async Task<IActionResult> Details (int id)
+        [Authorize(Roles = "SuperAdmin, Admin")]
+        public async Task<IActionResult> Details(int id)
         {
             Flight flight = await _context.flights.FindAsync(id);
             return View(flight);
         }
-        //[HttpPost]
-        //public async Task<IActionResult> Details ()
+        public async Task<IActionResult> Update(int id)
+        {
+            var flight = await _service.GetByIdAsync(id);
+            UpdateFlightVM flightvm = new UpdateFlightVM()
+            {
+                Seat = flight.Seat,
+                From = flight.From,
+                To = flight.To,
+                flightdate = flight.flightdate,
+                People = flight.People,
+                Price = flight.Price,
+            };
+            return View(flightvm);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Update (UpdateFlightVM flightvm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            var flight = await _service.Update(flightvm);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

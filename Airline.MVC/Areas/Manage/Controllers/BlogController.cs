@@ -7,6 +7,7 @@ using Airline.Business.ViewModel.DealVM;
 using Airline.Core.Entities;
 using Airline.DAL.Context;
 using Airline.MVC.Pagination;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,7 @@ using static Airline.Business.ViewModel.BlogVM.UpdateBlogVM;
 namespace Airline.MVC.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [AutoValidateAntiforgeryToken]
     public class BlogController : Controller
     {
         private readonly IBlogService _service;
@@ -26,7 +28,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             _tagService = tagService;
             _context = context;
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Index()
         {
             var blogs = await _service.GetAllAsync();
@@ -36,12 +38,14 @@ namespace Airline.MVC.Areas.Manage.Controllers
             //PaginatedList<Blog> paginatedOrders = PaginatedList<Blog>.Create(query, page, 4);
             //return View(paginatedOrders);
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Create()
         {
             
             ViewBag.Tags = await _tagService.GetAllAsync();
             return View();
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(CreateBlogVM blogVM)
         {
@@ -66,6 +70,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             }
            
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Update(int id)
         {
             ViewBag.Tags = await _tagService.GetAllAsync();
@@ -96,6 +101,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             }
             return View(blogvm);
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost]
         public async Task<IActionResult> Update(UpdateBlogVM blogVM)
         {
@@ -121,13 +127,13 @@ namespace Airline.MVC.Areas.Manage.Controllers
             }
           
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _service.Delete(id);
             return RedirectToAction(nameof(Index));
         }
-        
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Details(int id)
         {
             Blog blogs = await _context.blogs.FindAsync(id);

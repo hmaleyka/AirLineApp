@@ -2,6 +2,7 @@
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.DealVM;
 using Airline.Core.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using static Airline.Business.ViewModel.BlogVM.UpdateBlogVM;
@@ -9,6 +10,7 @@ using static Airline.Business.ViewModel.BlogVM.UpdateBlogVM;
 namespace Airline.MVC.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [AutoValidateAntiforgeryToken]
     public class DealController : Controller
     {
         private readonly IDealService _service;
@@ -17,17 +19,18 @@ namespace Airline.MVC.Areas.Manage.Controllers
         {
             _service = service;
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Index()
         {
             var deals = await _service.GetAllAsync();
             return View(deals);
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public IActionResult Create() 
         { 
                return View();
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost]
         public async Task<IActionResult> Create(DealCreateVM dealvm)
         {
@@ -49,6 +52,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             }
            
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async  Task<IActionResult> Update(int id)
         {
             Deal existdeals = await _service.GetByIdAsync(id);
@@ -84,6 +88,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
 
             return View(dealvm);
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost]
         public async Task<IActionResult> Update (DealUpdateVM dealvm)
         {
@@ -126,6 +131,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             }
             
         }
+        [Authorize(Roles = "SuperAdmin, Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             await _service.Delete(id);
