@@ -28,7 +28,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
             _tagService = tagService;
             _context = context;
         }
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin , Moderator")]
         public async Task<IActionResult> Index()
         {
             var blogs = await _service.GetAllAsync();
@@ -38,14 +38,14 @@ namespace Airline.MVC.Areas.Manage.Controllers
             //PaginatedList<Blog> paginatedOrders = PaginatedList<Blog>.Create(query, page, 4);
             //return View(paginatedOrders);
         }
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin , Moderator")]
         public async Task<IActionResult> Create()
         {
             
             ViewBag.Tags = await _tagService.GetAllAsync();
             return View();
         }
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin , Moderator")]
         [HttpPost]
         public async Task<IActionResult> Create(CreateBlogVM blogVM)
         {

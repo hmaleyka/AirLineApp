@@ -15,13 +15,13 @@ namespace Airline.MVC.Areas.Manage.Controllers
         {
             _service = service;
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin , Moderator")]
         public async Task<IActionResult> Index()
         {
            var setting= await _service.GetAllAsync();
             return View(setting);
         }
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin ")]
         public async Task<IActionResult> Update (int id)
         {
             if(!ModelState.IsValid)

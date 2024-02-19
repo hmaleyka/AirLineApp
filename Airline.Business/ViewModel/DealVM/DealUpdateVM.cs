@@ -15,8 +15,7 @@ namespace Airline.Business.ViewModel.DealVM
        
         
         public string? Title { get; set; }
-        
-        [MaxLength(50)]
+      
         public string? Description { get; set; }
        
         
@@ -31,10 +30,9 @@ namespace Airline.Business.ViewModel.DealVM
         public double? Range { get; set; }
         
         public double? Speed { get; set; }
-        [Required]
+        
         public double? Passenger { get; set; }
         
-        //public List<string> dealphotosUrl { get; set; }
         public List<IFormFile>? dealphotos { get; set; }
         public List<DealImagesVm>? multipledealphotos { get; set; }
         public List<int>? ImageIds { get; set; }
@@ -50,6 +48,13 @@ namespace Airline.Business.ViewModel.DealVM
         public UpdateDealVMValidator()
         {
             RuleFor(x => x.Title).NotEmpty().WithMessage("Please enter the title");
+           RuleFor(x => x.Description).NotEmpty().WithMessage("Please Enter the description");
+           RuleFor(x => x.Feature).NotEmpty().WithMessage("Please Enter the feature");
+           RuleFor(x => x.Distance).NotEmpty().WithMessage("Please Enter the distance");
+           RuleFor(x => x.Range).NotEmpty().WithMessage("Please Enter the range");
+           RuleFor(x => x.Speed).NotEmpty().WithMessage("Please Enter the speed");
+           RuleFor(x => x.Passenger).NotEmpty().WithMessage("Please Enter the passenger");
+
         }
     }
 

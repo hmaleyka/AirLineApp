@@ -1,5 +1,66 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="container-fluid py-4">
+    
+    <div class="row mt-4">
+        <div class="col-lg-4 col-md-6 mt-4 mb-4">
+            <div class="card z-index-2 ">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+                        <div class="chart">
+                            <canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h6 class="mb-0 ">Blogs</h6>
+                    <a class="btn btn-success" asp-action="Index" asp-controller="Blog">Go Blog</a>
+                   
+                    <hr class="dark horizontal">
+                    <div class="d-flex ">
+                        
+                        <p class="mb-0 text-sm"> Our website blogs </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-4 mb-4">
+            <div class="card z-index-2  ">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                    <div class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1">
+                        <div class="chart">
+                            <canvas id="chart-line" class="chart-canvas" height="170"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h6 class="mb-0 "> Deals </h6>
+                    <a class="btn btn-success" asp-controller="Deal" asp-action="Index"> Go Deals</a>
+                    <hr class="dark horizontal">
+                    <div class="d-flex ">
+                        <i class="material-icons text-sm my-auto me-1"></i>
+                        <p class="mb-0 text-sm"> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-4 mb-3">
+            <div class="card z-index-2 ">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+                    <div class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1">
+                        <div class="chart">
+                            <canvas id="chart-line-tasks" class="chart-canvas" height="170"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h6 class="mb-0 ">Teams</h6>
+                   <a asp-action="Index" asp-controller="Team" class="btn btn-success"> Go Teams</a>
+                    <hr class="dark horizontal">
+                    <div class="d-flex ">
+                        <i class="material-icons text-sm my-auto me-1"></i>
+                        <p class="mb-0 text-sm"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    

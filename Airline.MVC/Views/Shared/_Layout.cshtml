@@ -120,9 +120,9 @@
                                                     <li><a>@User.Identity.Name</a></li>
                                                     <li><a asp-controller="Account" asp-action="Logout">Log Out</a></li>
                                                     <li><a asp-controller="Ticket" asp-action="Index">Your Ticket</a></li>
-                                                    if (User.IsInRole("SuperAdmin"))
+                                                    if (User.IsInRole("SuperAdmin") || User.IsInRole("Admin") || User.IsInRole("Moderator"))
                                                 {
-                                                        <li><a asp-area="Manage" asp-controller="Benefit" asp-action="Index" class="btn btn-danger" style="height:50px">Go to Admin Panel</a></li>
+                                                        <li><a asp-area="Manage" asp-controller="Dashboard" asp-action="Index" class="btn btn-danger" style="height:50px">Go to Admin Panel</a></li>
                                                 }
 
                                                 }

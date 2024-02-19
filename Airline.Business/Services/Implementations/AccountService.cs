@@ -93,9 +93,9 @@ namespace Airline.Business.Services.Implementations
                || vm.Username == null || vm.Email == null || vm.ConfirmPassword == null;
             if (exists) throw new NullFieldException("all fields are required", nameof(vm.Name));
 
-            //var usedEmail = await _userManager.FindByEmailAsync(vm.Email);
-            //if (usedEmail is null)
-            //{
+            var usedEmail = await _userManager.FindByEmailAsync(vm.Email);
+            if (usedEmail is null)
+            {
                 AppUser user = new()
                 {
                     Name = vm.Name,
@@ -119,12 +119,13 @@ namespace Airline.Business.Services.Implementations
                     values: new { token, user.Id });
                 SendEmailService.SendEmail(to: user.Email, name: user.Name);
                 SendConfirmationService.SendEmail(to: user.Email, url: url);
-            //}
-            //else
-            //{
-            //    throw new UsedEmailException("This email address used before, try another!", nameof(vm.Email));
-            //}
-            await _userManager.AddToRoleAsync(user, UserRole.SuperAdmin.ToString());
+                await _userManager.AddToRoleAsync(user, UserRole.SuperAdmin.ToString());
+            }
+            else
+            {
+                throw new UsedEmailException("This email address used before, try another!", nameof(vm.Email));
+            }
+           
 
 
 

@@ -2,9 +2,11 @@
 using Airline.Business.Services.Interfaces;
 using Airline.Business.ViewModel.DealVM;
 using Airline.Core.Entities;
+using Airline.DAL.Context;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.EntityFrameworkCore;
 using static Airline.Business.ViewModel.BlogVM.UpdateBlogVM;
 
 namespace Airline.MVC.Areas.Manage.Controllers
@@ -14,23 +16,25 @@ namespace Airline.MVC.Areas.Manage.Controllers
     public class DealController : Controller
     {
         private readonly IDealService _service;
+        private readonly AppDbContext _context;
 
-        public DealController(IDealService service)
+        public DealController(IDealService service, AppDbContext context)
         {
             _service = service;
+            _context = context;
         }
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin , Moderator")]
         public async Task<IActionResult> Index()
         {
             var deals = await _service.GetAllAsync();
             return View(deals);
         }
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin , Moderator")]
         public IActionResult Create() 
         { 
                return View();
         }
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin , Moderator")]
         [HttpPost]
         public async Task<IActionResult> Create(DealCreateVM dealvm)
         {
@@ -137,6 +141,13 @@ namespace Airline.MVC.Areas.Manage.Controllers
             await _service.Delete(id);
             return RedirectToAction(nameof(Index));
         
+        }
+        [Authorize(Roles = "SuperAdmin, Admin")]
+        [HttpGet("Details/{id}")]
+        public async Task<IActionResult> Details(int id)
+        {
+            Deal deals = await _context.deals.FindAsync(id);
+            return View(deals);
         }
     }
 }

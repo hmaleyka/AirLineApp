@@ -6,7 +6,7 @@ namespace Airline.MVC.Areas.Manage.Controllers
     [Area("Manage")]
     public class DashboardController : Controller
     {
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin , Moderator")]
         public IActionResult Index()
         {
             return View();

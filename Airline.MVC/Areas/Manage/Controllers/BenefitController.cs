@@ -15,18 +15,18 @@ namespace Airline.MVC.Areas.Manage.Controllers
         {
             _service = service;
         }
-
+        [Authorize(Roles = "SuperAdmin, Admin , Moderator")]
         public async Task<IActionResult> Index()
         {
             var benefits = await _service.GetAllAsync();
             return View(benefits);
         }
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin , Moderator")]
         public IActionResult Create()
         {
             return View();
         }
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin , Moderator")]
         [HttpPost]
         public async Task<IActionResult> Create(BenefitCreateVM benefitvm)
         {

@@ -21,7 +21,7 @@
                         <table class="table align-items-center mb-0">
                             <thead>
                                 <tr>
-                                    <th class="text-secondary opacity-7">No#</th
+                                   @*  <th class="text-secondary opacity-7">No#</th *@
                                     <th class="text-secondary opacity-7">Title</th>
                                     <th class="text-secondary opacity-7">Description</th>
                                     <th class="text-secondary opacity-7">About</th>
@@ -36,23 +36,23 @@
                                     count++;
                                     <tr>
                                         
-                                         <td>
+                                        <td>
                                             <div class="d-flex px-2 py-1">
 
                                                 <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-sm">@count</h6>
+                                                    <h6 class="mb-0 text-sm">@item.Title</h6>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>
+                                        @* <td>
                                             <p class="text-xs font-weight-bold mb-0">@item.Title</p>
-                                        </td>
+                                        </td> *@
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">@item.Description</p>
+                                            <p class="text-xs font-weight-bold mb-0">@item.Description.Substring(0,10)</p>
                                         </td>
 
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">@item.About</p>
+                                            <p class="text-xs font-weight-bold mb-0">@item.About.Substring(0,7)</p>
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">@item.date</p>

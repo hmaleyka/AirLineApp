@@ -156,10 +156,10 @@
                 </div>
             </div>
         </div>
-        @foreach (var item in Model.benefits)
-        {
             <div class="feature-area">
                 <div class="row justify-content-center m-0">
+        @foreach (var item in Model.benefits)
+        {
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 p-0">
                         <div class="feature-item">
                             <div class="feature-icon">
@@ -174,9 +174,9 @@
                         </div>
                     </div>
 
+        }
                 </div>
             </div>
-        }
     </div>
 </section>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -276,7 +276,7 @@
                                         <span class="sub-title">@item.Description</span>
                                         <div class="charter-meta">
                                             <span class="seat">@item.Range</span>
-                                            <span class="price">Price: @item.Price hr</span>
+                                            <span class="price">Price: @item.Price </span>
                                         </div>
                                         <div class="charter-btn">
                                             <a>

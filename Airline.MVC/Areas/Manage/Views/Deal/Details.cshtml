@@ -1,0 +1,58 @@
+﻿@using Airline.Core.Entities;
+
+@model Deal
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4 class="mb-1">Title: </h4>
+            <h3 style="font-size: 15px">@Model.Title</h3>
+        </div>
+        <div class="col-md-6">
+            <h4 style="font-size: 30px">Feature: </h4>
+            <h3 style="font-size: 15px">@Model.Feature</h3>
+        </div>
+        <div class="col-md-6">
+            <h4 style="font-size: 30px">Price: </h4>
+            <h3 style="font-size: 15px">@Model.Price</h3>
+        </div>
+         <div class="col-md-6">
+            <h4 style="font-size: 30px">Distance: </h4>
+            <h3 style="font-size: 15px">@Model.Distance</h3>
+        </div>
+        <div class="col-md-6">
+            <h4 style="font-size: 30px">Range: </h4>
+            <h3 style="font-size: 15px">@Model.Range</h3>
+        </div>
+        <div class="col-md-6">
+            <h4 style="font-size: 30px">Speed: </h4>
+            <h3 style="font-size: 15px">@Model.Speed</h3>
+        </div>
+        <div class="col-md-6">
+            <h4 style="font-size: 30px">Passenger: </h4>
+            <h3 style="font-size: 15px">@Model.Passenger</h3>
+        </div>
+
+
+    </div>
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4> Description: </h4>
+            <p style="font-size: 15px">@Model.Description</p>
+        </div>
+    </div>
+
+
+    <h4 class="mt-4">Deal Image:</h4>
+    <div class="row align-items-start">
+
+        <div class="col-2 mb-3 position-relative">
+            <img style="width: 175px; border-radius: 5px;" src="~/Upload/Deal/@Model.MainPhoto" />
+        </div>
+
+    </div>
+
+
+    <a asp-controller="Deal" asp-action="Index" class="btn btn-secondary mt-5">Go Back</a>
+
+</div>
