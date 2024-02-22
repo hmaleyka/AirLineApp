@@ -30,6 +30,24 @@
             <p style="font-size: 15px">@Model.flightdate</p>
         </div>
     </div>
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4>People List:</h4>
+            @if (Model.People != null && Model.People.Any())
+            {
+                <ul style="font-size: 15px">
+                    @foreach (var ticket in Model.People)
+                    {
+                        <li>@ticket.user.Name</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No people listed.</p>
+            }
+        </div>
+    </div>
 
 
     

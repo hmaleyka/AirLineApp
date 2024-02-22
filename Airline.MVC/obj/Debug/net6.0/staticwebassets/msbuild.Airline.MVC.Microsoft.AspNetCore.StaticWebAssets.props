@@ -11152,6 +11152,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Package\bb18006f-b087-4922-b41e-1ebdbf7cb7463915e089787345dfb291e379a28f396c.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\057008b1-0f35-4f6e-8f4e-974eb85d48f7-Correct-A-Employee-or-An-Employee-Exploring-the-Difference.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Team/057008b1-0f35-4f6e-8f4e-974eb85d48f7-Correct-A-Employee-or-An-Employee-Exploring-the-Difference.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\057008b1-0f35-4f6e-8f4e-974eb85d48f7-Correct-A-Employee-or-An-Employee-Exploring-the-Difference.webp))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\24829e81-3a9b-4e0c-b648-90016eafce5d960x0.webp))">
       <SourceType>Package</SourceType>
       <SourceId>Airline.MVC</SourceId>
@@ -11216,6 +11232,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\8ebe05db-9cad-44c1-aedf-2392c94edd77Employee-Journey-What-it-is-and-how-to-improve-it.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\bf62169c-da22-4941-8dac-23e1be21e9dabenefits-of-flexible-work-for-companies-and-employees_.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Team/bf62169c-da22-4941-8dac-23e1be21e9dabenefits-of-flexible-work-for-companies-and-employees_.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\bf62169c-da22-4941-8dac-23e1be21e9dabenefits-of-flexible-work-for-companies-and-employees_.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\c9ef63aa-0e68-40ed-863b-b8e65aee57a8blog-how-important-is-employee-belonging.png))">
       <SourceType>Package</SourceType>
       <SourceId>Airline.MVC</SourceId>
@@ -11231,6 +11263,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\c9ef63aa-0e68-40ed-863b-b8e65aee57a8blog-how-important-is-employee-belonging.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\d6957f67-856a-4af0-b2cc-ed68c245cee3benefits-of-flexible-work-for-companies-and-employees_.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Airline.MVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Airline.MVC</BasePath>
+      <RelativePath>Upload/Team/d6957f67-856a-4af0-b2cc-ed68c245cee3benefits-of-flexible-work-for-companies-and-employees_.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\d6957f67-856a-4af0-b2cc-ed68c245cee3benefits-of-flexible-work-for-companies-and-employees_.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Team\d7c41c52-f8d4-4e22-a36f-fe61e4e06f31confident-cheerful-young-businesswoman_1262-20881.avif))">
       <SourceType>Package</SourceType>

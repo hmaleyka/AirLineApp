@@ -4,6 +4,7 @@ using Airline.Core.Entities;
 using Airline.DAL.Context;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Airline.MVC.Areas.Manage.Controllers
 {
@@ -51,6 +52,12 @@ namespace Airline.MVC.Areas.Manage.Controllers
         public async Task<IActionResult> Details(int id)
         {
             Flight flight = await _context.flights.FindAsync(id);
+            //var names = await _context.tickets
+            //                  .Where(t => t.FlightId == id)
+            //                  .Include(t => t.user)
+            //                  .Select(t => t.user.Name)
+            //                  .Distinct()
+            //                  .ToListAsync();
             return View(flight);
         }
         public async Task<IActionResult> Update(int id)

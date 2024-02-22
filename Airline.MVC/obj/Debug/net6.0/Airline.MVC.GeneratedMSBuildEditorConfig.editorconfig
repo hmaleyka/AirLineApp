@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\owner\source\repos\AirlineApp\Airline.MVC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/owner/source/repos/AirlineApp/Airline.MVC/Areas/Manage/Views/Barcode/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEJhcmNvZGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/owner/source/repos/AirlineApp/Airline.MVC/Areas/Manage/Views/Benefit/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEJlbmVmaXRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -198,10 +202,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/owner/source/repos/AirlineApp/Airline.MVC/Views/Team/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/owner/source/repos/AirlineApp/Airline.MVC/Views/Ticket/BarCode.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XEJhckNvZGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/owner/source/repos/AirlineApp/Airline.MVC/Views/Ticket/Index.cshtml]
