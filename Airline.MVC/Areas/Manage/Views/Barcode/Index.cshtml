@@ -5,13 +5,9 @@
     ViewData["Title"] = "Generate QR Code";
 } *@
 
-<style>
-    #QRCodeType {
-        color: red; /* Ensures the text is always black */
-    }
-</style>
-<form asp-action="Index">
 
+<form asp-action="Index">
+    
     <div class="row mt-2" >
         <div class="col-lg-6 col-md-6 col-sm-12" style="background-color:bisque">
             <label >Select QR Code Type</label>
@@ -29,6 +25,7 @@
 
     <!--  SMS  -->
     <div id="DIV1" class="hideDiv">
+      
         <div class="row mt-2">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <label>Enter Phone Number with country code(eg. +91)</label>
@@ -44,7 +41,9 @@
     </div>
 
     <!--  Whats App Message  -->
+
     <div id="DIV2" class="hideDiv">
+     
         <div class="row mt-2">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <label>Enter WhatsApp Number with country code(eg. +91)</label>
@@ -61,6 +60,7 @@
 
     <!--  Compose Email  -->
     <div id="DIV3" class="hideDiv">
+      
         <div class="row mt-2">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <label>Enter Receive's Email Address</label>
@@ -83,6 +83,7 @@
 
     <!--   WIFI   -->
     <div id="DIV4" class="hideDiv">
+       
         <div class="row mt-2">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <label>Enter WIFI Name</label>
@@ -116,7 +117,7 @@
 </form>
 
 
-
+@section Scripts{
 
     <script>
         $(document).ready(function () {
@@ -133,12 +134,10 @@
             $("#DIV" + qrcodeType).show();
         }
     </script>
+}
 
 
 
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
 
 <!-- jquery -->
 <script src="~/assets/js/jquery.js"></script>

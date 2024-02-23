@@ -16,13 +16,13 @@ namespace Airline.MVC.Areas.Manage.Controllers
             QRCodeVM model = new();
             return View(model);
         }
-        [Authorize(Roles = "SuperAdmin, Admin")]
+        [Authorize(Roles = "SuperAdmin, Admin , Moderator")]
         [HttpPost]
         public IActionResult Index(QRCodeVM model)
         {
             //if (!ModelState.IsValid)
             //{
-            //    return View(model);
+            //    return View();
             //}
             Payload? payload = null;
             switch (model.QRCodeType)

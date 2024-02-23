@@ -25,7 +25,7 @@ namespace Airline.Business.Services.Implementations
                         From = new MailAddress("maleykaheybatova1011@gmail.com"),
                         Subject = "Welcome to Airline App Website",
                         Body = $"Hello Dear, {name}" +
-                        $"<p>Thank you for booking ticket, you can get see your ticket in your user part, and exactly generate qrcode in there, " +
+                        $"<p>Thank you for booking ticket, you can get see your ticket in your user part, and exactly see in your ticket part , " +
                         $"Best Wishes  Airline Team<p>",
                         IsBodyHtml = true
                     };
