@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sxMbbyJGmXPkMa1UvINhLFS/Ln4a8X1rNBselnC5OFo=",
+  "Hash": "Ul0RGPyldFyZ+RQ1iDwf9kI0d2KzymS/NKZfLgUKFdk=",
   "Source": "Airline.MVC",
   "BasePath": "_content/Airline.MVC",
   "Mode": "Default",
@@ -13343,6 +13343,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Upload\\Package\\8ee8d2e9-c3f6-4eab-ab24-d3e23d48fb6eBest-of-2016-Nasim-Mansurov-20.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\953c7e3f-b5bc-4a52-a38e-66474ff47361when-is-new-years-day-2024-65709f84da4f6.jpg",
+      "SourceId": "Airline.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\",
+      "BasePath": "_content/Airline.MVC",
+      "RelativePath": "Upload/Package/953c7e3f-b5bc-4a52-a38e-66474ff47361when-is-new-years-day-2024-65709f84da4f6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\Package\\953c7e3f-b5bc-4a52-a38e-66474ff47361when-is-new-years-day-2024-65709f84da4f6.jpg"
     },
     {
       "Identity": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Package\\b32779d4-a458-4e39-99bd-43b9b372da5awhen-is-new-years-day-2024-65709f84da4f6.jpg",
