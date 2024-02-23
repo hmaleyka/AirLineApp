@@ -119,7 +119,7 @@ namespace Airline.Business.Services.Implementations
                     values: new { token, user.Id });
                 SendEmailService.SendEmail(to: user.Email, name: user.Name);
                 SendConfirmationService.SendEmail(to: user.Email, url: url);
-                await _userManager.AddToRoleAsync(user, UserRole.SuperAdmin.ToString());
+                await _userManager.AddToRoleAsync(user, UserRole.Member.ToString());
             }
             else
             {

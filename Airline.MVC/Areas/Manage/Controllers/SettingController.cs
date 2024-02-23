@@ -24,12 +24,14 @@ namespace Airline.MVC.Areas.Manage.Controllers
         [Authorize(Roles = "SuperAdmin, Admin ")]
         public async Task<IActionResult> Update (int id)
         {
-            if(!ModelState.IsValid)
-            {
-                return View();
-            }
+           
          var setting =   await _service.GetByIdAsync(id);
-            return View(setting);
+            UpdateSettingVM settingvm = new UpdateSettingVM()
+            {
+                Key = setting.Key,
+                Value = setting.Value,
+            };
+            return View(settingvm);
         }
         [Authorize(Roles = "SuperAdmin, Admin")]
         [HttpPost]
@@ -39,7 +41,9 @@ namespace Airline.MVC.Areas.Manage.Controllers
             {
                 return View();
             }
+            
             var settings = await _service.Update(settingvm);
+           
             return RedirectToAction("Index");
         }
 
