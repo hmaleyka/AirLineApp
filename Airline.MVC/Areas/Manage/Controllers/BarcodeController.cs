@@ -40,6 +40,12 @@ namespace Airline.MVC.Areas.Manage.Controllers
                     payload = new WiFi(model.WIFIName, model.WIFIPassword, WiFi.Authentication.WPA);
                     break;
             }
+            //if (payload == null)
+            //{
+               
+            //    //ViewBag.ErrorMessage = "Invalid QR code type or missing information.";
+            //    return View("Error"); 
+            //}
 
             QRCodeGenerator qrGenerator = new();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(payload);

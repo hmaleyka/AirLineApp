@@ -1505,6 +1505,14 @@
       "PackagePath": "staticwebassets\\Upload\\Blog\\8fdc595d-03b5-499c-a752-6eb56b2515521-Benefits-to-starting-a-travel-blog-and-traveling-the-world.jpg"
     },
     {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\962b60c1-fff1-4648-9340-0681a7725e70acecba0e05c03897646ce41c254b48b6-3-e1608783354656.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Blog\\962b60c1-fff1-4648-9340-0681a7725e70acecba0e05c03897646ce41c254b48b6-3-e1608783354656.jpg"
+    },
+    {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\97ad241c-b7bb-4893-b06a-7555218fd81e900x600-GettyImages-1341704677.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Blog\\97ad241c-b7bb-4893-b06a-7555218fd81e900x600-GettyImages-1341704677.jpg"
+    },
+    {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\a13c74e6-287d-422b-bf1e-471f8dc1f7eb354a119533feb57c6e3f2ef11860720b.jpg",
       "PackagePath": "staticwebassets\\Upload\\Blog\\a13c74e6-287d-422b-bf1e-471f8dc1f7eb354a119533feb57c6e3f2ef11860720b.jpg"
     },
@@ -1527,6 +1535,10 @@
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\ad0ec760-8420-4052-9571-76e0aca3ec561-Benefits-to-starting-a-travel-blog-and-traveling-the-world.jpg",
       "PackagePath": "staticwebassets\\Upload\\Blog\\ad0ec760-8420-4052-9571-76e0aca3ec561-Benefits-to-starting-a-travel-blog-and-traveling-the-world.jpg"
+    },
+    {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\ae2e8e64-3f92-4a70-8ec2-9a8588ac74ffacecba0e05c03897646ce41c254b48b6-3-e1608783354656.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Blog\\ae2e8e64-3f92-4a70-8ec2-9a8588ac74ffacecba0e05c03897646ce41c254b48b6-3-e1608783354656.jpg"
     },
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Blog\\b8a7682e-581f-43b0-a5d1-8d237d7f3c41blog-flight-tips-4.jpg",
@@ -1781,6 +1793,10 @@
       "PackagePath": "staticwebassets\\Upload\\Deal\\7a741d6d-357a-4c16-b848-ab7ed6e32f3dBest-of-2016-Nasim-Mansurov-20.jpg"
     },
     {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\7c3c30c2-f9da-41a4-8b2b-c1a65d7c2123900x600-GettyImages-1341704677.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Deal\\7c3c30c2-f9da-41a4-8b2b-c1a65d7c2123900x600-GettyImages-1341704677.jpg"
+    },
+    {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\7f7cbd0a-085d-4a3e-9a59-0190f434fe03spring-tulips.png",
       "PackagePath": "staticwebassets\\Upload\\Deal\\7f7cbd0a-085d-4a3e-9a59-0190f434fe03spring-tulips.png"
     },
@@ -1835,6 +1851,10 @@
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\90e42a1b-dbad-48a8-9e4a-113b056ee7d5beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg",
       "PackagePath": "staticwebassets\\Upload\\Deal\\90e42a1b-dbad-48a8-9e4a-113b056ee7d5beautiful-amazing-pictures-ce8zns6vqeh8q3gh.jpg"
+    },
+    {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\91efeb78-c148-4088-b1b5-306e80175360acecba0e05c03897646ce41c254b48b6-3-e1608783354656.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Deal\\91efeb78-c148-4088-b1b5-306e80175360acecba0e05c03897646ce41c254b48b6-3-e1608783354656.jpg"
     },
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\92366863-d0dd-472a-bba4-e65ca9cc34d0spring-tulips.png",
@@ -2031,6 +2051,10 @@
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\f11e32a6-3eb3-4819-8ac4-65ec282e8a9bsnowdrift-and-white-sky-in-norway-1024x683.webp",
       "PackagePath": "staticwebassets\\Upload\\Deal\\f11e32a6-3eb3-4819-8ac4-65ec282e8a9bsnowdrift-and-white-sky-in-norway-1024x683.webp"
+    },
+    {
+      "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\f2af3dd8-d73b-4b90-ae13-33bfcf7602dchow-to-have-the-perfect-weekend-in-madrid-6595587ddfe75.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Deal\\f2af3dd8-d73b-4b90-ae13-33bfcf7602dchow-to-have-the-perfect-weekend-in-madrid-6595587ddfe75.jpg"
     },
     {
       "Id": "C:\\Users\\owner\\source\\repos\\AirlineApp\\Airline.MVC\\wwwroot\\Upload\\Deal\\f3e5998f-69f5-4ccf-8ee5-7499147cd95cthe-portal-ocean-pictures-tamarama.webp",
